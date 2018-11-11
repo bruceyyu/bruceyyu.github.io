@@ -32,12 +32,11 @@
 		      <a class="navbar-brand" href="#">HHDC</a>
 		    </div>
 		    <ul class="nav navbar-nav">
-		      <li class="active"><a href="index.html"><b>About</b></a></li>
-			    <li><a href="Rules.html"><b>Rules</b></a></li>
+		      <li><a href="index.html"><b>About</b></a></li>
+			  <li><a href="Rules.html"><b>Rules</b></a></li>
 		      <li><a href="Project.html"><b>Project</b></a></li>
-		      <li><a href="Sponsors.html"><b>Sponsors</b></a></li>
-			    <li><a href="Join.html"><b>Join</b></a></li>
-			    <li><a href="https://docs.qq.com/sheet/DUkhXakJ0VlRVSHZw?opendocxfrom=admin&tab=BB08J2"><b>Finance</b></a></li>
+		      <li class="active"><a href="Sponsors.html"><b>Sponsors</b></a></li>
+			  <li><a href="Join.html"><b>Join</b></a></li>
 		    </ul>
 		  </div>
 		</nav>
@@ -57,37 +56,8 @@
     </header>
 
     <div class="container">
-        <div>
-            <div>
-               <h3>About us</h3>
-               <hr>
-            </div>
-        </div>
 
-        <div class="row">
-        	  <div class="col-xs-12 col-md-3">
-                <h2 align=center><b>Developers</b></h2>
-                <h2 align=center><b>开发者</b></h2>
-						</div>
-        		<div class="col-xs-12 col-md-9">
-				<p>不论是IT公司，还是大学研究所，当代社会对年轻开发者需求量都是巨大的。HHDC联盟为高中生开发者打造了高中生专属的舞台。</p>
-				<p>我们对开发者的定义是：热爱计算机理论知识（算法/密码学...）、软件编程（C++/java/python/swift/kotlin...）、网站制作（html/javascript/PHP/Ruby...）、或硬件编程（C/Arduino）等计算机技术的人员。简单来说，<b>我们不会对技术种类或熟练度做出任何要求。只要你热爱计算机学习，我们都希望你能成为我们的一员！</b></p>
-				</div>
-        </div>
-		
-		</br></br></br></br>
-		
-        <div class="row">
-            <div class="col-xs-12 col-md-3 col-md-push-9">
-                <h2 align=center><b><font color="red">C</font>ommunity</b></h2>
-                <h2 align=center><b>联盟社群</b></h2>
-            </div>
-            <div class="col-xs-12 col-sm-9 col-md-pull-3">
-				<p>这是一个需要消除界限的时代。我们欢迎全杭州的高中在读的年轻开发者的加入。联盟旨在建立计算机爱好者的跨校、跨社团关系网，并淡化学校、年级间的固有界限。联盟成员能在关系网中认识兴趣、学习方向相似的学生，也能找到技术互补的开发者来共同开发项目。同时，联盟也会帮助拥有好创意的成员找到合作伙伴，甚至愿意投资的赞助商。</p>
-				<p>这也是一个需要紧密合作的时代。联盟提倡互帮互助的共享精神和开源精神。通过资源共享和互相学习，各成员和各合作社团都能从中受益，获得自身的提升。
-				<p>联盟将要组织的活动包括且不限于：线下社团社长见面交流会，线上线下工作坊，hackathon，合作开发网页/软件/硬件。</p>
-				</div>
-       </div>
+       <h3>尚不开放</h3>
 
     </div>
 
@@ -110,4 +80,3 @@
 </body>
 
 </html>
-
