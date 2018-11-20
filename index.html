@@ -9,17 +9,58 @@
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+	  <style type="text/css">
+        html, body {width:100%;height:100%;} 
+        .my-navbar a{background:transparent !important;color:black !important}
+        .my-navbar a:hover {color:red !important;background:red;outline:0}
+				.my-navbar a:active {color:red !important;}
+        .my-navbar a {transition: color 0.2s ease-in-out;}
+    </style>
 </head>
 
 <body>	
-	  <div class="publicHead">
-	  		<script language="javascript" type="text/javascript" charset="gbk" src="js/head.js"></script>
-	  </div>
-    <div class="container">
+		<nav class="navbar navbar-static-top my-navbar" role="navigation">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+		    		<span class="sr-only"></span>
+		    		<span class="icon-bar"></span>
+		    		<span class="icon-bar"></span>
+		    		<span class="icon-bar"></span>
+		    	</button>
+		      <a class="navbar-brand" href="#">HHDC</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="menu">
+		    	<ul class="nav navbar-nav">
+		      <li><a href="#about"><i class="glyphicon glyphicon-info-sign"></i><b> About</b></a></li>
+		      <li><a href="#projects"><i class="glyphicon glyphicon-folder-open"></i><b> Projects</b></a></li>
+			    <li><a href="#join"><i class="glyphicon glyphicon-plus"></i><b> Join</b></a></li>
+		      <li><a href="#partner"><i class="glyphicon glyphicon-user"></i><b> Partners</b></a></li>
+			    <li><a href="Rules.html"><i class="glyphicon glyphicon-th-list"></i><b> Rules</b></a></li>
+			    <li><a href="https://docs.qq.com/sheet/DUkhXakJ0VlRVSHZw?opendocxfrom=admin&tab=BB08J2"><i class="glyphicon glyphicon-usd"></i><b>Finance</b></a></li>
+		    </ul>
+		    </div>		    
+		  </div>
+		</nav>
+	  
+	  <header class="jumbotron">
+      <div class="container">
+        <div class="row row-header">
+          <div class="col-xs-12 col-sm-3">
+            <img src="pics/Full_Logo.png" width="60%">
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <p><b>杭州高中生开发者联盟HHDC</b></p>
+            <p><em>Coding & Cooperation</em></p>
+          </div>               
+        </div>
+      </div>
+    </header>
+<!-- page for About -->    
+    <div class="container" id="about">
         <div>
             <div>
-               <h3>About us</h3>
+               <h3><b>关于我们</b></h3>
                <hr>
             </div>
         </div>
@@ -33,10 +74,8 @@
 				<p>不论是IT公司，还是大学研究所，当代社会对年轻开发者需求量都是巨大的。HHDC联盟为高中生开发者打造了高中生专属的舞台。</p>
 				<p>我们对开发者的定义是：热爱计算机理论知识（算法/密码学...）、软件编程（C++/java/python/swift/kotlin...）、网站制作（html/javascript/PHP/Ruby...）、或硬件编程（C/Arduino）等计算机技术的人员。简单来说，<b>我们不会对技术种类或熟练度做出任何要求。只要你热爱计算机学习，我们都希望你能成为我们的一员！</b></p>
 				</div>
-        </div>
-		
-		</br></br></br></br>
-		
+        </div>		
+		</br></br></br></br>		
         <div class="row">
             <div class="col-xs-12 col-md-3 col-md-push-9">
                 <h2 align=center><b><font color="red">C</font>ommunity</b></h2>
@@ -48,8 +87,44 @@
 				<p>联盟将要组织的活动包括且不限于：线下社团社长见面交流会，线上线下工作坊，hackathon，合作开发网页/软件/硬件。</p>
 				</div>
        </div>
-
     </div>
+
+<!-- page for Projects -->
+    <div class="container" id="projects">
+				<div>
+            <h3><b>合作开发项目</b></h3>
+            <hr>
+        </div>
+       <h3>尚不开放</h3>
+    </div> 
+    
+<!-- page for Join -->
+    <div class="container" id="join">
+				<div>
+            <h3><b>加入我们</b></h3>
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+					  <p>加入联盟需满足以下条件</p>
+					  <ul>
+								<li>杭州市及周边地区的高中在读</li>
+								<li>对计算机感兴趣</li>
+								<li>有一定时间和精力来参与联盟管理/比赛/工作坊/开发</li>
+								<li>认同“Rules”页的联盟原则，且明白违反原则带来的后果</li>
+					  </ul>
+		    </div>
+		    <div class="cl-xs-12 col-sm-3" style="padding: 40px;">
+			  		<a href="https://www.wjx.top/jq/30573953.aspx" class="button btn btn-default">点击报名</a>
+		    </div>
+    </div> 
+<!-- page for Partners -->
+    <div class="container" id="partner">
+				<div>
+            <h3><b>合作伙伴</b></h3>
+            <hr>
+        </div>
+        <h3>尚不开放</h3>
+    </div> 
 
     <footer class="footer">
         <div class="container">
@@ -62,7 +137,7 @@
            </div>
         </div>
     </footer>
-    
+    		
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
