@@ -1,24 +1,14 @@
-2018/11/23
+2018/11/23 周五
 
-今天看菜鸟的bootstrap教程，学着自己做了navbar上的 `class="navbar-toggle collapsed"`，即手机屏幕上能显示展开按钮的导航栏。遇到问题：所有网上可参考的资料都用
+今天主要修改：
 
-```html
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	<span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-</button>
-```
-做成所谓的“汉堡按钮”，但是似乎因为我用了css重写了nav的部分样式，导致按钮一直无法显示。
+1. 导航栏加上在小屏幕里可以展开导航栏的toggle
+2. 导航栏css重写，使用`.navbar{background:rgba(255,255,255,0.3)!important;} `使导航栏半透明更加美观
+3. 参考使用https://www.cnblogs.com/Wudj/p/9108649.html里的js代码，实现手机滚动屏幕时自动缩进导航栏，非常方便
 
-后来把这三行代码删了，自己加了bootstrap的icon作为按钮，就OK了。现在是：
-
-```html
-<button type="button" id="toggle-btn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-	<i class="glyphicon glyphicon-align-justify"></i>
-</button>
-```
+Bruce
 
 ---
+
+
 
