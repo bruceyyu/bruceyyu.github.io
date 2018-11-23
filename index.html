@@ -9,20 +9,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style type="text/css">
     html, body {width:100%;height:100%;} 
-    .my-navbar a{background:white !important;color:black !important}
-    .my-navbar a:hover {color:red !important}
-    .my-navbar a {transition: color 0.2s ease-in-out;}
-    .toggle-btn span:{color:black !important}
+    .navbar{background:rgba(255,255,255,0.3)!important;}
+    .navbar a{color:black !important}
+    .navbar a:hover {color:red !important}
+    .navbar a {transition: color 0.2s ease-in-out;}
+    body { padding-top: 50px}
     </style>
 </head>
 
 <body>
-    <nav class="navbar my-navbar">
+    <nav class="navbar navbar-fixed-top navbar-default">
         <div class="container">
             <!-- navbar-header -->
             <div class="navbar-header">
-                <button type="button" id="toggle-btn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-                    <i class="glyphicon glyphicon-align-justify"></i>
+                <!-- a hamburger button that will collapse in phone's screen -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#"><b>HHDC</b></a>
             </div>
@@ -43,10 +47,10 @@
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-xs-12 col-sm-3">
-                    <img src="pics/Full_Logo.png" width="60%">
+                <div class="col-xs-12 col-sm-3" style="text-align:center">
+                    <img src="pics/Full_Logo.png" width="70%">
                 </div>
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12 col-sm-6" style="text-align:center">
                     <p><b>杭州高中生开发者联盟HHDC</b></p>
                     <p><em>Coding & Cooperation</em></p>
                 </div>               
@@ -65,7 +69,7 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-3" style="margin-top: -20px">
                 <h2 align=center><b>Developers</b></h2>
                 <h2 align=center><b>开发者</b></h2>
             </div>
@@ -74,11 +78,11 @@
                 <p>我们对开发者的定义是：热爱计算机理论知识（算法/密码学...）、软件编程（C++/java/python/swift/kotlin...）、网站制作（html/javascript/PHP/Ruby...）、或硬件编程（C/Arduino）等计算机技术的人员。简单来说，<b>我们不会对技术种类或熟练度做出任何要求。只要你热爱计算机学习，我们都希望你能成为我们的一员！</b></p>
             </div>
         </div>		
-        </br></br></br></br>		
+        </br>		
         <div class="row">
             <div class="col-xs-12 col-md-3 col-md-push-9">
                 <h2 align=center><b><font color="red">C</font>ommunity</b></h2>
-                <h2 align=center><b>联盟社群</b></h2>
+                <h2 align=center><b>社群</b></h2>
             </div>
             <div class="col-xs-12 col-sm-9 col-md-pull-3">
                 <p>这是一个需要消除界限的时代。我们欢迎全杭州的高中在读的年轻开发者的加入。联盟旨在建立计算机爱好者的跨校、跨社团关系网，并淡化学校、年级间的固有界限。联盟成员能在关系网中认识兴趣、学习方向相似的学生，也能找到技术互补的开发者来共同开发项目。同时，联盟也会帮助拥有好创意的成员找到合作伙伴，甚至愿意投资的赞助商。</p>
@@ -141,9 +145,20 @@
         </div>
     </footer>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Include all frames, plugins, and functions in javascript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script> //Reference: https://www.cnblogs.com/Wudj/p/9108649.html
+        $(window).scroll(function () {
+          //小屏幕下的导航条折叠
+          if ($(window).width() < 768) {
+            //滚动屏幕时，把导航选项折叠起来
+            $(window).scroll(function () {
+              $("#menu").collapse('hide');
+            });
+          }
+        });
+    </script>
 </body>
 </html>
 
