@@ -14,15 +14,32 @@
     .navbar a:hover {color:red !important}
     .navbar a {transition: color 0.2s ease-in-out;}
     body { padding-top: 50px}
+    a {
+        color:black;
+    }
+    a:link {
+        text-decoration: none;
+    }
+    a:visited {
+        text-decoration: none;
+        color:black;
+    }
+    a:hover {
+        text-decoration: none;
+        color:red;
+    }
+    a:active {
+        text-decoration: none;
+    }
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-fixed-top navbar-default">
         <div class="container">
-            <!-- navbar-header -->
+            <!-- 响应式导航条 -->
             <div class="navbar-header">
-                <!-- a hamburger button that will collapse in phone's screen -->
+                <!-- a hamburger button that will collapse in phone's screen 汉堡按钮 -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -30,7 +47,7 @@
                 </button>
                 <a class="navbar-brand" href="#"><b>HHDC</b></a>
             </div>
-            <!-- navbar-nav -->
+            <!-- 导航条上的各个选项 -->
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="#about"><i class="glyphicon glyphicon-info-sign"></i><b> About</b></a></li>
@@ -78,7 +95,7 @@
                 <p>我们对开发者的定义是：热爱计算机理论知识（算法/密码学...）、软件编程（C++/java/python/swift/kotlin...）、网站制作（html/javascript/PHP/Ruby...）、或硬件编程（C/Arduino）等计算机技术的人员。简单来说，<b>我们不会对技术种类或熟练度做出任何要求。只要你热爱计算机学习，我们都希望你能成为我们的一员！</b></p>
             </div>
         </div>		
-        </br>		
+        <br>		
         <div class="row">
             <div class="col-xs-12 col-md-3 col-md-push-9">
                 <h2 align=center><b><font color="red">C</font>ommunity</b></h2>
@@ -99,8 +116,58 @@
             <h3><b>合作开发项目</b></h3>
             <hr>
         </div>
-        <h3>尚不开放</h3>
-    </div> 
+         <!--
+        注释里提供了一个项目的模板，使用后请测试是否正常工作 --Bruce YU
+        <div class="container">
+            <a data-toggle="collapse" data-target="#Your_id"><b>Your_project's_Name </b><i class="glyphicon glyphicon-chevron-down"></i></a>  
+            <div id="Your_id" class="collapsing">
+                 <div class="container">
+                     <p><b>Your_project's_Name</b></p>
+                     <img src="pics/Your_pic's_Name.ico">
+                     <p><b>负责人:</b>Names</p>
+                     <p><b>可参与开发的人群:</b>Your_Descirption</p>
+                     <p><b>目前进度:</b>Your_Descirption</p>
+                     <p><b>简要介绍:</b>Your_Descirption</p>
+                     <p><b>是否开源&源代码网址（若有）:</b>是/否，<a href="https://github.com/Bruceshark/Bruceshark.github.io" target="view_window">github平台</a>
+                     <p><b>最后更新时间:</b>DATE</p>
+                </div>                
+            </div>
+        </div>
+        -->
+        <div class="container">
+            <a data-toggle="collapse" data-target="#Project-web-HHDC"><b>Web-HHDC官网 </b><i class="glyphicon glyphicon-chevron-down"></i></a>  
+            <div id="Project-web-HHDC" class="collapsing">
+                 <div class="container">
+                     <p><b>HHDC官网</b></p>
+                     <img src="pics/DC_Logo.ico">
+                     <p><b>负责人:</b>Yu Yue, Shao Xiyan</p>
+                     <p><b>可参与开发的人群:</b>对前端开发有学习兴趣/掌握部分前端技术的同学</p>
+                     <p><b>目前进度:</b>本站即为此项目</p>
+                     <p><b>简要介绍:</b>此项目使用html，css，JavaScript语言，并且使用了bootstrap前端框架。为节省开销，此项目不设后端，所有静态页面托管于github pages和coding pages中。感兴趣可联系qq954272777。</p>
+                     <p><b>是否开源&源代码网址（若有）:</b>是，<a href="https://github.com/Bruceshark/Bruceshark.github.io" target="view_window">github平台</a>，<a href="https://git.coding.net/Bruceshark/Bruceshark.git" target="view_window">coding平台</a></p>
+                     <p><b>最后更新时间:</b>2018/11/28</p>
+                </div>                
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <a data-toggle="collapse" data-target="#Project-arduino-IoT"><b>Arduino-IoT </b><i class="glyphicon glyphicon-chevron-down"></i></a>     
+            <div id="Project-arduino-IoT" class="collapsing">
+                 <div class="container">
+                     <p><b>IoT</b></p>
+                     <p><b>负责人:</b>Chen Yipu</p>
+                     <p><b>可参与开发的人群:</b></p>
+                     <p><b>目前进度:</b></p>
+                     <p><b>简要介绍:</b></p>
+                     <p><b>是否开源&源代码网址（若有）:</b></p>
+                     <p><b>最后更新时间:</b></p>
+                </div>                
+            </div>
+        </div>
+    </div>
+    
+    
+
 
     <!-- page for Join -->
 
@@ -147,10 +214,15 @@
 
     <!-- Include all frames, plugins, and functions in javascript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script> //Reference: https://www.cnblogs.com/Wudj/p/9108649.html
         $(window).scroll(function () {
           //小屏幕下的导航条折叠
+          if ($(window).width() < 768) {
+            //点击导航链接之后，把导航选项折叠起来
+            $("#navbar a").click(function () {
+              $("#navbar").collapse('hide');
+            });
             //滚动屏幕时，把导航选项折叠起来
             $(window).scroll(function () {
               $("#navbar").collapse('hide');
