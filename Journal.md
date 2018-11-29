@@ -27,4 +27,6 @@ Bruce
 
 用`data-toggle="collapse"`和`class="collapsing"`做了可折叠的展示窗口，并且在注释里提供了一个简要的模板
 
+小插曲：在做折叠窗口的时候，发现在用pad和iphone上点击链接，没法触发折叠窗口。后来在链接里统一加了`href="#"`就可以在触摸屏上访问了hhh
+
 Bruce
