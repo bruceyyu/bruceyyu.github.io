@@ -11,8 +11,12 @@ This is the official website for Hangzhou High School Developer Community (HHDC)
 
 # To do list
 
-1. public navigation bar (see head.html)
-2. combine sponsors.html, join.html, and index.html into one html page (with link within the page)
+1. public navigation bar (see head.html) [cancelled]
+2. combine sponsors.html, join.html, and index.html into one html page (with link within the page) [done]
+3. a transparent nav bar, collapsed in the iphone size screen [done]
+4. page for projects' showcase & its template [done]
+5. collapsed showcase [done]
+6. page for partners & its template [undo]
 
 ---
 
