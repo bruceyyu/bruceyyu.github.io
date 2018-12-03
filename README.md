@@ -18,7 +18,6 @@ This is the official website for Hangzhou High School Developer Community (HHDC)
 5. collapsed showcase [done]
 6. page for partners & its template [undo]
 7. page for activities & its calendar [undo]
-
 ---
 
 # Authors
