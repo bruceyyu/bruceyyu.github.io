@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>HHDC</title>
-    <link rel="shortcut icon" href="pics/DC_Logo.ico">
+    <title>Bruce Y.</title>
+    <link rel="shortcut icon" href="./pics/icon.png">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">  
     <style type="text/css">
     html, body {width:100%;height:100%;} 
     .navbar{background:rgba(255,255,255,0.3)!important;}
     .navbar a{color:black !important}
-    .navbar a:hover {color:red !important}
+    .navbar a:hover {color:dodgerblue !important}
     .navbar a {transition: color 0.2s ease-in-out;}
     body { padding-top: 50px}
     a {
@@ -27,13 +28,45 @@
     }
     a:hover {
         text-decoration: none;
-        color:red;
+        color:gray;
     }
     a:active {
         text-decoration: none;
         color: black;
     }
+    .jumbotron { 
+        background-color: rgb(246,238,227); 
+    } 
+    .swiper-container {
+        width: 60%; 
+        /* height: 600px; */
+    } 
+    .answer{
+        opacity: 1;
+        animation:shining 3s linear 5s infinite alternate;
+        /* Firefox: */
+        -moz-animation:shining 3s linear 5s infinite alternate;
+        /* Safari and Chrome: */
+        -webkit-animation:shining 3s linear 5s infinite alternate;
+        /* Opera: */
+        -o-animation:shining 3s linear 5s infinite alternate;
+    }
+    @keyframes shining
+    {
+        from {opacity: 1;}
+        to {opacity: 0;}
+    }
+
+    @-webkit-keyframes shining /* Safari and Chrome */
+    {
+        from {opacity: 1;}
+        to {opacity: 0;}
+    }
     </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
 </head>
 
 <body>
@@ -47,19 +80,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><b>HHDC</b></a>
+                <a class="navbar-brand" href="#"><b>B.Y.</b></a>
             </div>
             <!-- 导航条上的各个选项 -->
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about"><i class="glyphicon glyphicon-info-sign"></i><b> About</b></a></li>
+                    <li><a href="#about"><i class="glyphicon glyphicon-info-sign"></i><b> Me</b></a></li>
                     <li><a href="#projects"><i class="glyphicon glyphicon-folder-open"></i><b> Projects</b></a></li>
-                    <li><a href="#activities"><i class="glyphicon glyphicon-calendar"></i><b> Activities</b></a></li>
-
-                    <li><a href="#join"><i class="glyphicon glyphicon-plus"></i><b> Join</b></a></li>
-                    <li><a href="#partner"><i class="glyphicon glyphicon-user"></i><b> Partners</b></a></li>
-                    <li><a href="Rules.html"><i class="glyphicon glyphicon-th-list"></i><b> Rules</b></a></li>
-                    <li><a href="https://docs.qq.com/sheet/DUkhXakJ0VlRVSHZw?opendocxfrom=admin&tab=BB08J2"><i class="glyphicon glyphicon-usd"></i><b> Finance</b></a></li>
+                    <li><a href="#photos"><i class="glyphicon glyphicon-camera"></i><b> Gallery</b></a></li>
+                    <li><a href="#contact"><i class="glyphicon glyphicon-envelope"></i><b> Contact</b></a></li>
+                    <li><a href="#comments"><i class="glyphicon glyphicon-send"></i><b> Comments</b></a></li>
                 </ul>
             </div>
         </div>
@@ -68,13 +98,16 @@
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-xs-12 col-sm-3" style="text-align:center">
-                    <img src="pics/Full_Logo.png" width="70%">
-                </div>
-                <div class="col-xs-12 col-sm-6" style="text-align:center">
-                    <p><b>杭州高中生开发者联盟HHDC</b></p>
-                    <p><em>Coding & Cooperation</em></p>
-                </div>               
+                <div class="col-xs-12 col-sm-6" style="text-align:left;margin-top:2rem">
+                    <p style="font-size: 35px"><b>Hi.How's ur day?</b></p>
+                    <p><b>My name is Bruce Yu Yue</b></p>
+                    <p>嗨今天過得好嗎,我叫<a target="view_window" href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%99%9E"><u>虞</u></a>越,自幼家貧,發奮圖强。會寫一點代碼。喜歡吃、拍照片、健身。</p>
+                    <p><u><a class="answer" href="#about">I'm great</a></u></p>
+                    <p><u><a class="answer" target="view_window" href="https://www.youtube.com/watch?v=7w8HlfC5Mb8">I'm anxious/angry/depressed..</a></u></p>
+
+                </div>     
+                <div class="col-xs-12 col-sm-6" style="text-align:left;margin-top:2rem">
+                </div>  
             </div>
         </div>
     </header>
@@ -84,163 +117,196 @@
     <div class="container" id="about">
         <div>
             <div>
-                <h3><b>关于我们</b></h3>
+                <h2><b>🐟About me</b></h2>
                 <hr>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-xs-12 col-md-3" style="margin-top: -20px">
-                <h2 align=center><b>Developers</b></h2>
-                <h2 align=center><b>开发者</b></h2>
+            <div class="col-xs-12 col-md-3">
+                <h2 align=center><b>Interests</b></h2>
             </div>
             <div class="col-xs-12 col-md-9">
-                <p>不论是IT公司，还是大学研究所，当代社会对年轻开发者需求量都是巨大的。HHDC联盟为高中生开发者打造了高中生专属的舞台。</p>
-                <p>我们对开发者的定义是：热爱计算机理论知识（算法/密码学...）、软件编程（C++/java/python/swift/kotlin...）、网站制作（html/javascript/PHP/Ruby...）、或硬件编程（C/Arduino）等计算机技术的人员。简单来说，<b>我们不会对技术种类或熟练度做出任何要求。只要你热爱计算机学习，我们都希望你能成为我们的一员！</b></p>
+                <b>
+                    <p>📕: Sci-Fi🚀</p>
+                    <p>👨‍🎓: Social Science / Computer Science👩‍💻</p>
+                    <p>😎: Chinese Folk Music (bamboo flute) / Photography📷 / Fitness🏋️‍♂️</p>
+                </b>
+                <hr>
             </div>
         </div>		
-        <br>		
+        <br>
         <div class="row">
-            <div class="col-xs-12 col-md-3 col-md-push-9">
-                <h2 align=center><b><font color="red">C</font>ommunity</b></h2>
-                <h2 align=center><b>社群</b></h2>
+            <div class="col-xs-12 col-md-3">
+                <h2 align=center><b>Education</b></h2>
             </div>
-            <div class="col-xs-12 col-sm-9 col-md-pull-3">
-                <p>这是一个需要消除界限的时代。我们欢迎全杭州的高中在读的年轻开发者的加入。联盟旨在建立计算机爱好者的跨校、跨社团关系网，并淡化学校、年级间的固有界限。联盟成员能在关系网中认识兴趣、学习方向相似的学生，也能找到技术互补的开发者来共同开发项目。同时，联盟也会帮助拥有好创意的成员找到合作伙伴，甚至愿意投资的赞助商。</p>
-                <p>这也是一个需要紧密合作的时代。联盟提倡互帮互助的共享精神和开源精神。通过资源共享和互相学习，各成员和各合作社团都能从中受益，获得自身的提升。
-                <p>联盟将要组织的活动包括且不限于：线下社团社长见面交流会，线上线下工作坊，hackathon，合作开发网页/软件/硬件。</p>
+            <div class="col-xs-12 col-md-9">
+                <b>
+                    <p>Hangzhou Yucai Middle School, Hangzhou, China (2013-2016)</p>
+                    <p><a href="http://www.h14z.cn" target="view_window"><u>Hangzhou No.14 High School</u></a>, Hangzhou, China (2016-2019)</p>
+                    <p><a href="https://www.ust.hk" target="view_window"><u>Hong Kong University of Science and Technology</u></a>, Hong Kong, China - School of Humanity and Social Science (2019-2020)</p>
+                    <p><a href="https://www.umich.edu" target="view_window"><u>University of Michigan--Ann Arbor</u></a>, MI, USA - College of Literature, Science, and the Arts (2020-?)</p>
+                </b>
+                <hr>
             </div>
-        </div>
+        </div>		
+        <br>
+        <div class="row">
+            <div class="col-xs-12 col-md-3">
+                <h2 align=center><b>Work Exp.</b></h2>
+            </div>
+            <div class="col-xs-12 col-md-9">
+                <b>
+                    <p>Internship at Hangzhou Xiyu Education Technology Co. <a href="http://www.feshangye.com" target="view_window">(<u>www.feshangye.com</u>)</a> as a full-stack web engineer. (2019.6 - 2019.8)
+                    Participated in the development of a web ice-breaking game. (details are provided in the project section)</p>
+                    <p>Volunteer at Hangzhou Zoo. Made educational videos of endangered animals. (2017.12 - 2018.12)</p>
+                </b>
+                <hr>
+            </div>
+        </div>	
+        <div class="row">
+            <div class="col-xs-12 col-md-3">
+                <h2 align=center><b>Tech. Skills</b></h2>
+            </div>
+            <div class="col-xs-12 col-md-3" style="text-align:center">
+                <h3>Web front end</h3>
+                <b>
+                <p>HTML, CSS</p>
+                <p>JavaScript, Vue.js</p>
+                <h3>Web back end</h3>
+                <p>C# (.NET framework)</p>
+                <p>PHP</p>
+                <p>SQL, MySQL</p>
+                </b>
+            </div>
+            <div class="col-xs-12 col-md-3" style="text-align:center">
+                <h3>Software</h3>
+                <b>
+                    <p>Java</p>
+                    <p>Python</p>
+                </b>
+            </div>
+            <div class="col-xs-12 col-md-3" style="text-align:center">
+                <h3>Design</h3>
+                <b>
+                    <p>Photoshop</p>
+                    <p>Premiere Pro</p>
+                    <p>After Effects</p>
+                    <p>Rhino</p>
+                </b>
+            </div>
+        </div>		
     </div>
 
     <!-- page for Projects -->
 
     <div class="container" id="projects">
         <div>
-            <h3><b>合作开发项目</b></h3>
+            <h2><b>🔧Projects</b></h2>
             <hr>
         </div>
-         <!--
-        注释里提供了一个项目的模板，使用后请测试是否正常工作 --Bruce YU
+
         <div class="container">
-            <a href="#" data-toggle="collapse" data-target="#Your_id"><b>Your_project's_Name </b><i class="glyphicon glyphicon-chevron-down"></i></a>  
-            <div id="Your_id" class="collapsing">
-                 <div class="container">
-                     <p><b>Your_project's_Name</b></p>
-                     <img src="pics/Your_pic's_Name.ico">
-                     <p><b>负责人:</b>Names</p>
-                     <p><b>可参与开发的人群:</b>Your_Descirption</p>
-                     <p><b>目前进度:</b>Your_Descirption</p>
-                     <p><b>简要介绍:</b>Your_Descirption</p>
-                     <p><b>是否开源&源代码网址（若有）:</b>是/否，<a href="https://github.com/Bruceshark/Bruceshark.github.io" target="view_window">github平台</a>
-                     <p><b>最后更新时间:</b>DATE</p>
-                </div>                
-            </div>
-        </div>
-        -->
-        <div class="container">
-            <a href="#" data-toggle="collapse" data-target="#Project-web-HHDC"><b>Web-HHDC官网 </b><i class="glyphicon glyphicon-chevron-down"></i></a>  
-            <div id="Project-web-HHDC" class="collapse">
-                 <div class="container">
-                     <p><b>HHDC官网</b></p>
-                     <img src="pics/DC_Logo.ico">
-                     <p><b>负责人:</b>Yu Yue, Shao Xiyan</p>
-                     <p><b>可参与开发的人群:</b>对前端开发有学习兴趣/掌握部分前端技术的同学</p>
-                     <p><b>目前进度:</b>本站即为此项目</p>
-                     <p><b>简要介绍:</b>此项目使用html，css，JavaScript语言，并且使用了bootstrap前端框架。为节省开销，此项目不设后端，所有静态页面托管于github pages和coding pages中。感兴趣可联系qq954272777。</p>
-                     <p><b>是否开源&源代码网址（若有）:</b>是，<a href="https://github.com/Bruceshark/Bruceshark.github.io" target="view_window">github平台</a>，<a href="https://git.coding.net/Bruceshark/Bruceshark.git" target="view_window">coding平台</a></p>
-                     <p><b>最后更新时间:</b>2018/11/28</p>
+            <a href="#" data-toggle="collapse" data-target="#Project-GOK"><b>Web game - 'Game of Kings'</b><i class="glyphicon glyphicon-chevron-down"></i></a>  
+            <div id="Project-GOK" class="collapse">
+                <div class="container">
+                    <img src="./pics/project_gok.ico">
+                    <p><b>Role:</b> full-stack developer (except the design of the interface) </p>
+                    <p><b>Technology Stack:</b> vue.js (vue-cli) & .NET Framework & SQL Server</p>
+                    <p><b>Description:</b> It's a multiplayer strategic game and the players play different roles with different identities and jobs. Basically there are two opposite camps: kings and common people. The task of kings is to find other kings online and the task of common people is to intervene the meeting of the kings. This ice-breaking game is for the students before a competition and the goal of the game is to help the students know each other and build the friendship before meeing.</p>
+                    <p><b>Link:</b> <a href="http://gok.feshangye.top" target="view_window"><u>http://gok.feshangye.top</u></a> The game is built for my former company so the login process is required. The link is just a preview. Thus, if you want further info, please contact me.</p>
+                    <p><b>last update:</b> 2019/8/9</p>
                 </div>                
             </div>
         </div>
         <br>
         <div class="container">
-            <a href="#" data-toggle="collapse" data-target="#Project-arduino-IoT"><b>Arduino-IoT </b><i class="glyphicon glyphicon-chevron-down"></i></a>     
-            <div id="Project-arduino-IoT" class="collapse">
-                 <div class="container">
-                     <p><b>IoT</b></p>
-                     <p><b>负责人:</b>Chen Yipu</p>
-                     <p><b>可参与开发的人群:</b></p>
-                     <p><b>目前进度:</b></p>
-                     <p><b>简要介绍:</b></p>
-                     <p><b>是否开源&源代码网址（若有）:</b></p>
-                     <p><b>最后更新时间:</b></p>
-                </div>                
-            </div>
-        </div>
-    </div>
-    
-    
-    <!-- page for Activities -->
-
-    <div class="container" id="activities">
-        <div>
-            <h3><b>线下活动</b></h3>
-            <hr>
-        </div>
-        <div class="container">
-            <h4><b>2018</b></h4>
-            <div class="container">
-                <a href="#" data-toggle="collapse" data-target="#Activity-workshop-wordpress-1209"><b>12.9 workshop-WordPress建站 </b><i class="glyphicon glyphicon-chevron-down"></i></a>     
-                <div id="Activity-workshop-wordpress-1209" class="collapse">
+            <a href="#" data-toggle="collapse" data-target="#Project-personal_page"><b>Web page - This static site</b><i class="glyphicon glyphicon-chevron-down"></i></a>  
+            <div id="Project-personal_page" class="collapse">
                 <div class="container">
-                    <a href="https://mp.weixin.qq.com/s?__biz=MzU3NTY4MzU0Mw==&mid=2247483756&idx=1&sn=49b8972441e94b0566e2765398706f02&chksm=fd1e2fd4ca69a6c2f67b6b0a3a6d8b611e8fa3acca23d0442dc6788484eecae90cc7a0484dd6&token=767449050&lang=zh_CN#rd"target="view_window"><b>文章链接</b></a>
+                    <p><b>Role:</b> developer </p>
+                    <p><b>Technology Stack:</b> HTML (bootstrap)& CSS & JavaScript (jQuery) & my awful art</p>
+                    <p><b>Description:</b> It's a simple single page.</p>
+                    <p><b>Link:</b> This site </p>
+                    <p><b>last update:</b> 2020/2/12</p>
                 </div>                
-                </div>                
-            </div>  
-            
+            </div>
         </div>
     </div>
 
-    <!-- page for Join -->
+    <!-- page for Photos -->
 
-    <div class="container" id="join">
+    <div class="container" id="photos">
         <div>
-            <h3><b>加入我们</b></h3>
+            <h2><b>📷Gallery</b></h2>
             <hr>
+            <p style="text-align: center"> As an amateur photographer, I'd like to show some recent photos I took or I like here, if you don't have interest then I'm sorry :></p>
         </div>
-        <div class="col-xs-12 col-sm-9">
-            <p>加入联盟需满足以下条件</p>
-            <ul>
-            <li>杭州市及周边地区的高中在读</li>
-            <li>对计算机感兴趣</li>
-            <li>有一定时间和精力来参与联盟管理/比赛/工作坊/开发</li>
-            <li>认同“Rules”页的联盟原则，且明白违反原则带来的后果</li>
-            </ul>
-        </div>
-        <div class="cl-xs-12 col-sm-3" style="padding: 40px;">
-            <a href="https://www.wjx.top/jq/30573953.aspx" class="button btn btn-default">报名加入，和HHDC共同成长</a>
-        </div>
-    </div> 
-
-    <!-- page for Partners -->
-
-    <div class="container" id="partner">
-        <div>
-            <h3><b>合作伙伴</b></h3>
-            <hr>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="./pics/gallery/wenzhou_dongtou.jpg"><img src="./pics/gallery/wenzhou_dongtou.jpg" width="100%"></a></div>
+                <div class="swiper-slide"><a href="./pics/gallery/hongkong_hkust_atrium.jpg"><img src="./pics/gallery/hongkong_hkust_atrium.jpg" width="100%"></a></div>
+                <div class="swiper-slide"><a href="./pics/gallery/hongkong_morning_bay.jpg"><img src="./pics/gallery/hongkong_morning_bay.jpg" width="100%"></a></div>
+                <div class="swiper-slide"><a href="./pics/gallery/hongkong_twilight_bay.jpg"><img src="./pics/gallery/hongkong_twilight_bay.jpg" width="100%"></a></div>
+                <div class="swiper-slide"><a href="./pics/gallery/hangzhou_zhuantang.jpg"><img src="./pics/gallery/hangzhou_zhuantang.jpg" width="100%"></a></div>
+                <div class="swiper-slide"><a href="./pics/gallery/hangzhou_westlake_black.jpg"><img src="./pics/gallery/hangzhou_westlake_black.jpg" width="55%" style="margin-left:23%"></a></div>
             </div>
-        <h3>尚不开放</h3>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
+            <!-- 如果需要滚动条 -->
+            <div class="swiper-scrollbar"></div>
+        </div>
     </div> 
+
+    <!-- page for Contact -->
+
+    <div class="container" id="contact">
+        <div>
+            <h2><b>📧Contact</b></h2>
+            <hr>
+            <div class="col-xs-12 col-md-4" style="text-align:center">
+                <p style="text-align:center">Email: <a href="mailto:bruceyuyue@hotmail.com">bruceyuyue@hotmail.com</a></p>
+            </div>
+            <div class="col-xs-12 col-md-4" style="text-align:center">
+                <p style="text-align:center">Tel: s3cr3t</p>
+            </div>
+            <div class="col-xs-12 col-md-4" style="text-align:center">
+                <p style="text-align:center">Address: You may find me in a restaurant or a gym</p>
+            </div>
+        </div>
+    </div>    
+
+    <div class="container" id="comments">
+        <div>
+            <h2><b>🙇‍♂️Leave sth before u leave</b></h2>
+            <hr>
+            <p  class="col-xs-12 col-md-9">This is a temporarily free and open place powered by facebook comment plugin, you can leave any comment here through your fb account(btw, is fb free?)中國大陸的訪問者請翻墻留言，對不起:(</p>
+            <div class="container col-xs-12 col-md-9">
+                <div class="fb-comments" data-href="http://www-personal.umich.edu/~bruceyu/" data-width="80%" data-numposts="10"></div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
             <hr>
             <div class="row justify-content-center">             
             <div class="col-auto">
-                <p>© Copyright 2018 HHDC</p>
-                <p>此网站托管于github，联盟成员可参与编辑，详见<a href="#projects">projects</a>页</p>
+                <p>© Copyright 2020 Bruce Yu, designed and programmed by Bruce with 💙</p>
             </div>
             </div>
         </div>
     </footer>
 
     <!-- Include all frames, plugins, and functions in javascript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+
     <script> //Reference: https://www.cnblogs.com/Wudj/p/9108649.html
+        //小屏幕的情况下折叠导航条
         $(window).scroll(function () {
-          //小屏幕下的导航条折叠
           if ($(window).width() < 768) {
             //点击导航链接之后，把导航选项折叠起来
             $("#navbar a").click(function () {
@@ -252,7 +318,29 @@
             });
           }
         });
+        //初始化swiper
+        $(document).ready(function () {
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal', // 垂直切换选项
+                loop: true, // 循环模式选项
+                // 如果需要分页器
+                pagination: {
+                el: '.swiper-pagination',
+                },
+                // 如果需要前进后退按钮
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+                // 如果需要滚动条
+                // scrollbar: {
+                // el: '.swiper-scrollbar',
+                // },
+            })   
+        })
+ 
     </script>
 </body>
-</html>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=737011173411749&autoLogAppEvents=1"></script>
 
