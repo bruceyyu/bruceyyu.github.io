@@ -6,17 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">  
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
-    html, body {width:100%;height:100%;} 
-    .navbar{background:rgba(255,255,255,0.3)!important;}
-    .navbar a{color:black !important}
-    .navbar a:hover {color:dodgerblue !important}
-    .navbar a {transition: color 0.2s ease-in-out;}
-    body { padding-top: 50px}
+    html, body {width:100%;height:100%;overflow-x: hidden;font-size: 15px}
     a {
         color:black;
+        transition: all 0.2s;
     }
     a:link {
         text-decoration: none;
@@ -28,7 +23,7 @@
     }
     a:hover {
         text-decoration: none;
-        color:gray;
+        color:rgb(54, 54, 54);
     }
     a:active {
         text-decoration: none;
@@ -36,77 +31,124 @@
     }
     .jumbotron { 
         background-color: rgb(246,238,227); 
-    } 
-    .swiper-container {
-        width: 60%; 
-        /* height: 600px; */
-    } 
-    .answer{
-        opacity: 1;
-        animation:shining 3s linear 5s infinite alternate;
-        /* Firefox: */
-        -moz-animation:shining 3s linear 5s infinite alternate;
-        /* Safari and Chrome: */
-        -webkit-animation:shining 3s linear 5s infinite alternate;
-        /* Opera: */
-        -o-animation:shining 3s linear 5s infinite alternate;
     }
-    @keyframes shining
-    {
-        from {opacity: 1;}
-        to {opacity: 0;}
+    .path {
+        font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace!important
     }
-
-    @-webkit-keyframes shining /* Safari and Chrome */
-    {
-        from {opacity: 1;}
-        to {opacity: 0;}
+    .bio-link {
+        display: flex;
+    }
+    .bio-link img {
+        width: 1.5rem;
+        margin: 0 1rem;
+    }
+    .bio-link img:hover {
+        cursor: pointer;
+    }
+    .bio-link img:first-child {
+        margin: 0 1rem 0 0;
+    }
+    .box {
+        width: 100%; 
+        box-shadow: 1px 1px 5px 2px rgba(170, 167, 167, 0.3); 
+        padding: 0.5rem; 
+        border-radius: 5px; 
+        margin: auto; 
+        margin-bottom: 1rem;
+    }
+    .major-box {
+        box-shadow: 0 0 0 0 rgba(170, 167, 167, 0.2);
+        width: 48%;
+        margin: 0.5rem 0;
+        transition: all 0.3s;
+    }
+    .major-box:hover {
+        box-shadow: 1px 1px 5px 1px rgba(170, 167, 167, 0.2);
+    }
+    #chart-outer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+    #chart-outer .chart{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+    .chart box {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 3px;
+    }
+    .chart text {
+        font-family: "Open Sans";
+        text-anchor: middle;
+        color: rgb(34,​ 34,​ 34);
+        font-size: 12px;
+    }
+    text {
+        font-family: "Open Sans";
+        text-anchor: middle;
+        color: rgb(34,​ 34,​ 34);
+        font-size: 12px;
+    }
+    polyline {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 2px;
+        stroke-dasharray: 5px;
+    }
+    .work-item-outer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .work-item {
+        width: 17em;
+        height: auto;
+        box-shadow: 2px 2px 35px 1px rgba(170, 167, 167, 0.5);
+        border-radius: 10px; 
+        margin: 1rem 0.5rem 1rem 0.5rem; padding: 0.5em;
+        transition: all 0.5s;
+        /* height: 22rem; */
+    }
+    .work-item .poster{
+        width: 100%; height: 20rem; 
+        background-size: contain; background-repeat: no-repeat; background-position: 50%;
+    }
+    .work-item:hover {
+        cursor: pointer;
+        transform: translateY(-5px);
+        box-shadow: 2px 2px 45px 1px rgba(170, 167, 167, 0.5);
+    }
+    .work-item .desc {
+        width: 100%;
+    }
+    .work-item-detail {
+        box-shadow: 2px 2px 35px 1px rgba(170, 167, 167, 0.5);
     }
     </style>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/d3/6.0.0/d3.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-fixed-top navbar-default">
-        <div class="container">
-            <!-- 响应式导航条 -->
-            <div class="navbar-header">
-                <!-- a hamburger button that will collapse in phone's screen 汉堡按钮 -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><b>B.Y.</b></a>
-            </div>
-            <!-- 导航条上的各个选项 -->
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about"><i class="glyphicon glyphicon-info-sign"></i><b> Me</b></a></li>
-                    <li><a href="#projects"><i class="glyphicon glyphicon-folder-open"></i><b> Projects</b></a></li>
-                    <li><a href="#photos"><i class="glyphicon glyphicon-camera"></i><b> Gallery</b></a></li>
-                    <li><a href="#contact"><i class="glyphicon glyphicon-envelope"></i><b> Contact</b></a></li>
-                    <li><a href="#comments"><i class="glyphicon glyphicon-send"></i><b> Comments</b></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-xs-12 col-sm-6" style="text-align:left;margin-top:2rem">
-                    <p style="font-size: 35px"><b>Hi.How's ur day?</b></p>
-                    <p><b>My name is Bruce Yu Yue</b></p>
-                    <p>嗨今天過得好嗎,我叫<a target="view_window" href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%99%9E"><u>虞</u></a>越,會寫一點代碼,喜歡吃、拍照片、健身。離技術還很遠,離肥胖很近。</p>
-                    <p><u><a class="answer" href="#about">I'm great</a></u></p>
-                    <p><u><a class="answer" target="view_window" href="https://www.youtube.com/watch?v=7w8HlfC5Mb8">I'm anxious/angry/depressed..</a></u></p>
-
+                <div class="col-xs-12 col-sm-6" style="text-align:left;">
+                    <h3><b>Hi. How's ur day?</b></h3>
+                    <p style="margin-top:-10px"><b>My name is Bruce Yu Yue.</b></p>
+                    <p style="margin-top:-10px">嗨今天過得好嗎，我叫<a target="_blank" href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%99%9E"><u>虞</u></a>越，會寫一點代碼，喜歡吃、拍照片、健身。離技術還很遠，離肥胖很近。</p>
+                    <div class="bio-link">
+                        <div><a href="https://github.com/bruceshark" target="_blank"><img src="./pics/github.svg"/></a></div>
+                        <div><a href="https://www.linkedin.com/in/yuyuebruce/" target="_blank"><img src="./pics/linkedin.svg"/></a></div>
+                    </div>
                 </div>     
-                <div class="col-xs-12 col-sm-6" style="text-align:left;margin-top:2rem">
+                <div class="col-xs-12 col-sm-6" style="text-align:left;">
                 </div>  
             </div>
         </div>
@@ -114,142 +156,378 @@
     
     <!-- page for About -->  
     
-    <div class="container" id="about">
-        <div>
-            <div>
-                <h2><b>🐟About me</b></h2>
-                <hr>
-            </div>
-        </div>
+    <div class="container" id="about">	
         <div class="row">
-            <div class="col-xs-12 col-md-3">
-                <h2 align=center><b>Interests</b></h2>
-            </div>
-            <div class="col-xs-12 col-md-9">
-                <b>
-                    <p>📕: Sci-Fi🚀</p>
-                    <p>👨‍🎓: Social Science / Computer Science👩‍💻</p>
-                    <p>😎: Chinese Folk Music (bamboo flute) / Photography📷 / Fitness🏋️‍♂️</p>
-                </b>
-                <hr>
-            </div>
-        </div>		
-        <br>
-        <div class="row">
-            <div class="col-xs-12 col-md-3">
-                <h2 align=center><b>Education</b></h2>
-            </div>
-            <div class="col-xs-12 col-md-9">
-                <b>
-                    <p><a href="http://www.h14z.cn" target="view_window"><u>Hangzhou No.14 High School</u></a>, Hangzhou, China (2016-2019)</p>
-                    <p><a href="https://www.ust.hk" target="view_window"><u>Hong Kong University of Science and Technology</u></a>, Hong Kong, China - Major: Quantitative Social Analysis (2019-2020)</p>
-                    <p><a href="https://www.umich.edu" target="view_window"><u>University of Michigan--Ann Arbor</u></a>, MI, USA - College of Literature, Science, and the Arts (2020-?)</p>
-                </b>
-                <hr>
-            </div>
-        </div>		
-        <br>
-        <div class="row">
-            <div class="col-xs-12 col-md-3">
-                <h2 align=center><b>Work Exp.</b></h2>
-            </div>
-            <div class="col-xs-12 col-md-9">
-                <b>
-                    <p>· Intern at Magnum Research Limited (<a href="https://www.aqumon.com/" target="view_window" style="color:#e61c72"><u>AQUMON</u></a>), a Fintech company providing robo-advisor automatic investment management service as a developer. (2020.4 - 2020.8)
-                    <p>· Intern at Hangzhou Xiyu Education Technology Co. <a href="http://www.feshangye.com" target="view_window">(<u>www.feshangye.com</u>)</a> as a full-stack web developer. (2019.6 - 2019.8)
-                    <p style="text-indent:2em">· Participated in the whole development of a web multiplayer strategic game <a href="#projects"><u>project</u></a></p>
-                    <p style="text-indent:2em">· Designed a front-back separated architecture for the web application</p>
-                    <p style="text-indent:2em">· Developed the front-end using Vue.js, the back-end using .Net Framework, and MSSQL database system.</p>
-                    <p>· Volunteer at Hangzhou Zoo. Made educational videos of endangered animals. (2017.12 - 2018.12)</p>
-                </b>
-                <hr>
-            </div>
-        </div>	
-        <div class="row">
-            <div class="col-xs-12 col-md-3">
-                <h2 align=center><b>Tech. Skills</b></h2>
-            </div>
-            <div class="col-xs-12 col-md-3" style="text-align:center">
-                <h3>Web front end</h3>
-                <b>
-                    <p>HTML, CSS</p>
-                    <p>JavaScript, Vue.js</p>
-                <h3>Web back end</h3>
-                    <p>C# (.NET framework)</p>
-                    <p>PHP (Laravel MVC)</p>
-                    <p>SQL, MySQL</p>
-                </b>
-            </div>
-            <div class="col-xs-12 col-md-3" style="text-align:center">
-                <h3>Software</h3>
-                <b>
-                    <p>Java</p>
-                    <p>Python</p>
-                </b>
-            </div>
-            <div class="col-xs-12 col-md-3" style="text-align:center">
-                <h3>Design</h3>
-                <b>
-                    <p>Photoshop</p>
-                    <p>Premiere Pro</p>
-                    <p>After Effects</p>
-                    <p>Rhino</p>
-                </b>
-            </div>
-        </div>		
-    </div>
-
-    <!-- page for Projects -->
-
-    <div class="container" id="projects">
-        <div>
-            <h2><b>🔧Projects</b></h2>
-            <hr>
-        </div>
-
-        <div class="container">
-            <a href="#" data-toggle="collapse" data-target="#Project-GOK"><b>Web game - 'Game of Kings'</b><i class="glyphicon glyphicon-chevron-down"></i></a>  
-            <div id="Project-GOK" class="collapse">
-                <div class="container">
-                    <img src="./pics/project_gok.ico">
-                    <p><b>Role:</b> full-stack developer (except the design of the UI) </p>
-                    <p><b>Technology Stack:</b> vue.js (vue-cli) & .NET Framework & SQL Server</p>
-                    <p><b>Description:</b> It's a multiplayer strategic game and the players play different roles with different identities and jobs. There are two opposite camps: kings and common people. The task of kings is to recognize other kings online and the task of common people is to intervene the meeting of the kings. The goal of the game is to help the students break the ice and build the friendship before meeting.</p>
-                    <p><b>Link:</b> <a href="http://47.96.128.103:1235/" target="view_window"><u>CLICK ME</u></a> Note: if you want further info or an account to try it out, please contact me.</p>
-                    <div class="container">
-                        <div class="col-xs-6 col-md-4" style="text-align:center"><img src="./pics/projects/GOK1.png" width="90%"></div>
-                        <div class="col-xs-6 col-md-4" style="text-align:center"><img src="./pics/projects/GOK2.png" width="90%"></div>
-                        <div class="col-xs-6 col-md-4" style="text-align:center"><img src="./pics/projects/GOK3.png" width="90%"></div>
+            <div class="col-xs-12 col-md-6">
+                <div class="box">
+                    <div class="path">Workspace/Self/Readme</div>
+                    <div style="display: flex; margin-top: 1rem; flex-wrap: wrap; justify-content: space-between;">
+                        <div class="box major-box">
+                            <h5><b>📕Reading</b></h5> Sci-Fi: Some featured books: <i>Galactic Empire</i> by Asimov, <i>Stories of Your Life and Others</i> by Ted Chiang...<br>                                
+                        </div>
+                        <div class="box major-box">
+                            <h5><b>🤓Learning</b></h5> Web Dev, Data Viz, UIUX Design, Social Network Analysis, and more to explore...                             
+                        </div>
+                        <div class="box major-box">
+                            <h5><b>😎Other</b></h5> Chinese Folk Music (bamboo flute) / Photography / Fitness / Dim Sum               
+                        </div>
+                        <div class="box major-box">
+                            <a href="https://www.linkedin.com/in/yuyuebruce/" target="_blank">
+                                <h5><b>💼Hire me!</b></h5>Seeking for opportunities in projects related to  web dev, HCI, and quant social science
+                            </a>
+                        </div>
                     </div>
-                    <p><b>last update:</b> 2019/12/9</p>
-                </div>                
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="box">
+                    <div class="path">Workspace/Self/Edu</div>
+                    <a href="https://www.ust.hk" target="_blank"><h3 style="text-transform: uppercase;"><b>Hong Kong University of Science and Technology</b></h3></a>
+                    <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+                        <div>2019.9</div>
+                        <div class="progress" style="width: 80%; margin: 0 1rem; align-self: center;">
+                            <div id="progress" class="progress-bar bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+                            <script type="text/javascript">
+                                var start = 1567299600;
+                                var end = 1688173200;
+                                var now = Number(new Date().getTime()) / 1000;
+                                var progress = (((now - start) / (end - start)) * 100).toFixed(1);
+                                var progressTxt = document.createTextNode(progress + '%');
+                                document.getElementById('progress').style.width = progress + '%';
+                                document.getElementById('progress').appendChild(progressTxt);
+                            </script>
+                        </div> 
+                        <div>2023.7</div>
+                    </div>
+                    <div style="display: flex; margin-top: 1.5rem">
+                        <div class="box major-box" style="margin: 0 1rem 0 0">
+                            <a href="https://www.cse.ust.hk/bsc/" target="_blank">
+                                <div style="width: 3rem; height: 0.3rem; background: linear-gradient(to bottom right, blue, purple);margin-top: -0.5rem; margin-bottom: 1rem;"></div>
+                                <h5><b>B.Sc. in Computer Science</u></b></h5> at Depart. of Computer Science & Engineering <br>
+                            </a>
+                        </div>
+                        <div class="box major-box" style="margin: 0 0 0 1rem">
+                            <a href="https://www.shss.ust.hk/ug/major/qsa/" target="_blank">
+                                <div style="width: 3rem; height: 0.3rem; background: linear-gradient(to bottom right, rgb(216, 97, 0), rgb(148, 0, 0));margin-top: -0.5rem; margin-bottom: 1rem;"></div>
+                                <h5><b>B.Sc. in Quant. Social Analysis</a></b></h5> at School of Humanities & Social Science                              
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" data-toggle="collapse" data-target="#honors">
+                        <div class="box major-box" style="width: 100%; margin-top: 1.5rem">
+                            <div style="width: 3rem; height: 0.3rem; background: linear-gradient(to bottom right, rgb(255, 240, 108),rgb(218, 185, 0));margin-top: -0.5rem; margin-bottom: 1rem;"></div>
+                            <h5><b>Honors</b></h5>
+                            <div id="honors" class="collapse">
+                                <p>· Admission Scholarship, 50,000 HKD (2019)</p>
+                                <p>· Dean's List (2019)</p>
+                                <p>· Still working hard</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>		
+        <div class="row box">
+            <div class="col-xs-12 col-md-3">
+                <div class="path">Workspace/Self/Skills</div>
+            </div>
+            <div class="col-xs-12 col-md-5">
+                <div id="chart-outer">
+                    <div class="chart" id="lang-chart">Lang</div>
+                    <div class="chart" id="lib-chart">Framew.&Lib</div>
+                    <div class="chart" id="design-chart">Design</div>
+                </div>
+                <script>
+                    var langColorMap = d3.interpolateRgb(
+                        d3.rgb('#d6e685'),
+                        d3.rgb('#1e6823')
+                    );
+                    var langs = [{
+                        name: "JavaScript",
+                        level: 0.9,
+                    },{
+                        name: "html&css",
+                        level: 0.9,
+                    },{
+                        name: "TypeScript",
+                        level: 0.6,
+                    },{
+                        name: "Java",
+                        level: 0.6,
+                    },{
+                        name: "C#",
+                        level: 0.6,
+                    },{
+                        name: "MySQL",
+                        level: 0.5,
+                    },{
+                        name: "PHP",
+                        level: 0.1,
+                    }];
+                    var libColorMap = d3.interpolateRgb(
+                        d3.rgb('#a1a3ff'),
+                        d3.rgb('#31328d')
+                    );
+                    var libs = [{
+                        name: "Vue",
+                        level: 0.8,
+                    },{
+                        name: "Node.js",
+                        level: 0.7,
+                    },{
+                        name: "D3.js",
+                        level: 0.5,
+                    },{
+                        name: "Echarts.js",
+                        level: 0.5,
+                    },{
+                        name: ".NET",
+                        level: 0.4,
+                    },{
+                        name: "Laravel",
+                        level: 0.1,
+                    }];
+                    var designColorMap = d3.interpolateRgb(
+                        d3.rgb('#e0aea1'),
+                        d3.rgb('#a31a1a')
+                    );
+                    var designs = [{
+                        name: "PS",
+                        level: 0.8,
+                    },{
+                        name: "Figma",
+                        level: 0.6,
+                    },{
+                        name: "PR",
+                        level: 0.5,
+                    },{
+                        name: "Rhino",
+                        level: 0.1,
+                    }]
+                    var lang = d3.select('#lang-chart')
+                        .selectAll("div")
+                        .data(langs)
+                        .enter()
+                        .append("a")
+                        lang.append("box")
+                        .style("background-color", (d)=> {
+                            return d == 0 ? '#eee' : langColorMap(d.level);
+                        })
+                        lang.append("text")
+                        .text((d)=> d.name)
+                    var lib = d3.select('#lib-chart')
+                        .selectAll("div")
+                        .data(libs)
+                        .enter()
+                        .append("a")
+                        lib.append("box")
+                        .style("background-color", (d)=> {
+                            return d == 0 ? '#eee' : libColorMap(d.level);
+                        })
+                        lib.append("text")
+                        .text((d)=> d.name)
+                    var design = d3.select('#design-chart')
+                        .selectAll("div")
+                        .data(designs)
+                        .enter()
+                        .append("a")
+                        design.append("box")
+                        .style("background-color", (d)=> {
+                            return d == 0 ? '#eee' : designColorMap(d.level);
+                        })
+                        design.append("text")
+                        .text((d)=> d.name)
+                </script>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div id="chart-outer">
+                    <div class="course-chart-container">
+                        <div>Courses taken at HKUST (2019-2020)</div>
+                        <svg width="100%" height="100%"></svg>
+                    </div>
+                </div>
+                <script>
+                    var width = 250, height = 150;
+                    var outerRadius = 60;
+                    var innerRadius = 40;
+                    // 创建一个分组用来组合要画的图表元素
+                    var main = d3.select('.course-chart-container svg').append('g')
+                            .classed('main', true)
+                            .attr('transform', "translate(" + width/2 + ',' + height/2 + ')');
+                    // 模拟数据
+                    var dataset = [
+                        {name: 'Social Science', value: 6},
+                        {name: 'Computer Science', value: 5},
+                        {name: 'Math', value: 3},
+                        {name: 'Humanity', value: 2},
+                    ];
+                    // 转换原始数据为能用于绘图的数据
+                    var pie = d3.pie()
+                            .sort(null)
+                            .value(function(d) {
+                                return d.value;
+                            });
+                    // pie是一个函数
+                    var pieData = pie(dataset);
+                        // 创建计算弧形路径的函数
+
+                    var arc = d3.arc()
+                        .innerRadius(innerRadius)
+                        .outerRadius(outerRadius)
+                        .padAngle(0.02);
+                    
+                    var slices = main.append('g').attr('class', 'slices');
+                    // 添加弧形元素（g中的path）
+                    var arcs = slices.selectAll('g')
+                        .data(pieData)
+                        .enter()
+                        arcs.append('path')
+                        .attr('fill', function(d, i) {
+                            return getColor(i);
+                        })
+                        .attr('d', function(d){
+                            return arc(d);
+                        });
+                        arcs.append("text")  //给饼图的每一部分添加text元素
+                            .attr("transform", function(d) {                   
+                                d.innerRadius = innerRadius; 
+                                d.outerRadius = outerRadius;
+                                return "translate(" + arc.centroid(d) + ")";        //返回path的中心用于设置文字相对于（0，0）的偏移
+                            })
+                            .attr("text-anchor", "middle") //文字居中
+                            .attr("font-size", "10px")//文字大小
+                            .text(function(d, i) { return dataset[i].name; }); //文字内容从数据list中根据index获取
+                    function getColor(idx) {
+                        var palette = [
+                            '#8d98b3', '#a1a3ff', '#d6e685', '#dc69aa',
+                            '#07a2a4', '#9a7fd1', '#588dd5', '#f5994e', '#c05050',
+                            '#59678c', '#c9ab00', '#7eb00a', '#6f5553', '#c14089'
+                        ]
+                        return palette[idx % palette.length];
+                    }
+                </script>
             </div>
         </div>
-        <br>
-        <div class="container">
-            <a href="#" data-toggle="collapse" data-target="#Project-personal_page"><b>Web page - This static site</b><i class="glyphicon glyphicon-chevron-down"></i></a>  
-            <div id="Project-personal_page" class="collapse">
-                <div class="container">
-                    <img src="./pics/icon.png">
-                    <p><b>Role:</b> developer </p>
-                    <p><b>Technology Stack:</b> HTML (bootstrap)& CSS & JavaScript (jQuery) & my awful art</p>
-                    <p><b>Description:</b> It's a simple single page.</p>
-                    <p><b>Link:</b> This site </p>
-                    <p><b>last update:</b> 2020/2/12</p>
-                </div>                
+        <div class="row box">
+            <div class="col-xs-12 col-md-2">
+                <div class="path">Workspace/Self/Work</div>
+            </div>
+            <div class="col-xs-12 col-md-10">
+                <div class="work-item-outer">
+                    <div class="work-item" id="work-1" onclick="handleExpand(this)">
+                        <a href="#" data-toggle="collapse" data-target="#work-item-1">
+                            <div class="poster" style="background-image: url(pics/qiyanlogo.png);">
+                                <div>
+                                    <p style="color: gray">Frontend Developer Intern <br><span style="font-size: 13px;">(2020.5 - 2020.8)</span></p>
+                                    <h5 style="margin-top: -6px"><b>Qiyan Data 企研数据</b></h5>    
+                                </div>
+                                <div style="height: 12rem; width: 100%"></div>
+                                <div>
+                                    <span class="badge badge-secondary" style="background-color: rgb(0, 170, 0)">Vue.js</span>
+                                    <span class="badge badge-secondary" style="background-color: rgb(0, 75, 189)">Typescript</span>
+                                    <span class="badge badge-secondary" style="background-color: rgb(211, 7, 0)">Echarts.js</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div id="work-item-1" class="collapse">
+                            <p><i>Qiyan Data, Hangzhou is a company that provides tailored data resource and technical services for scholars and think tanks.</i></p>
+                            · Developed a charting tool for the customers with academic needs in data visualization, <a href="https://www.gaoxiazhitu.com/" target="_blank"><u>Gaoxia(高下製圖)</u></a>,
+                            using Vue, Typescript, Antd, and Echarts.js.<br>
+                            · Improved the interactive operation of the widget configs by designing the Vuex store system of Gaoxia.<br>
+                            · Added chart templates including Density Map, Heatmap, and Sankey Diagram using Echarts.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row box">
+            <div class="col-xs-12 col-md-2">
+                <div class="path">Workspace/Self/Proj</div>
+            </div>
+            <div class="col-xs-12 col-md-10">  
+                <div class="work-item-outer">
+                    <div class="work-item" id="project-1" onclick="handleExpand(this);">
+                        <a href="#" data-toggle="collapse" data-target="#project-detail-1">
+                            <div class="poster" style="background-image: url(pics/goklogo.png);">
+                                <div>
+                                    <p style="color: gray">Web Board Game</p>
+                                    <h5 style="margin-top: -6px"><b>Game of Kings</b></h5>    
+                                </div>
+                                <div style="height: 13.5rem; width: 100%"></div>
+                                <div>
+                                    <span class="badge badge-secondary" style="background-color: rgb(0, 170, 0)">Vue.js</span>
+                                    <span class="badge badge-secondary" style="background-color: rgb(4, 94, 228)">.NET</span>
+                                    <span class="badge badge-secondary" style="background-color: rgb(189, 0, 142)">SQL</span>
+                                </div>
+                            </div>
+                            <div id="project-detail-1" class="collapse">
+                                <p><i>It's a multiplayer strategic game and the players have different identities, and skills. "Bullet" is the hard currency and the players can shoot the people they suspect or trade the bullets with others. There are two opposite camps: kings and plebeians. The kings need to recognize other kings and the plebeians need to prevent the kings from meeting.</i></p>
+                                <p>· Developed the game as a full-stack developer using Vue.js, .NET Framework, and SQL Server.<br>
+                                · Worked seamlessly with the game designer, discussed and improved the balance and the logical flow from time to time.</p>
+                                <div class="bio-link">
+                                    <div><a href="https://github.com/Bruceshark/GOK_front_end" target="_blank"><img src="./pics/github.svg"/></a></div>
+                                    <div><a href="http://gok.feshangye.top/" target="_blank"><img src="./pics/link.svg"/></a></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="work-item" id="project-2" onclick="handleExpand(this);">
+                        <a href="#" data-toggle="collapse" data-target="#project-2-detail">
+                            <div class="poster" style="background-image: url(pics/icon.png); background-size: 30%;">
+                                <div>
+                                    <p style="color: gray">Homepage</p>
+                                    <h5 style="margin-top: -6px"><b>This Site</b></h5>    
+                                </div>
+                                <div style="height: 13.5rem; width: 100%"></div>
+                                <div>
+                                    <span class="badge badge-secondary" style="background-color: rgb(161, 3, 182)">Boostrap</span>
+                                    <span class="badge badge-secondary" style="background-color:rgb(0, 170, 0)">HTML&CSS</span>
+                                    <span class="badge badge-secondary" style="background-color: rgb(211, 7, 0)">D3.js</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div id="project-2-detail" class="collapse">
+                            <br>
+                            <div class="bio-link">
+                                <div><a href="https://github.com/Bruceshark/Bruceshark.github.io" target="_blank"><img src="./pics/github.svg"/></a></div>
+                                <div><a href="#" target="_blank"><img src="./pics/link.svg"/></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>             
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="box">
+                    <div class="path">Workspace/Self/Contact</div>
+                    <div style="padding: 0.5rem">
+                        <p>📧Email: <a href="mailto:yyubv@connect.ust.hk">yyubv@connect.ust.hk</a></p>
+                        <p>📞Tel: s3cr3t</p>
+                        <p>🏠Address: You may find me in a restaurant or a gym</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="box">
+                    <div class="path">Workspace/Friends/Link</div>
+                    <div class="box major-box bio-link" style="width: 100%;">
+                        <a href="https://zhuangbi.student.ust.hk" target="_blank"><img src="./pics/link.svg"/>zhuangbi.student.ust.hk</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- page for Photos -->
 
-    <div class="container" id="photos">
+    <!-- <div class="container" id="photos">
         <div>
             <h2><b>📷Gallery</b></h2>
             <hr>
             <p style="text-align: center"> As an amateur photographer, I'd like to show some recent photos I took or I like here, if you don't have interest then I'm sorry :></p>
-        </div>
-        <div class="swiper-container">
+        </div> -->
+        <!-- <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><a href="./pics/gallery/wenzhou_dongtou.jpg"><img src="./pics/gallery/wenzhou_dongtou.jpg" width="100%"></a></div>
                 <div class="swiper-slide"><a href="./pics/gallery/hongkong_hkust_atrium.jpg"><img src="./pics/gallery/hongkong_hkust_atrium.jpg" width="100%"></a></div>
@@ -257,43 +535,9 @@
                 <div class="swiper-slide"><a href="./pics/gallery/hongkong_twilight_bay.jpg"><img src="./pics/gallery/hongkong_twilight_bay.jpg" width="100%"></a></div>
                 <div class="swiper-slide"><a href="./pics/gallery/hangzhou_zhuantang.jpg"><img src="./pics/gallery/hangzhou_zhuantang.jpg" width="100%"></a></div>
                 <div class="swiper-slide"><a href="./pics/gallery/hangzhou_westlake_black.jpg"><img src="./pics/gallery/hangzhou_westlake_black.jpg" width="55%" style="margin-left:23%"></a></div>
-            </div>
-            <!-- 如果需要分页器 -->
-            <div class="swiper-pagination"></div>
-            <!-- 如果需要导航按钮 -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>         
-        </div>
-    </div> 
-
-    <!-- page for Contact -->
-
-    <div class="container" id="contact">
-        <div>
-            <h2><b>📧Contact</b></h2>
-            <hr>
-            <div class="col-xs-12 col-md-4" style="text-align:center">
-                <p style="text-align:center">Email: <a href="mailto:bruceyuyue@hotmail.com">bruceyuyue@hotmail.com</a></p>
-            </div>
-            <div class="col-xs-12 col-md-4" style="text-align:center">
-                <p style="text-align:center">Tel: s3cr3t</p>
-            </div>
-            <div class="col-xs-12 col-md-4" style="text-align:center">
-                <p style="text-align:center">Address: You may find me in a restaurant or a gym</p>
-            </div>
-        </div>
-    </div>    
-
-    <div class="container" id="comments">
-        <div>
-            <h2><b>🙇‍♂️Leave sth before u leave</b></h2>
-            <hr>
-            <p  class="col-xs-12 col-md-9">This is a temporarily free and open place powered by facebook comment plugin, you can leave any comment here through your fb account(btw, is fb free?)中國大陸的訪問者請翻墻留言，對不起:(</p>
-            <div class="container col-xs-12 col-md-9">
-                <div class="fb-comments" data-href="http://www-personal.umich.edu/~bruceyu/" data-width="80%" data-numposts="10"></div>
-            </div>
-        </div>
-    </div>
+            </div>     
+        </div> -->
+    <!-- </div>  -->
 
     <footer class="footer">
         <div class="container">
@@ -308,43 +552,14 @@
 
     <!-- Include all frames, plugins, and functions in javascript -->
 
-    <script> //Reference: https://www.cnblogs.com/Wudj/p/9108649.html
-        //小屏幕的情况下折叠导航条
-        $(window).scroll(function () {
-          if ($(window).width() < 768) {
-            //点击导航链接之后，把导航选项折叠起来
-            $("#navbar a").click(function () {
-              $("#navbar").collapse('hide');
-            });
-            //滚动屏幕时，把导航选项折叠起来
-            $(window).scroll(function () {
-              $("#navbar").collapse('hide');
-            });
-          }
-        });
-        //初始化swiper
-        $(document).ready(function () {
-            var mySwiper = new Swiper ('.swiper-container', {
-                direction: 'horizontal', // 垂直切换选项
-                loop: true, // 循环模式选项
-                // 如果需要分页器
-                pagination: {
-                el: '.swiper-pagination',
-                },
-                // 如果需要前进后退按钮
-                navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-                },
-                // 如果需要滚动条
-                // scrollbar: {
-                // el: '.swiper-scrollbar',
-                // },
-            })   
-        })
- 
+    <script>
+        function handleExpand(obj) {
+            var id = $(obj).attr("id");
+            if (document.getElementById(id).style.height === "auto") {
+                $("#" + id).css("height", "100%");
+            } else {
+                $("#" + id).css("height", "auto");
+            }
+        }
     </script>
 </body>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=737011173411749&autoLogAppEvents=1"></script>
-
