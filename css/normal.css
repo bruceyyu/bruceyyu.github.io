@@ -22,9 +22,9 @@ a:active {
     background-color: rgb(246,238,227);
 }
 .jumbotron .theme-switch {
-    position: fixed;
-    top: 1rem;
-    right: 2rem
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .jumbotron .theme-switch :hover{
     cursor: pointer;
