@@ -7,128 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/normal.css" rel="stylesheet" id="theme-css-file">
+    <!-- <link href="css/dark.css" rel="stylesheet" id="theme-css-file"> -->
     <style type="text/css">
-    html, body {width:100%;height:100%;overflow-x: hidden;font-size: 15px}
-    a {
-        color:black;
-        transition: all 0.2s;
-    }
-    a:link {
-        text-decoration: none;
-        color:black;
-    }
-    a:visited {
-        text-decoration: none;
-        color:black;
-    }
-    a:hover {
-        text-decoration: none;
-        color:rgb(54, 54, 54);
-    }
-    a:active {
-        text-decoration: none;
-        color: black;
-    }
-    .jumbotron { 
-        background-color: rgb(246,238,227); 
-    }
-    .path {
-        font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace!important
-    }
-    .bio-link {
-        display: flex;
-    }
-    .bio-link img {
-        width: 1.5rem;
-        margin: 0 1rem;
-    }
-    .bio-link img:hover {
-        cursor: pointer;
-    }
-    .bio-link img:first-child {
-        margin: 0 1rem 0 0;
-    }
-    .box {
-        width: 100%; 
-        box-shadow: 1px 1px 5px 2px rgba(170, 167, 167, 0.3); 
-        padding: 0.5rem; 
-        border-radius: 5px; 
-        margin: auto; 
-        margin-bottom: 1rem;
-    }
-    .major-box {
-        box-shadow: 0 0 0 0 rgba(170, 167, 167, 0.2);
-        width: 48%;
-        margin: 0.5rem 0;
-        transition: all 0.3s;
-    }
-    .major-box:hover {
-        box-shadow: 1px 1px 5px 1px rgba(170, 167, 167, 0.2);
-    }
-    #chart-outer {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        width: 100%;
-        height: 100%;
-    }
-    #chart-outer .chart{
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-    }
-    .chart box {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin-right: 3px;
-    }
-    .chart text {
-        font-family: "Open Sans";
-        text-anchor: middle;
-        color: rgb(34,​ 34,​ 34);
-        font-size: 12px;
-    }
-    text {
-        font-family: "Open Sans";
-        text-anchor: middle;
-        color: rgb(34,​ 34,​ 34);
-        font-size: 12px;
-    }
-    polyline {
-        fill: none;
-        stroke: #000000;
-        stroke-width: 2px;
-        stroke-dasharray: 5px;
-    }
-    .work-item-outer {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .work-item {
-        width: 17em;
-        height: auto;
-        box-shadow: 2px 2px 35px 1px rgba(170, 167, 167, 0.5);
-        border-radius: 10px; 
-        margin: 1rem 0.5rem 1rem 0.5rem; padding: 0.5em;
-        transition: all 0.5s;
-        /* height: 22rem; */
-    }
-    .work-item .poster{
-        width: 100%; height: 20rem; 
-        background-size: contain; background-repeat: no-repeat; background-position: 50%;
-    }
-    .work-item:hover {
-        cursor: pointer;
-        transform: translateY(-5px);
-        box-shadow: 2px 2px 45px 1px rgba(170, 167, 167, 0.5);
-    }
-    .work-item .desc {
-        width: 100%;
-    }
-    .work-item-detail {
-        box-shadow: 2px 2px 35px 1px rgba(170, 167, 167, 0.5);
-    }
+        html, body {width:100%;height:100%;overflow-x: hidden;font-size: 15px}
     </style>
     <script src="https://cdn.bootcdn.net/ajax/libs/d3/6.0.0/d3.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
@@ -144,9 +26,30 @@
                     <p style="margin-top:-10px"><b>My name is Bruce Yu Yue.</b></p>
                     <p style="margin-top:-10px">嗨今天過得好嗎，我叫<a target="_blank" href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%99%9E"><u>虞</u></a>越，會寫一點代碼，喜歡吃、拍照片、健身。離技術還很遠，離肥胖很近。</p>
                     <div class="bio-link">
-                        <div><a href="https://github.com/bruceshark" target="_blank"><img src="./pics/github.svg"/></a></div>
-                        <div><a href="https://www.linkedin.com/in/yuyuebruce/" target="_blank"><img src="./pics/linkedin.svg"/></a></div>
+                        <a href="https://github.com/bruceshark" target="_blank">
+                            <svg t="1599628540995" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2178" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80"><defs><style type="text/css"></style></defs><path d="M512.96 3.52C230.72 3.52 1.92 232.32 1.92 514.56c0 225.92 146.56 417.28 349.44 485.12 25.6 4.8 34.88-11.2 34.88-24.64 0-12.16-0.32-44.16-0.64-87.04-142.08 31.04-172.16-68.48-172.16-68.48-23.36-59.2-56.64-74.88-56.64-74.88-46.72-31.36 3.2-30.72 3.2-30.72 51.2 3.52 78.4 52.8 78.4 52.8 45.44 78.08 119.68 55.68 148.8 42.56 4.8-32.96 17.92-55.68 32.32-68.48-113.6-12.8-232.96-56.64-232.96-252.48 0-55.68 19.84-101.44 52.48-137.28-5.12-12.8-22.72-64.96 5.12-135.36 0 0 42.88-13.76 140.48 52.48 40.64-11.2 84.48-16.96 128-17.28 43.52 0.32 87.04 5.76 128 17.28 97.6-66.24 140.48-52.48 140.48-52.48 27.84 70.4 10.24 122.24 5.12 135.36 32.64 35.84 52.48 81.28 52.48 137.28 0 196.48-119.36 239.68-233.28 252.16 18.24 15.68 34.56 47.04 34.56 94.72 0 68.48-0.64 123.52-0.64 140.16 0 13.76 9.28 29.44 35.2 24.64C877.76 932.16 1024 740.48 1024 514.88 1024 232.32 795.2 3.52 512.96 3.52z" fill="#181616" p-id="2179"></path></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yuyuebruce/" target="_blank">
+                            <svg t="1599628532430" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1440" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80"><defs><style type="text/css"></style></defs><path d="M896 64H127.8C92.6 64 64 93 64 128.6v766.8C64 931 92.6 960 127.8 960H896c35.2 0 64-29 64-64.6V128.6c0-35.6-28.8-64.6-64-64.6zM334.8 832H202V404.4h133V832z m-66.4-486c-42.6 0-77-34.6-77-77S225.8 192 268.4 192c42.4 0 77 34.6 77 77 0 42.6-34.4 77-77 77z m564.2 486h-132.8V624c0-49.6-1-113.4-69-113.4-69.2 0-79.8 54-79.8 109.8V832h-132.8V404.4h127.4v58.4h1.8c17.8-33.6 61.2-69 125.8-69 134.4 0 159.4 88.6 159.4 203.8V832z" p-id="1441"></path></svg>
+                        </a>
                     </div>
+                    <div class="theme-switch" onclick="test()">
+                        <span id="theme-night"  style="display: none">🌙</span>
+                        <span id="theme-day">☀</span>
+                    </div>
+                    <script>
+                        function test() {
+                            if (document.getElementById('theme-night').style.display !== "none") {
+                                $('#theme-night').css("display", "none");
+                                $('#theme-day').css("display", "inline");
+                                document.getElementById('theme-css-file').href = 'css/normal.css';
+                            } else {
+                                $('#theme-day').css("display", "none");
+                                $('#theme-night').css("display", "inline");
+                                document.getElementById('theme-css-file').href = 'css/dark.css';
+                            }
+                        }
+                    </script>
                 </div>     
                 <div class="col-xs-12 col-sm-6" style="text-align:left;">
                 </div>  
@@ -162,16 +65,16 @@
                 <div class="box">
                     <div class="path">Workspace/Self/Readme</div>
                     <div style="display: flex; margin-top: 1rem; flex-wrap: wrap; justify-content: space-between;">
-                        <div class="box major-box">
+                        <div class="box small-box">
                             <h5><b>📕Reading</b></h5> Sci-Fi: Some featured books: <i>Galactic Empire</i> by Asimov, <i>Stories of Your Life and Others</i> by Ted Chiang...<br>                                
                         </div>
-                        <div class="box major-box">
+                        <div class="box small-box">
                             <h5><b>🤓Learning</b></h5> Web Dev, Data Viz, UIUX Design, Social Network Analysis, and more to explore...                             
                         </div>
-                        <div class="box major-box">
+                        <div class="box small-box">
                             <h5><b>😎Other</b></h5> Chinese Folk Music (bamboo flute) / Photography / Fitness / Dim Sum               
                         </div>
-                        <div class="box major-box">
+                        <div class="box small-box">
                             <a href="https://www.linkedin.com/in/yuyuebruce/" target="_blank">
                                 <h5><b>💼Hire me!</b></h5>Seeking for opportunities in projects related to  web dev, HCI, and quant social science
                             </a>
@@ -200,13 +103,13 @@
                         <div>2023.7</div>
                     </div>
                     <div style="display: flex; margin-top: 1.5rem">
-                        <div class="box major-box" style="margin: 0 1rem 0 0">
+                        <div class="box small-box" style="margin: 0 1rem 0 0">
                             <a href="https://www.cse.ust.hk/bsc/" target="_blank">
                                 <div style="width: 3rem; height: 0.3rem; background: linear-gradient(to bottom right, blue, purple);margin-top: -0.5rem; margin-bottom: 1rem;"></div>
                                 <h5><b>B.Sc. in Computer Science</u></b></h5> at Depart. of Computer Science & Engineering <br>
                             </a>
                         </div>
-                        <div class="box major-box" style="margin: 0 0 0 1rem">
+                        <div class="box small-box" style="margin: 0 0 0 1rem">
                             <a href="https://www.shss.ust.hk/ug/major/qsa/" target="_blank">
                                 <div style="width: 3rem; height: 0.3rem; background: linear-gradient(to bottom right, rgb(216, 97, 0), rgb(148, 0, 0));margin-top: -0.5rem; margin-bottom: 1rem;"></div>
                                 <h5><b>B.Sc. in Quant. Social Analysis</a></b></h5> at School of Humanities & Social Science                              
@@ -214,7 +117,7 @@
                         </div>
                     </div>
                     <a href="#" data-toggle="collapse" data-target="#honors">
-                        <div class="box major-box" style="width: 100%; margin-top: 1.5rem">
+                        <div class="box small-box" style="width: 100%; margin-top: 1.5rem">
                             <div style="width: 3rem; height: 0.3rem; background: linear-gradient(to bottom right, rgb(255, 240, 108),rgb(218, 185, 0));margin-top: -0.5rem; margin-bottom: 1rem;"></div>
                             <h5><b>Honors</b></h5>
                             <div id="honors" class="collapse">
@@ -237,7 +140,9 @@
                     <div class="chart" id="lib-chart">Framew.&Lib</div>
                     <div class="chart" id="design-chart">Design</div>
                 </div>
+                <!-- D3画热力图 -->
                 <script>
+                    // 画技能热力图
                     var langColorMap = d3.interpolateRgb(
                         d3.rgb('#d6e685'),
                         d3.rgb('#1e6823')
@@ -341,26 +246,27 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div id="chart-outer">
-                    <div class="course-chart-container">
+                    <div class="chart" id="course-chart">
                         <div>Courses taken at HKUST (2019-2020)</div>
                         <svg width="100%" height="100%"></svg>
                     </div>
                 </div>
+                <!-- D3画饼图 -->
                 <script>
-                    var width = 250, height = 150;
-                    var outerRadius = 60;
-                    var innerRadius = 40;
-                    // 创建一个分组用来组合要画的图表元素
-                    var main = d3.select('.course-chart-container svg').append('g')
-                            .classed('main', true)
-                            .attr('transform', "translate(" + width/2 + ',' + height/2 + ')');
-                    // 模拟数据
+                    // 画课程饼图
                     var dataset = [
                         {name: 'Social Science', value: 6},
                         {name: 'Computer Science', value: 5},
                         {name: 'Math', value: 3},
                         {name: 'Humanity', value: 2},
                     ];
+                    var width = 250, height = 150;
+                    var outerRadius = 60;
+                    var innerRadius = 40;
+                    // 创建一个分组用来组合要画的图表元素
+                    var main = d3.select('#course-chart svg').append('g')
+                            .classed('main', true)
+                            .attr('transform', "translate(" + width/2 + ',' + height/2 + ')');
                     // 转换原始数据为能用于绘图的数据
                     var pie = d3.pie()
                             .sort(null)
@@ -394,8 +300,6 @@
                                 d.outerRadius = outerRadius;
                                 return "translate(" + arc.centroid(d) + ")";        //返回path的中心用于设置文字相对于（0，0）的偏移
                             })
-                            .attr("text-anchor", "middle") //文字居中
-                            .attr("font-size", "10px")//文字大小
                             .text(function(d, i) { return dataset[i].name; }); //文字内容从数据list中根据index获取
                     function getColor(idx) {
                         var palette = [
@@ -413,16 +317,16 @@
                 <div class="path">Workspace/Self/Work</div>
             </div>
             <div class="col-xs-12 col-md-10">
-                <div class="work-item-outer">
-                    <div class="work-item" id="work-1" onclick="handleExpand(this)">
+                <div class="expand-item-outer">
+                    <div class="expand-item" id="work-1" onclick="handleExpand(this)">
                         <a href="#" data-toggle="collapse" data-target="#work-item-1">
                             <div class="poster" style="background-image: url(pics/qiyanlogo.png);">
-                                <div>
-                                    <p style="color: gray">Frontend Developer Intern <br><span style="font-size: 13px;">(2020.5 - 2020.8)</span></p>
-                                    <h5 style="margin-top: -6px"><b>Qiyan Data 企研数据</b></h5>    
+                                <div class="header">
+                                    <div class="sub-title">Frontend Developer Intern</div>
+                                    <div class="title">Qiyan Data 企研数据</div>    
                                 </div>
-                                <div style="height: 12rem; width: 100%"></div>
-                                <div>
+                                <div class="placeholder"></div>
+                                <div class="footer">
                                     <span class="badge badge-secondary" style="background-color: rgb(0, 170, 0)">Vue.js</span>
                                     <span class="badge badge-secondary" style="background-color: rgb(0, 75, 189)">Typescript</span>
                                     <span class="badge badge-secondary" style="background-color: rgb(211, 7, 0)">Echarts.js</span>
@@ -445,52 +349,60 @@
                 <div class="path">Workspace/Self/Proj</div>
             </div>
             <div class="col-xs-12 col-md-10">  
-                <div class="work-item-outer">
-                    <div class="work-item" id="project-1" onclick="handleExpand(this);">
-                        <a href="#" data-toggle="collapse" data-target="#project-detail-1">
+                <div class="expand-item-outer">
+                    <div class="expand-item" id="project-1" onclick="handleExpand(this);">
+                        <a href="#" data-toggle="collapse" data-target="#project-item-1">
                             <div class="poster" style="background-image: url(pics/goklogo.png);">
-                                <div>
-                                    <p style="color: gray">Web Board Game</p>
-                                    <h5 style="margin-top: -6px"><b>Game of Kings</b></h5>    
+                                <div class="header">
+                                    <div class="sub-title">Web Board Game</div>
+                                    <div class="title">Game of Kings</div>    
                                 </div>
-                                <div style="height: 13.5rem; width: 100%"></div>
-                                <div>
+                                <div class="placeholder"></div>
+                                <div class="footer">
                                     <span class="badge badge-secondary" style="background-color: rgb(0, 170, 0)">Vue.js</span>
                                     <span class="badge badge-secondary" style="background-color: rgb(4, 94, 228)">.NET</span>
                                     <span class="badge badge-secondary" style="background-color: rgb(189, 0, 142)">SQL</span>
                                 </div>
                             </div>
-                            <div id="project-detail-1" class="collapse">
+                            <div id="project-item-1" class="collapse">
                                 <p><i>It's a multiplayer strategic game and the players have different identities, and skills. "Bullet" is the hard currency and the players can shoot the people they suspect or trade the bullets with others. There are two opposite camps: kings and plebeians. The kings need to recognize other kings and the plebeians need to prevent the kings from meeting.</i></p>
                                 <p>· Developed the game as a full-stack developer using Vue.js, .NET Framework, and SQL Server.<br>
                                 · Worked seamlessly with the game designer, discussed and improved the balance and the logical flow from time to time.</p>
                                 <div class="bio-link">
-                                    <div><a href="https://github.com/Bruceshark/GOK_front_end" target="_blank"><img src="./pics/github.svg"/></a></div>
-                                    <div><a href="http://gok.feshangye.top/" target="_blank"><img src="./pics/link.svg"/></a></div>
+                                    <a href="https://github.com/Bruceshark/GOK_front_end" target="_blank">
+                                        <svg t="1599628540995" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2178" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80"><defs><style type="text/css"></style></defs><path d="M512.96 3.52C230.72 3.52 1.92 232.32 1.92 514.56c0 225.92 146.56 417.28 349.44 485.12 25.6 4.8 34.88-11.2 34.88-24.64 0-12.16-0.32-44.16-0.64-87.04-142.08 31.04-172.16-68.48-172.16-68.48-23.36-59.2-56.64-74.88-56.64-74.88-46.72-31.36 3.2-30.72 3.2-30.72 51.2 3.52 78.4 52.8 78.4 52.8 45.44 78.08 119.68 55.68 148.8 42.56 4.8-32.96 17.92-55.68 32.32-68.48-113.6-12.8-232.96-56.64-232.96-252.48 0-55.68 19.84-101.44 52.48-137.28-5.12-12.8-22.72-64.96 5.12-135.36 0 0 42.88-13.76 140.48 52.48 40.64-11.2 84.48-16.96 128-17.28 43.52 0.32 87.04 5.76 128 17.28 97.6-66.24 140.48-52.48 140.48-52.48 27.84 70.4 10.24 122.24 5.12 135.36 32.64 35.84 52.48 81.28 52.48 137.28 0 196.48-119.36 239.68-233.28 252.16 18.24 15.68 34.56 47.04 34.56 94.72 0 68.48-0.64 123.52-0.64 140.16 0 13.76 9.28 29.44 35.2 24.64C877.76 932.16 1024 740.48 1024 514.88 1024 232.32 795.2 3.52 512.96 3.52z" fill="#181616" p-id="2179"></path></svg>
+                                    </a>
+                                    <a href="http://gok.feshangye.top/" target="_blank">
+                                        <svg t="1599984296064" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1268" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80"><defs><style type="text/css"></style></defs><path d="M440.224 635.776a51.84 51.84 0 0 1-36.768-15.232c-95.136-95.136-95.136-249.92 0-345.056l192-192C641.536 37.408 702.816 12.032 768 12.032s126.432 25.376 172.544 71.456c95.136 95.136 95.136 249.92 0 345.056l-87.776 87.776a51.968 51.968 0 1 1-73.536-73.536l87.776-87.776a140.16 140.16 0 0 0 0-197.984c-26.432-26.432-61.6-40.992-99.008-40.992s-72.544 14.56-99.008 40.992l-192 192a140.16 140.16 0 0 0 0 197.984 51.968 51.968 0 0 1-36.768 88.768z" p-id="1269"></path><path d="M256 1012a242.4 242.4 0 0 1-172.544-71.456c-95.136-95.136-95.136-249.92 0-345.056l87.776-87.776a51.968 51.968 0 1 1 73.536 73.536l-87.776 87.776a140.16 140.16 0 0 0 0 197.984c26.432 26.432 61.6 40.992 99.008 40.992s72.544-14.56 99.008-40.992l192-192a140.16 140.16 0 0 0 0-197.984 51.968 51.968 0 1 1 73.536-73.536c95.136 95.136 95.136 249.92 0 345.056l-192 192A242.4 242.4 0 0 1 256 1012z" p-id="1270"></path></svg>
+                                    </a>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="work-item" id="project-2" onclick="handleExpand(this);">
-                        <a href="#" data-toggle="collapse" data-target="#project-2-detail">
+                    <div class="expand-item" id="project-2" onclick="handleExpand(this);">
+                        <a href="#" data-toggle="collapse" data-target="#project-item-2">
                             <div class="poster" style="background-image: url(pics/icon.png); background-size: 30%;">
-                                <div>
-                                    <p style="color: gray">Homepage</p>
-                                    <h5 style="margin-top: -6px"><b>This Site</b></h5>    
+                                <div class="header">
+                                    <div class="sub-title">Homepage</div>
+                                    <div class="title">This Site</div>    
                                 </div>
-                                <div style="height: 13.5rem; width: 100%"></div>
-                                <div>
+                                <div class="placeholder"></div>
+                                <div class="footer">
                                     <span class="badge badge-secondary" style="background-color: rgb(161, 3, 182)">Boostrap</span>
                                     <span class="badge badge-secondary" style="background-color:rgb(0, 170, 0)">HTML&CSS</span>
                                     <span class="badge badge-secondary" style="background-color: rgb(211, 7, 0)">D3.js</span>
                                 </div>
                             </div>
                         </a>
-                        <div id="project-2-detail" class="collapse">
+                        <div id="project-item-2" class="collapse">
                             <br>
                             <div class="bio-link">
-                                <div><a href="https://github.com/Bruceshark/Bruceshark.github.io" target="_blank"><img src="./pics/github.svg"/></a></div>
-                                <div><a href="#" target="_blank"><img src="./pics/link.svg"/></a></div>
+                                <a href="https://github.com/Bruceshark/Bruceshark.github.io" target="_blank">
+                                    <svg t="1599628540995" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2178" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80"><defs><style type="text/css"></style></defs><path d="M512.96 3.52C230.72 3.52 1.92 232.32 1.92 514.56c0 225.92 146.56 417.28 349.44 485.12 25.6 4.8 34.88-11.2 34.88-24.64 0-12.16-0.32-44.16-0.64-87.04-142.08 31.04-172.16-68.48-172.16-68.48-23.36-59.2-56.64-74.88-56.64-74.88-46.72-31.36 3.2-30.72 3.2-30.72 51.2 3.52 78.4 52.8 78.4 52.8 45.44 78.08 119.68 55.68 148.8 42.56 4.8-32.96 17.92-55.68 32.32-68.48-113.6-12.8-232.96-56.64-232.96-252.48 0-55.68 19.84-101.44 52.48-137.28-5.12-12.8-22.72-64.96 5.12-135.36 0 0 42.88-13.76 140.48 52.48 40.64-11.2 84.48-16.96 128-17.28 43.52 0.32 87.04 5.76 128 17.28 97.6-66.24 140.48-52.48 140.48-52.48 27.84 70.4 10.24 122.24 5.12 135.36 32.64 35.84 52.48 81.28 52.48 137.28 0 196.48-119.36 239.68-233.28 252.16 18.24 15.68 34.56 47.04 34.56 94.72 0 68.48-0.64 123.52-0.64 140.16 0 13.76 9.28 29.44 35.2 24.64C877.76 932.16 1024 740.48 1024 514.88 1024 232.32 795.2 3.52 512.96 3.52z" fill="#181616" p-id="2179"></path></svg>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <svg t="1599984296064" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1268" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80"><defs><style type="text/css"></style></defs><path d="M440.224 635.776a51.84 51.84 0 0 1-36.768-15.232c-95.136-95.136-95.136-249.92 0-345.056l192-192C641.536 37.408 702.816 12.032 768 12.032s126.432 25.376 172.544 71.456c95.136 95.136 95.136 249.92 0 345.056l-87.776 87.776a51.968 51.968 0 1 1-73.536-73.536l87.776-87.776a140.16 140.16 0 0 0 0-197.984c-26.432-26.432-61.6-40.992-99.008-40.992s-72.544 14.56-99.008 40.992l-192 192a140.16 140.16 0 0 0 0 197.984 51.968 51.968 0 0 1-36.768 88.768z" p-id="1269"></path><path d="M256 1012a242.4 242.4 0 0 1-172.544-71.456c-95.136-95.136-95.136-249.92 0-345.056l87.776-87.776a51.968 51.968 0 1 1 73.536 73.536l-87.776 87.776a140.16 140.16 0 0 0 0 197.984c26.432 26.432 61.6 40.992 99.008 40.992s72.544-14.56 99.008-40.992l192-192a140.16 140.16 0 0 0 0-197.984 51.968 51.968 0 1 1 73.536-73.536c95.136 95.136 95.136 249.92 0 345.056l-192 192A242.4 242.4 0 0 1 256 1012z" p-id="1270"></path></svg>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -511,8 +423,11 @@
             <div class="col-xs-12 col-md-6">
                 <div class="box">
                     <div class="path">Workspace/Friends/Link</div>
-                    <div class="box major-box bio-link" style="width: 100%;">
-                        <a href="https://zhuangbi.student.ust.hk" target="_blank"><img src="./pics/link.svg"/>zhuangbi.student.ust.hk</a>
+                    <div class="box small-box bio-link" style="width: 100%;">
+                        <a href="https://zhuangbi.student.ust.hk" target="_blank">
+                            <svg t="1599984296064" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1268" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80"><defs><style type="text/css"></style></defs><path d="M440.224 635.776a51.84 51.84 0 0 1-36.768-15.232c-95.136-95.136-95.136-249.92 0-345.056l192-192C641.536 37.408 702.816 12.032 768 12.032s126.432 25.376 172.544 71.456c95.136 95.136 95.136 249.92 0 345.056l-87.776 87.776a51.968 51.968 0 1 1-73.536-73.536l87.776-87.776a140.16 140.16 0 0 0 0-197.984c-26.432-26.432-61.6-40.992-99.008-40.992s-72.544 14.56-99.008 40.992l-192 192a140.16 140.16 0 0 0 0 197.984 51.968 51.968 0 0 1-36.768 88.768z" p-id="1269"></path><path d="M256 1012a242.4 242.4 0 0 1-172.544-71.456c-95.136-95.136-95.136-249.92 0-345.056l87.776-87.776a51.968 51.968 0 1 1 73.536 73.536l-87.776 87.776a140.16 140.16 0 0 0 0 197.984c26.432 26.432 61.6 40.992 99.008 40.992s72.544-14.56 99.008-40.992l192-192a140.16 140.16 0 0 0 0-197.984 51.968 51.968 0 1 1 73.536-73.536c95.136 95.136 95.136 249.92 0 345.056l-192 192A242.4 242.4 0 0 1 256 1012z" p-id="1270"></path></svg>
+                            <span>zhuangbi.student.ust.hk</span>
+                        </a>
                     </div>
                 </div>
             </div>
