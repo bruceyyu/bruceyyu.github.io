@@ -21,7 +21,7 @@
             <div class="row row-header" style="position: relative;">
                 <div style="text-align:left;">
                     <h3><b>Hi. How's ur day?</b></h3>
-                    <p style="margin-top:-10px"><b>My name is <span class="title">Bruce Yu Yue</span>.</b></p>
+                    <p style="margin-top:-10px"><b>My name is <span class="title" onclick="toWechat()">Bruce Yu Yue</span>.</b></p>
                     <p style="margin-top:-10px">嗨今天過得好嗎，我叫<a target="_blank"
                             href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%99%9E"><u>虞</u></a>越，會寫一點代碼，喜歡吃、拍照片、健身。離技術還很遠，離肥胖很近。
                     </p>
@@ -75,6 +75,9 @@
                             $('#theme-night').css("display", "inline");
                             document.getElementById('theme-css-file').href = 'css/dark.css';
                         }
+                    }
+                    function toWechat () {
+                        window.location.href = 'weixin://dl/business/?t=KnHyV1Fbo3d'
                     }
                 </script>
             </div>
@@ -563,14 +566,9 @@
         <div class="container">
             <hr>
             <div class="row justify-content-center">
-                <div class="col-xs-12 col-md-12" style="text-align:center" onclick="toWechat()">
+                <div class="col-xs-12 col-md-12" style="text-align:center">
                     <p>© Copyright 2020 Bruce Yu, designed and programmed by Bruce with 💙</p>
                 </div>
-                <script>
-                    function toWechat () {
-                        window.location.href = 'weixin://dl/business/?t=KnHyV1Fbo3d'
-                    }
-                </script>
             </div>
         </div>
     </footer>
