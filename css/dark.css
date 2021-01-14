@@ -1,145 +1,30 @@
-body {
-    background-color: rgb(60, 60, 60);
-    color: white
-}
-a {
-    color:white;
-    transition: all 0.2s;
-}
-a:link {
-    text-decoration: none;
-    color:white;
-}
-a:visited {
-    text-decoration: none;
-    color:white;
-}
-a:hover {
-    text-decoration: none;
-    color:rgb(206, 206, 206);
-}
-a:active {
-    text-decoration: none;
-    color: white;
-}
-.jumbotron { 
-    background-color:  rgb(31, 31, 31);
-}
-.jumbotron .theme-switch {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.jumbotron .theme-switch :hover{
-    cursor: pointer;
-}
-.path {
-    font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace!important
-}
-.bio-link {
-    display: flex;
-}
-.bio-link svg {
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: 0 1rem;
-}
-.bio-link svg path {
-    fill: white
-}
-.bio-link svg:hover {
-    cursor: pointer;
-}
-.bio-link svg:first-child {
-    margin: 0 1rem 0 0;
+:root {
+    --theme-blue-color: #4eabff;
+    --theme-absolute-color: rgb(60, 60, 60);
+    --theme-color-0:  rgb(43, 43, 43);
+    --theme-color-1:  rgb(43, 43, 43);
+    --theme-invert-color: #ffffff;
+    --theme-invert-color-0: rgb(206, 206, 206);
+    --theme-shadow-0: rgba(77, 77, 77, 0.8);
+    --theme-shadow-1: rgba(53, 53, 53, 0.8);
+    --theme-shadow-2: rgba(34, 34, 34, 0.8);
 }
 .box {
     width: 100%; 
-    background-color:rgb(49, 49, 49);
-    box-shadow: 1px 1px 5px 2px rgba(34, 34, 34, 0.8); 
+    background-color:var(--theme-color-1);
+    box-shadow: 1px 3px 4px 2px var(--theme-shadow-2); 
     padding: 0.5rem; 
     border-radius: 5px; 
     margin: auto; 
     margin-bottom: 1rem;
 }
-.small-box {
-    background-color: rgb(60, 60, 60);
-    box-shadow: 0 0 0 0  rgba(71, 71, 71, 0.8);
-    width: 48%;
-    margin: 0.5rem 0;
-    transition: all 0.3s;
-}
-.small-box:hover {
-    box-shadow: 1px 1px 5px 1px rgb(46, 46, 46);
-}
-#chart-outer {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-}
-#chart-outer .chart{
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-}
-#chart-outer .chart box {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 3px;
-}
-#chart-outer .chart text {
-    text-anchor: middle;
-    font-size: 12px;
-    stroke: white
-}
-.expand-item-outer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 .expand-item {
     width: 17em;
     height: 100%;
-    background-color: rgb(60, 60, 60);
+    background-color: var(--theme-absolute-color);
     box-shadow: 2px 2px 35px 1px rgba(27, 27, 27, 0.5);
     border-radius: 10px; 
     margin: 1rem; 
     padding: 0.5em;
     transition: all 0.5s;
-}
-.expand-item .poster{
-    width: 100%; 
-    height: 20rem; 
-    background-size: contain; 
-    background-repeat: no-repeat; 
-    background-position: 50%;
-}
-.expand-item .poster .header{
-    height: 4rem
-}
-.expand-item .poster .header .title {
-    color: white;
-    margin-top: 0.5rem;
-    font-size: 18px;
-    font-weight: bold;
-}
-.expand-item .poster .header .sub-title {
-    color: rgb(219, 217, 217)
-}
-.expand-item .poster .placeholder {
-    height: 14.5rem
-}
-.expand-item .poster .footer {
-    height: 1.5rem
-}
-.expand-item:hover {
-    cursor: pointer;
-    transform: translateY(-5px);
-    box-shadow: 2px 2px 45px 1px rgba(27, 27, 27, 0.7);
-}
-.expand-item .desc {
-    width: 100%;
 }
