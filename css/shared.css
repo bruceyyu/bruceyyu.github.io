@@ -122,7 +122,7 @@ body {
 }
 .expand-item .poster{
     width: 100%; 
-    height: 20rem; 
+    height: 16.5rem; 
     background-size: contain; 
     background-repeat: no-repeat; 
     background-position: 50%;
@@ -140,7 +140,7 @@ body {
             font-weight: bold;
         }
     .expand-item .poster .placeholder {
-        height: 14.5rem
+        height: 11rem
     }
     .expand-item .poster .footer {
         display: flex;
