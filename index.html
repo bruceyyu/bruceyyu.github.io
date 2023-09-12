@@ -10,7 +10,6 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" id="theme-css-file">
     <link href="css/shared.css" rel="stylesheet">
-    <script src="./js/d3.min.js"></script>
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
 </head>
@@ -19,12 +18,25 @@
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header" style="position: relative;">
-                <div style="text-align:left;">
-                    <h3><b>Hi. How's ur day?</b></h3>
-                    <p style="margin-top:-10px"><b>My name is <span class="title" onclick="toWechat()">Bruce Yu
-                                Yue</span>.</b></p>
-                    <p style="margin-top:-10px">嗨今天過得好嗎，我叫<a target="_blank"
-                            href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%99%9E"><u>虞</u></a>越，會寫一點代碼，喜歡吃、拍照片、健身。離技術還很遠，離肥胖很近。
+                <div class="col-xs-12 col-md-8">
+                    <h3>Yue Yu (<a
+                            href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%99%9E">虞</a>越)</h3>
+                    <p>
+                        Hi, I'm Yue (or Bruce), a MPhil student at <a href="http://vis.cse.ust.hk/">HKUST VisLab</a>.
+                        <br />
+                        My
+                        research focuses on developing data
+                        visualization technologies to help people better understand their complex data, with a
+                        particular
+                        interest in the humanity domain. I'm fortunate to be supervised by <a
+                            href="http://huamin.org/">Prof. Huamin Qu</a> and <a
+                            href="https://camerondcampbell.blog/">Prof.
+                            Cameron Campbell</a>, and previously earned my BSc in <a href="./diploma.html">Quantitative
+                            Social Analysis and
+                            Computer
+                            Science</a> with first class honors at HKUST.
+                        <br />
+                        When I'm not working, I enjoy human-nature interaction (i.e., hiking) in Hong Kong.
                     </p>
                     <div class="bio-link">
                         <a href="https://github.com/bruceyyu" target="_blank">
@@ -51,7 +63,51 @@
                                     p-id="1441"></path>
                             </svg>
                         </a>
+                        <a href="https://twitter.com/Bruce_YuYue" target="_blank">
+                            <svg t="1694443068244" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="1611" width="200" height="200">
+                                <path
+                                    d="M919.759462 318.994613c0-9.605475-0.184234-19.102577-0.608696-28.534655 41.060787-30.595551 76.68666-68.894629 104.863684-112.720738a403.247526 403.247526 0 0 1-120.68436 33.017692c43.401647-26.708567 76.68666-69.423851 92.415219-120.68436-40.638132 24.645865-85.589515 42.265535-133.383889 51.446549-38.295465-43.575045-92.944441-71.329413-153.358869-72.360764-116.027926-1.918205-210.084998 96.132418-210.084999 218.973404 0 17.460724 1.826088 34.394031 5.451171 50.745736-174.722834-11.243716-329.55016-102.190479-433.116978-239.293373-18.071226 32.847907-28.438925 71.237296-28.438925 112.377556 0 77.811934 37.090717 146.970271 93.44657 187.779994-34.500598-1.560574-66.819283-12.009553-95.166091-29.141545v2.85744c0 108.752474 72.440238 199.870827 168.560013 221.13003-17.621477 5.012259-36.207475 7.62044-55.322696 7.526516a191.542349 191.542349 0 0 1-39.500214-4.325895c26.708567 89.120675 104.332655 154.231274 196.231295 156.400543-71.923659 59.635948-162.525433 95.258208-260.892145 95.00895-16.960401 0-33.720311-1.137918-50.15149-3.200621 93.011271 63.80109 203.418242 100.960443 322.104923 100.960443 386.350343 0.092117 597.636477-336.191629 597.636477-627.962902z"
+                                    fill="#231815" p-id="1612"></path>
+                            </svg>
+                        </a>
+                        <a href="https://fosstodon.org/@brky" target="_blank">
+                            <svg t="1694443140857" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="2579" width="200" height="200">
+                                <path
+                                    d="M989.568 336.170667c0-222.122667-145.536-287.232-145.536-287.232C770.645333 15.232 644.608 1.066667 513.749333 0h-3.242666c-130.901333 1.066667-256.853333 15.232-330.24 48.938667 0 0-145.536 65.109333-145.536 287.232 0 50.858667-0.981333 111.701333 0.64 176.170666 5.290667 217.258667 39.850667 431.317333 240.682666 484.48 92.586667 24.490667 172.117333 29.653333 236.16 26.112 116.138667-6.4 181.333333-41.472 181.333334-41.472l-3.84-84.266666s-82.986667 26.154667-176.170667 22.997333c-92.373333-3.157333-189.824-9.941333-204.757333-123.349333a234.624 234.624 0 0 1-2.048-31.786667s90.666667 22.186667 205.525333 27.434667c70.229333 3.2 136.106667-4.138667 203.008-12.074667 128.298667-15.317333 240-94.378667 254.037333-166.613333 22.058667-113.706667 20.266667-277.632 20.266667-277.632z m-171.690667 286.250666h-106.538666V361.344c0-55.04-23.168-82.944-69.461334-82.944-51.2 0-76.885333 33.109333-76.885333 98.645333v142.890667h-105.941333v-142.933333c0-65.536-25.685333-98.645333-76.885334-98.645334-46.293333 0-69.461333 27.946667-69.461333 82.944v261.077334H206.165333V353.450667c0-54.997333 13.994667-98.688 42.112-130.986667 29.013333-32.341333 66.944-48.896 114.090667-48.896 54.528 0 95.829333 20.949333 123.136 62.890667L512 280.96l26.538667-44.501333c27.306667-41.941333 68.608-62.890667 123.136-62.890667 47.104 0 85.077333 16.554667 114.090666 48.896 28.074667 32.298667 42.069333 75.989333 42.069334 130.986667v268.970666z"
+                                    p-id="2580" fill="#000000"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto: yue.yu@connect.ust.hk" target="_blank">
+                            <svg t="1694443275207" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="11645" width="200" height="200">
+                                <path
+                                    d="M702.4 509.9l259.1 207.4V302.5L702.4 509.9z m-103.1 82.5c-25.5 20.4-56.8 30.6-88.1 30.6-31.3 0-62.6-10.2-88.1-30.6L369 549.1l-307.3 246c3 22.1 13.9 41.7 29.9 55.9 7.6 6.8 16.5 12.3 26 16.3 10.9 4.5 22.9 7.1 35.5 7.1h716.1c15.9 0 30.8-4.1 43.9-11.2 9.2-5 17.5-11.3 24.5-19 12.3-13.4 20.6-30.5 23.1-49.3L653.5 549.1l-54.2 43.3z m-538.5-290v415.1l259.3-207.6L60.8 302.4z"
+                                    fill="#000000" p-id="11646"></path>
+                                <path
+                                    d="M417.5 515.6l44.3 35.5c28.8 23.1 70.6 23.1 99.3 0l400.8-321.5c-9.7-40.5-46.5-70.8-90.3-70.8H151c-43.8 0-80.5 30.2-90.3 70.6l307.5 246.7 49.3 39.5z"
+                                    fill="#000000" p-id="11647"></path>
+                            </svg>
+                        </a>
                     </div>
+                </div>
+                <div class="col-xs-12 col-md-4 align-self-center text-center">
+                    <img id="self-image" src="./pics/self/tapmum.jpeg" />
+                    <div id="self-image-desc" style="font-family: monospace;">May 2023 @ Tap Mum</div>
+                    <script>
+                        const imageDom = document.getElementById("self-image");
+                        const imageDescDom = document.getElementById("self-image-desc");
+                        const images = [{ "id": "tapmum", "name": "May 2023 @ Tap Mum" }, { "id": "capetown", "name": "Aug 2023 @ Cape Town" }, { "id": "feingoshan", "name": "Feb 2022 @ Fei Ngo Shan" }, { "id": "devilspeak", "name": "Dec 2021 @ Devil's Peak" }, { "id": "highjunkpeak", "name": "Nov 2022 @ High Junk Peak" }]
+                        const pickImage = () => {
+                            const randomIndex = Math.floor(Math.random() * images.length);
+                            const randomImage = images[randomIndex];
+                            imageDom.src = `./pics/self/${randomImage.id}.jpeg`;
+                            imageDescDom.innerText = randomImage.name;
+                        }
+                        imageDom.onmouseover = () => pickImage();
+                        imageDom.onclick = () => pickImage();
+                    </script>
                 </div>
                 <div class="theme-switch" onclick="switchMode()">
                     <span id="theme-night">🌙</span>
@@ -77,505 +133,211 @@
                             document.getElementById('theme-css-file').href = 'css/dark.css';
                         }
                     }
-                    function toWechat() {
-                        window.location.href = 'weixin://dl/business/?t=KnHyV1Fbo3d'
-                    }
                 </script>
             </div>
         </div>
     </header>
 
-    <!-- page for About -->
-
     <div class="container" id="about">
         <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <div class="box">
-                    <div class="path">Workspace/Self/Readme</div>
-                    <div style="display: flex; margin-top: 1rem; flex-wrap: wrap; justify-content: space-between;">
-                        <div class="box small-box">
-                            <div class="title">📕 Reading</div> Sci-Fi: Some featured books: <i>Galactic Empire</i> by
-                            Asimov, <i>Stories of Your Life and Others</i> by Ted Chiang...<br>
-                        </div>
-                        <div class="box small-box">
-                            <div class="title">🤓 Learning</div> Web Dev, Data Viz, UIUX Design, Social Network
-                            Analysis, and more to explore...
-                        </div>
-                        <div class="box small-box">
-                            <div class="title">😎 Other</div> Chinese Folk Music (bamboo flute) / Photography / Fitness
-                            / Dim Sum
-                        </div>
-                        <div class="box small-box">
-                            <a href="https://www.linkedin.com/in/yuyuebruce/" target="_blank">
-                                <div class="title">💼 Hire me!</div>Seeking for opportunities in projects related to web
-                                dev, HCI, and quant social science
-                            </a>
-                        </div>
-                    </div>
+            <div class="col-xs-12 col-md-8">
+                <div class="path">Publications</div>
+                <div id="publication-list">
                 </div>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <div class="box">
-                    <div class="path">Workspace/Self/Edu</div>
-                    <a href="https://www.ust.hk" target="_blank">
-                        <h3 style="text-transform: uppercase;"><b>Hong Kong University of Science and Technology</b>
-                        </h3>
-                    </a>
-                    <!-- <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
-                        <div>2019.9</div>
-                        <div class="progress" style="width: 80%; margin: 0 1rem; align-self: center;">
-                            <div id="progress" class="progress-bar bg-success" role="progressbar" aria-valuenow="75"
-                                aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-                            <script type="text/javascript">
-                                var start = 1567299600;
-                                var end = 1688173200;
-                                var now = Number(new Date().getTime()) / 1000;
-                                var progress = (((now - start) / (end - start)) * 100).toFixed(1);
-                                var progressTxt = document.createTextNode(progress + '%');
-                                document.getElementById('progress').style.width = progress + '%';
-                                document.getElementById('progress').appendChild(progressTxt);
-                            </script>
-                        </div>
-                        <div>2023.7</div>
-                    </div> -->
-                    <div style="display: flex; margin-top: 1.5rem">
-                        <div class="box small-box" style="margin: 0 1rem 0 0">
-                            <a href="https://www.cse.ust.hk/bsc/" target="_blank">
-                                <div
-                                    style="width: 3rem; height: 0.3rem; background: linear-gradient(to bottom right, blue, purple);margin-bottom: 0.5rem; border-radius: 2px;">
-                                </div>
-                                <div class="title">B.Sc. in Computer Science</div> at Depart. of Computer Science &
-                                Engineering <br>
-                            </a>
-                        </div>
-                        <div class="box small-box" style="margin: 0 0 0 1rem">
-                            <a href="https://www.shss.ust.hk/ug/major/qsa/" target="_blank">
-                                <div
-                                    style="width: 3rem; height: 0.3rem; background: linear-gradient(to bottom right, rgb(216, 97, 0), rgb(148, 0, 0));margin-bottom: 0.5rem; border-radius: 2px;">
-                                </div>
-                                <div class="title">B.Sc. in Quant. Social Analysis</div> at School of Humanities &
-                                Social Science
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row box">
-            <div class="col-xs-12 col-md-3">
-                <div class="path">Workspace/Self/Skills</div>
-            </div>
-            <div class="col-xs-12 col-md-5">
-                <div id="chart-outer">
-                    <div class="chart" id="lang-chart">Lang</div>
-                    <div class="chart" id="lib-chart">Framew.&Lib</div>
-                    <div class="chart" id="design-chart">Design</div>
-                </div>
-                <!-- D3画热力图 -->
                 <script>
-                    // 画技能热力图
-                    var langColorMap = d3.interpolateRgb(
-                        d3.rgb('#4eabff'),
-                        d3.rgb('#0F4C81')
-                    );
-                    var langs = [{
-                        name: "JavaScript",
-                        level: 0.9,
-                    }, {
-                        name: "Python",
-                        level: 0.8,
-                    }, {
-                        name: "TypeScript",
-                        level: 0.6,
-                    }, {
-                        name: "Java",
-                        level: 0.6,
-                    }, {
-                        name: "C#",
-                        level: 0.6,
-                    }, {
-                        name: "MySQL",
-                        level: 0.5,
-                    }, {
-                        name: "PHP",
-                        level: 0.1,
-                    }];
-                    var libColorMap = d3.interpolateRgb(
-                        d3.rgb('#4eabff'),
-                        d3.rgb('#0F4C81')
-                    );
-                    var libs = [{
-                        name: "Vue",
-                        level: 0.8,
-                    }, {
-                        name: "Node.js",
-                        level: 0.7,
-                    }, {
-                        name: "Flask",
-                        level: 0.7,
-                    }, {
-                        name: "D3.js",
-                        level: 0.5,
-                    }, {
-                        name: ".NET",
-                        level: 0.4,
-                    }, {
-                        name: "Laravel",
-                        level: 0.1,
-                    }];
-                    var designColorMap = d3.interpolateRgb(
-                        d3.rgb('#4eabff'),
-                        d3.rgb('#0F4C81')
-                    );
-                    var designs = [{
-                        name: "PS",
-                        level: 0.8,
-                    }, {
-                        name: "Figma",
-                        level: 0.6,
-                    }, {
-                        name: "PR",
-                        level: 0.5,
-                    }, {
-                        name: "Rhino",
-                        level: 0.1,
-                    }]
-                    var lang = d3.select('#lang-chart')
-                        .selectAll("div")
-                        .data(langs)
-                        .enter()
-                        .append("a")
-                    lang.append("box")
-                        .style("background-color", (d) => {
-                            return d == 0 ? '#eee' : langColorMap(d.level);
+                    var researchList = [
+                        {
+                            imgSrc: './pics/publication/neighviz.png',
+                            title: 'NeighViz: Towards Better Understanding of Neighborhood Effects on Social Groups with Spatial Data',
+                            authors: 'Yue Yu, Yifang Wang, Qisen Yang, Di Weng, Yongjun Zhang, Xiaogang Wu, Yingcai Wu, Huamin Qu',
+                            venue: '9th Symposium on Visualization in Data Science (VDS@VIS 2023) (to Appear)',
+                            tags: ['Viz', 'Sociology', 'Urban Science'],
+                        }, {
+                            imgSrc: './pics/publication/foodwise.png',
+                            title: 'FoodWise: Food Waste Reduction and Behavior Change on Campus with Data Visualization and Gamification',
+                            authors: 'Yue Yu, Sophia Yi, Xi Nan, Leo Yu-Ho Lo, Kento Shigyo, Liwenhan Xie, Jeffry Wicaksana, Kwang-Ting Cheng, Huamin Qu',
+                            venue: '6th ACM SIGCAS/SIGCHI Conference on Computing and Sustainable Societies (COMPASS ’23)',
+                            tags: ['Viz', 'Sustainability'],
+                            links: [
+                                { label: 'paper', url: 'https://dl.acm.org/doi/10.1145/3588001.3609364' },
+                                { label: 'presentation', url: 'https://www.youtube.com/watch?v=EftanoT-3lM&list=PLzhsLf-y54j32cx90ujLadarjCkCM6Ph_&index=5' }
+                            ]
+                        },
+                        {
+                            imgSrc: './pics/publication/wallstbets.png',
+                            title: 'Short, Colorful, and Irreverent! A Comparative Analysis of New Users on WallstreetBets During the Gamestop Short-squeeze',
+                            authors: 'Ehsan Ul Haq, Tristan Braud, Lik Hang Lee, Anish Krishna Vallapuram, Yue Yu, Gareth Tyson, Pan Hui',
+                            venue: '31st ACM Web Conference (WWW ’22)',
+                            tags: ['Computational Social Science'],
+                            links: [
+                                { label: 'paper', url: 'https://dl.acm.org/doi/10.1145/3487553.3524202' }
+                            ]
+                        },];
+
+                    $.each(researchList, function (index, item) {
+                        var $row = $('<div class="row research-item"></div>');
+                        var $col1 = $('<div class="col-xs-12 col-md-4"></div>');
+                        var $col2 = $('<div class="col-xs-12 col-md-8"></div>');
+                        var $img = $('<img>').attr('src', item.imgSrc).css('width', '100%');
+                        var $title = $('<div></div>').html('<b>' + item.title + '</b>');
+                        var $authors = $('<div></div>').text(item.authors);
+                        var $venue = $('<div></div>').text(item.venue);
+                        var $links = $('<div></div>')
+                        var $tags = $('<div class="d-flex"></div>');
+                        $.each(item.tags, function (index, tag) {
+                            var $tag = $('<div class="tag"></div>').text(tag);
+                            $tags.append($tag);
+                        });
+                        $.each(item.links, function (index, link) {
+                            var $link = $('<a href="' + link.url + '">[' + link.label + ']</a>');
+                            $links.append($link);
                         })
-                    lang.append("text")
-                        .text((d) => d.name)
-                    var lib = d3.select('#lib-chart')
-                        .selectAll("div")
-                        .data(libs)
-                        .enter()
-                        .append("a")
-                    lib.append("box")
-                        .style("background-color", (d) => {
-                            return d == 0 ? '#eee' : libColorMap(d.level);
-                        })
-                    lib.append("text")
-                        .text((d) => d.name)
-                    var design = d3.select('#design-chart')
-                        .selectAll("div")
-                        .data(designs)
-                        .enter()
-                        .append("a")
-                    design.append("box")
-                        .style("background-color", (d) => {
-                            return d == 0 ? '#eee' : designColorMap(d.level);
-                        })
-                    design.append("text")
-                        .text((d) => d.name)
+                        var authorList = item.authors.split(', ');
+                        $.each(authorList, function (index, author) {
+                            if (author === 'Yue Yu') {
+                                authorList[index] = '<b>' + author + '</b>';
+                            }
+                        });
+                        $authors.html(authorList.join(', '));
+                        $col1.append($img);
+                        $col2.append($title, $authors, $venue, $links, $tags);
+                        $row.append($col1, $col2);
+                        $('#publication-list').append($row);
+                    });
                 </script>
             </div>
             <div class="col-xs-12 col-md-4">
-                <div id="chart-outer">
-                    <div class="chart" id="course-chart">
-                        <div style="text-align: center;">Courses taken at HKUST</div>
-                        <svg width="100%" height="100%"></svg>
+                <div class="path">News</div>
+                <a class="twitter-timeline" data-width="400" data-height="600"
+                    href="https://twitter.com/Bruce_YuYue?ref_src=twsrc%5Etfw">Tweets by Bruce_YuYue</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <div class="path">Highlighted Projects</div>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="row research-item">
+                            <div class="col-xs-12 col-md-2">
+                                <img src="./pics/gwalkr_logo.png" />
+                            </div>
+                            <div class="col-xs-12 col-md-10">
+                                <div><b>GWalkR: R Package for Interactive Exploratory Data Analysis</b></div>
+                                <div>🕵️ GWalkR is an interactive Exploratory Data Analysis (EDA) Tool in R. With just
+                                    single line of code, it can simplify your R data analysis and data visualization
+                                    workflow by turning your data frame into a Tableau-style UI for visual
+                                    exploration. Also, by using it in RMarkdown, you can create web page to showcase
+                                    your insights with editable and explorable.</div>
+                                <div>
+                                    🪄 Below are some examples showing the power of GWalkR with RMarkdown. Data are from
+                                    <a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday</a>:
+                                </div>
+                                <div>
+                                    <a href="./show/tidytuesday_etymology.nb.html">[From Peak to Tide]</a>
+                                    <a href="./show/R_tuesday_fair_use.nb.html">[How Fair Use Cases Evolved]</a>
+                                </div>
+                                <div class="badge-bar">
+                                    <a class="badge" href="https://CRAN.R-project.org/package=GWalkR"><img
+                                            src="https://www.r-pkg.org/badges/version/GWalkR" /></a>
+                                    <div class="badge"><img
+                                            src="https://cranlogs.r-pkg.org/badges/grand-total/GWalkR" /></div>
+                                    <a class="badge" href="https://github.com/Kanaries/GWalkR"><img
+                                            src="https://img.shields.io/github/stars/kanaries/gwalkr" /></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- D3画饼图 -->
-                <script>
-                    // 画课程饼图
-                    var dataset = [
-                        { name: 'Social Science', value: 6 },
-                        { name: 'Computer Science', value: 5 },
-                        { name: 'Math', value: 3 },
-                        { name: 'Humanity', value: 2 },
-                    ];
-                    var width = 250, height = 150;
-                    var outerRadius = 60;
-                    var innerRadius = 40;
-                    // 创建一个分组用来组合要画的图表元素
-                    var main = d3.select('#course-chart svg').append('g')
-                        .classed('main', true)
-                        .attr('transform', "translate(" + width / 2 + ',' + height / 2 + ')');
-                    // 转换原始数据为能用于绘图的数据
-                    var pie = d3.pie()
-                        .sort(null)
-                        .value(function (d) {
-                            return d.value;
-                        });
-                    // pie是一个函数
-                    var pieData = pie(dataset);
-                    // 创建计算弧形路径的函数
+            </div>
+        </div>
 
-                    var arc = d3.arc()
-                        .innerRadius(innerRadius)
-                        .outerRadius(outerRadius)
-                        .padAngle(0.02);
-
-                    var slices = main.append('g').attr('class', 'slices');
-                    // 添加弧形元素（g中的path）
-                    var arcs = slices.selectAll('g')
-                        .data(pieData)
-                        .enter()
-                    arcs.append('path')
-                        .attr('fill', function (d, i) {
-                            return getColor(i);
-                        })
-                        .attr('d', function (d) {
-                            return arc(d);
-                        });
-                    arcs.append("text")  //给饼图的每一部分添加text元素
-                        .attr("transform", function (d) {
-                            d.innerRadius = innerRadius;
-                            d.outerRadius = outerRadius;
-                            return "translate(" + arc.centroid(d) + ")";        //返回path的中心用于设置文字相对于（0，0）的偏移
-                        })
-                        .text(function (d, i) { return dataset[i].name; }); //文字内容从数据list中根据index获取
-                    function getColor(idx) {
-                        var palette = [
-                            '#8d98b3', '#a1a3ff', '#d6e685', '#dc69aa',
-                            '#07a2a4', '#9a7fd1', '#588dd5', '#f5994e', '#c05050',
-                            '#59678c', '#c9ab00', '#7eb00a', '#6f5553', '#c14089'
-                        ]
-                        return palette[idx % palette.length];
+        <div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="path">Work & Research Experience</div>
+                    <ul id="work-list">
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="path">Selected Awards</div>
+                    <ul id="award-list">
+                    </ul>
+                </div>
+            </div>
+            <script>
+                var awardList = [
+                    {
+                        name: 'Professor Samuel Chanson Best Final Year Project Award (top 2 in 114 teams)',
+                        year: '2023'
+                    },
+                    {
+                        name: 'University’s Scholarship Scheme for Continuing Undergraduate Students',
+                        year: '2022 - 2023'
+                    },
+                    {
+                        name: 'Dean’s List at HKUST for 4 times',
+                        year: '2019 - 2023'
+                    },
+                    {
+                        name: 'Second place in IEEE SusTech 2022 Student Poster Competition',
+                        year: '2022'
                     }
-                </script>
-            </div>
-            <div class="col-xs-12 col-md-12" style="text-align: right; color: var(--theme-invert-color-0)">
-                <div>powered by D3.js</div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="col-xs-12 col-md-2">
-                <div class="path">Workspace/Self/Research</div>
-            </div>
-            <div class="col-xs-12 col-md-12 expand-item-outer">
-                <ul style="padding: 0.5rem">
-                    <li>Ehsan Ul Haq, Tristan Braud, Lik Hang Lee, Anish Krishna Vallapuram, <b>Yue Yu</b>, Gareth Tyson
-                        and Pan Hui. Short, Colorful, and Irreverent! A Comparative Analysis of New Users on
-                        WallstreetBets During the Gamestop Short-squeeze. In 31st ACM Web Conference (WWW), Lyon, France
-                        (2022). [Acceptance Rate: 17%]</li>
-                </ul>
-            </div>
-        </div>
-        <div class="box">
-            <div class="col-xs-12 col-md-2">
-                <div class="path">Workspace/Self/Work</div>
-            </div>
-            <div class="col-xs-12 col-md-12 expand-item-outer">
-                <div class="expand-item" id="work-1" onclick="handleExpand(this)">
-                    <div class="poster" style="background-image: url(pics/tencent_logo.png);">
-                        <div class="header">
-                            <div class="sub-title">SDE Intern</div>
-                            <div class="title">Tencent 騰訊 PCG</div>
-                        </div>
-                        <div class="placeholder"></div>
-                        <div class="footer">
-                            <div class="tag">Vue.js</div>
-                            <div class="tag">Python</div>
-                            <div class="tag">Microservices</div>
-                        </div>
-                    </div>
-                    <div id="work-1-item" class="collapse">
-                        <p><i>Platform & Content Group (PCG) is responsible for Tencent's Internet platform and
-                                development of the content ecosystem.</i></p>
-                        · Participated in the developing of image-text retrieval Microservices using RPC and Python.<br>
-                        · Developed a website visualizing the team’s deep learning models, using Vue.js and Node.js
-                        (Koa).
-                    </div>
-                </div>
-                <div class="expand-item" id="work-3" onclick="handleExpand(this)">
-                    <div class="poster" style="background-image: url(pics/aqumon_logo.png);">
-                        <div class="header">
-                            <div class="sub-title">Frontend Developer Intern</div>
-                            <div class="title">AQUMON 弘量研究</div>
-                        </div>
-                        <div class="placeholder"></div>
-                        <div class="footer">
-                            <div class="tag">Vue.js</div>
-                            <div class="tag">Echarts.js</div>
-                        </div>
-                    </div>
-                    <div id="work-3-item" class="collapse">
-                        <p><i>AQUMON provides intelligent investment solutions for individuals and institutions.</i></p>
-                        · Participated in the developing of the frontend of the Stock Order Management System from
-                        scratch, using Vue.js, Vuex, and Echarts.js.<br>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="col-xs-12 col-md-2">
-                <div class="path">Workspace/Self/Proj</div>
-            </div>
-            <div class="col-xs-12 col-md-12 expand-item-outer">
-                <div class="expand-item" id="project-1" onclick="handleExpand(this);">
-                    <div class="poster" style="background-image: url(pics/sexismviz.svg); background-size: 30%;">
-                        <div class="header">
-                            <div class="sub-title">Computational Social Science</div>
-                            <div class="title">SexismViz</div>
-                        </div>
-                        <div class="placeholder"></div>
-                        <div class="footer">
-                            <div class="tag">Vue.js</div>
-                            <div class="tag">D3.js</div>
-                        </div>
-                    </div>
-                    <div id="project-1-item" class="collapse">
-                        <p><i>It is an interactive web tool that aims to help both non-specialists and social science
-                                scholars study sexist speech on the mainstream Chinese social media platform, Sina
-                                Weibo.</i></p>
-                        <p>· Designed and developed the website using Vue.js and the data visualization components using
-                            D3.js.<br>
-                            · Analyzed the social media data using various computational methods including topic
-                            modeling,
-                            geospatial analysis, and regression analysis.</p>
-                        <p>Try it out ⬇️</p>
-                        <div class="bio-link">
-                            <a href="https://github.com/bruceyyu/sexismviz" target="_blank">
-                                <svg t="1599628540995" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg" p-id="2178"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80">
-                                    <defs>
-                                        <style type="text/css"></style>
-                                    </defs>
-                                    <path
-                                        d="M512.96 3.52C230.72 3.52 1.92 232.32 1.92 514.56c0 225.92 146.56 417.28 349.44 485.12 25.6 4.8 34.88-11.2 34.88-24.64 0-12.16-0.32-44.16-0.64-87.04-142.08 31.04-172.16-68.48-172.16-68.48-23.36-59.2-56.64-74.88-56.64-74.88-46.72-31.36 3.2-30.72 3.2-30.72 51.2 3.52 78.4 52.8 78.4 52.8 45.44 78.08 119.68 55.68 148.8 42.56 4.8-32.96 17.92-55.68 32.32-68.48-113.6-12.8-232.96-56.64-232.96-252.48 0-55.68 19.84-101.44 52.48-137.28-5.12-12.8-22.72-64.96 5.12-135.36 0 0 42.88-13.76 140.48 52.48 40.64-11.2 84.48-16.96 128-17.28 43.52 0.32 87.04 5.76 128 17.28 97.6-66.24 140.48-52.48 140.48-52.48 27.84 70.4 10.24 122.24 5.12 135.36 32.64 35.84 52.48 81.28 52.48 137.28 0 196.48-119.36 239.68-233.28 252.16 18.24 15.68 34.56 47.04 34.56 94.72 0 68.48-0.64 123.52-0.64 140.16 0 13.76 9.28 29.44 35.2 24.64C877.76 932.16 1024 740.48 1024 514.88 1024 232.32 795.2 3.52 512.96 3.52z"
-                                        fill="#181616" p-id="2179"></path>
-                                </svg>
-                            </a>
-                            <a href="https://yyubv.student.ust.hk/sosc4300" target="_blank">
-                                <svg t="1599984296064" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg" p-id="1268"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80">
-                                    <defs>
-                                        <style type="text/css"></style>
-                                    </defs>
-                                    <path
-                                        d="M440.224 635.776a51.84 51.84 0 0 1-36.768-15.232c-95.136-95.136-95.136-249.92 0-345.056l192-192C641.536 37.408 702.816 12.032 768 12.032s126.432 25.376 172.544 71.456c95.136 95.136 95.136 249.92 0 345.056l-87.776 87.776a51.968 51.968 0 1 1-73.536-73.536l87.776-87.776a140.16 140.16 0 0 0 0-197.984c-26.432-26.432-61.6-40.992-99.008-40.992s-72.544 14.56-99.008 40.992l-192 192a140.16 140.16 0 0 0 0 197.984 51.968 51.968 0 0 1-36.768 88.768z"
-                                        p-id="1269"></path>
-                                    <path
-                                        d="M256 1012a242.4 242.4 0 0 1-172.544-71.456c-95.136-95.136-95.136-249.92 0-345.056l87.776-87.776a51.968 51.968 0 1 1 73.536 73.536l-87.776 87.776a140.16 140.16 0 0 0 0 197.984c26.432 26.432 61.6 40.992 99.008 40.992s72.544-14.56 99.008-40.992l192-192a140.16 140.16 0 0 0 0-197.984 51.968 51.968 0 1 1 73.536-73.536c95.136 95.136 95.136 249.92 0 345.056l-192 192A242.4 242.4 0 0 1 256 1012z"
-                                        p-id="1270"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="expand-item" id="project-2" onclick="handleExpand(this);">
-                    <div class="poster" style="background-image: url(pics/gwalkr_logo.png);">
-                        <div class="header">
-                            <div class="sub-title">R Package</div>
-                            <div class="title">GWalkR</div>
-                        </div>
-                        <div class="placeholder"></div>
-                        <div class="footer">
-                            <div class="tag">R</div>
-                            <div class="tag">TypeScript</div>
-                        </div>
-                    </div>
-                    <div id="project-2-item" class="collapse">
-                        <p>It is an interactive Exploratory Data Analysis (EDA) Tool in R. It integrates the htmlwidgets with Graphic Walker. It can simplify your R data analysis and data visualization workflow, by turning your data frame into a Tableau-style User Interface for visual exploration.</p>
-                        <div class="bio-link">
-                            <a href="https://github.com/kanaries/gwalkr" target="_blank">
-                                <svg t="1599628540995" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg" p-id="2178"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80">
-                                    <defs>
-                                        <style type="text/css"></style>
-                                    </defs>
-                                    <path
-                                        d="M512.96 3.52C230.72 3.52 1.92 232.32 1.92 514.56c0 225.92 146.56 417.28 349.44 485.12 25.6 4.8 34.88-11.2 34.88-24.64 0-12.16-0.32-44.16-0.64-87.04-142.08 31.04-172.16-68.48-172.16-68.48-23.36-59.2-56.64-74.88-56.64-74.88-46.72-31.36 3.2-30.72 3.2-30.72 51.2 3.52 78.4 52.8 78.4 52.8 45.44 78.08 119.68 55.68 148.8 42.56 4.8-32.96 17.92-55.68 32.32-68.48-113.6-12.8-232.96-56.64-232.96-252.48 0-55.68 19.84-101.44 52.48-137.28-5.12-12.8-22.72-64.96 5.12-135.36 0 0 42.88-13.76 140.48 52.48 40.64-11.2 84.48-16.96 128-17.28 43.52 0.32 87.04 5.76 128 17.28 97.6-66.24 140.48-52.48 140.48-52.48 27.84 70.4 10.24 122.24 5.12 135.36 32.64 35.84 52.48 81.28 52.48 137.28 0 196.48-119.36 239.68-233.28 252.16 18.24 15.68 34.56 47.04 34.56 94.72 0 68.48-0.64 123.52-0.64 140.16 0 13.76 9.28 29.44 35.2 24.64C877.76 932.16 1024 740.48 1024 514.88 1024 232.32 795.2 3.52 512.96 3.52z"
-                                        fill="#181616" p-id="2179"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <div class="box">
-                    <div class="path">Workspace/Self/Contact</div>
-                    <div style="padding: 0.5rem">
-                        <p>📧Email: <a href="mailto:yyubv@connect.ust.hk">yyubv@connect.ust.hk</a></p>
-                        <p>📞Tel: s3cr3t</p>
-                        <p>🏠Address: You may find me in a restaurant or a gym</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <div class="box">
-                    <div class="path">Workspace/Friends/Link</div>
-                    <div class="box small-box bio-link" style="width: 100%;">
-                        <a href="https://zhuangbi.student.ust.hk" target="_blank">
-                            <svg t="1599984296064" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                                xmlns="http://www.w3.org/2000/svg" p-id="1268"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80">
-                                <defs>
-                                    <style type="text/css"></style>
-                                </defs>
-                                <path
-                                    d="M440.224 635.776a51.84 51.84 0 0 1-36.768-15.232c-95.136-95.136-95.136-249.92 0-345.056l192-192C641.536 37.408 702.816 12.032 768 12.032s126.432 25.376 172.544 71.456c95.136 95.136 95.136 249.92 0 345.056l-87.776 87.776a51.968 51.968 0 1 1-73.536-73.536l87.776-87.776a140.16 140.16 0 0 0 0-197.984c-26.432-26.432-61.6-40.992-99.008-40.992s-72.544 14.56-99.008 40.992l-192 192a140.16 140.16 0 0 0 0 197.984 51.968 51.968 0 0 1-36.768 88.768z"
-                                    p-id="1269"></path>
-                                <path
-                                    d="M256 1012a242.4 242.4 0 0 1-172.544-71.456c-95.136-95.136-95.136-249.92 0-345.056l87.776-87.776a51.968 51.968 0 1 1 73.536 73.536l-87.776 87.776a140.16 140.16 0 0 0 0 197.984c26.432 26.432 61.6 40.992 99.008 40.992s72.544-14.56 99.008-40.992l192-192a140.16 140.16 0 0 0 0-197.984 51.968 51.968 0 1 1 73.536-73.536c95.136 95.136 95.136 249.92 0 345.056l-192 192A242.4 242.4 0 0 1 256 1012z"
-                                    p-id="1270"></path>
-                            </svg>
-                            <span>zhuangbi.student.ust.hk</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                ];
+                var workList = [
+                    {
+                        position: 'Software Engineer Intern',
+                        company: 'Kanaries Data',
+                        companyURL: 'https://kanaries.net/',
+                        date: 'June 2023 - Aug 2023'
+                    },
+                    {
+                        position: 'Junior Research Assistant',
+                        company: 'Department of Marketing, HKUST',
+                        companyURL: 'https://mark.hkust.edu.hk/',
+                        date: 'Jan 2021 - May 2023'
+                    },
+                    {
+                        position: 'Software Engineer Intern',
+                        company: 'Tencent',
+                        companyURL: 'https://www.tencent.com/en-us/about.html',
+                        date: 'May 2021 - Aug 2023'
+                    }
+                ];
+                $.each(awardList, function (index, item) {
+                    var $li = $('<li></li>');
+                    var $row = $('<div class="row"></div>');
+                    var $col1 = $('<div class="col-9"></div>').text(item.name);
+                    var $col2 = $('<div class="col-3 align-self-center"></div>').text(item.year);
+                    $row.append($col1, $col2);
+                    $li.append($row);
+                    $('#award-list').append($li);
+                });
+                $.each(workList, function (index, item) {
+                    var $li = $('<li></li>');
+                    var $row = $('<div class="row"></div>');
+                    var $col1 = $('<div class="col-7"></div>');
+                    var $position = $('<div></div>').text(item.position);
+                    var $company = $('<a class="company" href="' + item.companyURL + '">' + item.company + '</a>');
+                    $col1.append($position, $company);
+                    var $col2 = $('<div class="col-5 align-self-center"></div>').text(item.date);
+                    $row.append($col1, $col2);
+                    $li.append($row);
+                    $('#work-list').append($li);
+                });            
+            </script>
         </div>
     </div>
-
-    <!-- page for Photos -->
-
-    <!-- <div class="container" id="photos">
-        <div>
-            <h2><b>📷Gallery</b></h2>
-            <hr>
-            <p style="text-align: center"> As an amateur photographer, I'd like to show some recent photos I took or I like here, if you don't have interest then I'm sorry :></p>
-        </div> -->
-    <!-- <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="./pics/gallery/wenzhou_dongtou.jpg"><img src="./pics/gallery/wenzhou_dongtou.jpg" width="100%"></a></div>
-                <div class="swiper-slide"><a href="./pics/gallery/hongkong_hkust_atrium.jpg"><img src="./pics/gallery/hongkong_hkust_atrium.jpg" width="100%"></a></div>
-                <div class="swiper-slide"><a href="./pics/gallery/hongkong_morning_bay.jpg"><img src="./pics/gallery/hongkong_morning_bay.jpg" width="100%"></a></div>
-                <div class="swiper-slide"><a href="./pics/gallery/hongkong_twilight_bay.jpg"><img src="./pics/gallery/hongkong_twilight_bay.jpg" width="100%"></a></div>
-                <div class="swiper-slide"><a href="./pics/gallery/hangzhou_zhuantang.jpg"><img src="./pics/gallery/hangzhou_zhuantang.jpg" width="100%"></a></div>
-                <div class="swiper-slide"><a href="./pics/gallery/hangzhou_westlake_black.jpg"><img src="./pics/gallery/hangzhou_westlake_black.jpg" width="55%" style="margin-left:23%"></a></div>
-            </div>     
-        </div> -->
-    <!-- </div>  -->
 
     <footer class="footer">
         <div class="container">
             <hr>
             <div class="row justify-content-center">
-                <div class="col-xs-12 col-md-12" style="text-align:center">
-                    <p>© Copyright 2023 Bruce Yu, designed and programmed by Bruce with 💙</p>
+                <div class="col-xs-12 col-md-12 text-center">
+                    <p>Designed and coded by Bruce with 💙. Last updated on Sept 2023. </p>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Include all frames, plugins, and functions in javascript -->
-
-    <script>
-        function handleExpand(obj) {
-            var id = "#" + $(obj).attr("id") + "-item";
-            var classArr = $(id).attr("class").split(/\s+/);
-            if (classArr.indexOf("expanded") !== -1) {
-                $(id).removeClass("expanded");
-                $(id).slideUp(300);
-            } else {
-                $(id).addClass("expanded");
-                $(id).slideDown(300);
-            }
-        }
-    </script>
 </body>
