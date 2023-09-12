@@ -41,7 +41,6 @@ body {
             cursor: pointer;
         }
 #self-image {
-    max-width: 230px;
     width: 100%;
     margin: 0.5rem
 }
