@@ -150,10 +150,10 @@
                             imgSrc: './pics/publication/neighviz.png',
                             title: 'NeighViz: Towards Better Understanding of Neighborhood Effects on Social Groups with Spatial Data',
                             authors: 'Yue Yu, Yifang Wang, Qisen Yang, Di Weng, Yongjun Zhang, Xiaogang Wu, Yingcai Wu, Huamin Qu',
-                            venue: '9th Symposium on Visualization in Data Science (VDS@VIS 2023) (to Appear)',
+                            venue: '9th Symposium on Visualization in Data Science (VDS@VIS 2023)',
                             tags: ['Viz', 'Sociology', 'Urban Science'],
                             links: [
-                                { label: 'paper', url: 'https://arxiv.org/abs/2309.11454' },
+                                { label: 'paper', url: 'https://ieeexplore.ieee.org/abstract/document/10357756' },
                                 { label: 'slides', url: './materials/VDS_NeighViz_long_ver.pdf' }
                             ]
                         }, {
@@ -164,14 +164,15 @@
                             tags: ['Viz', 'Sustainability'],
                             links: [
                                 { label: 'paper', url: 'https://dl.acm.org/doi/10.1145/3588001.3609364' },
-                                { label: 'presentation', url: 'https://www.youtube.com/watch?v=EftanoT-3lM&list=PLzhsLf-y54j32cx90ujLadarjCkCM6Ph_&index=5' }
+                                { label: 'presentation', url: 'https://www.youtube.com/watch?v=EftanoT-3lM&list=PLzhsLf-y54j32cx90ujLadarjCkCM6Ph_&index=5' },
+                                { label: 'blog article', url: 'https://library.hkust.edu.hk/sc/foodwise/' }
                             ]
                         },
                         {
                             imgSrc: './pics/publication/wallstbets.png',
                             title: 'Short, Colorful, and Irreverent! A Comparative Analysis of New Users on WallstreetBets During the Gamestop Short-squeeze',
                             authors: 'Ehsan Ul Haq, Tristan Braud, Lik Hang Lee, Anish Krishna Vallapuram, Yue Yu, Gareth Tyson, Pan Hui',
-                            venue: '31st ACM Web Conference (WWW ’22)',
+                            venue: 'Companion Proceedings of the Web Conference 2022 (WWW ’22)',
                             tags: ['Computational Social Science'],
                             links: [
                                 { label: 'paper', url: 'https://dl.acm.org/doi/10.1145/3487553.3524202' }
@@ -193,7 +194,7 @@
                             $tags.append($tag);
                         });
                         $.each(item.links, function (index, link) {
-                            var $link = $('<a href="' + link.url + '">[' + link.label + ']</a>');
+                            var $link = $('<a href="' + link.url + '" class="research-link">[' + link.label + ']</a>');
                             $links.append($link);
                         })
                         var authorList = item.authors.split(', ');
@@ -265,7 +266,7 @@
                     </ul>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <div class="path">Selected Awards</div>
+                    <div class="path">Selected Honors & Awards</div>
                     <ul id="award-list">
                     </ul>
                 </div>
@@ -273,16 +274,16 @@
             <script>
                 var awardList = [
                     {
+                        name: 'Valedictorian, the School of Humanities and Social Science at HKUST, Class of 2023',
+                        year: '2023'
+                    },
+                    {
                         name: 'Professor Samuel Chanson Best Final Year Project Award (top 2 in 114 teams)',
                         year: '2023'
                     },
                     {
                         name: 'University’s Scholarship Scheme for Continuing Undergraduate Students',
                         year: '2022 - 2023'
-                    },
-                    {
-                        name: 'Dean’s List at HKUST for 4 times',
-                        year: '2019 - 2023'
                     },
                     {
                         name: 'Second place in IEEE SusTech 2022 Student Poster Competition',
@@ -339,7 +340,7 @@
             <hr>
             <div class="row justify-content-center">
                 <div class="col-xs-12 col-md-12 text-center">
-                    <p>Designed and coded by Bruce with 💙. Last updated on Sept 2023. </p>
+                    <p>Designed and coded by Bruce with 💙. Last updated on April 2024. </p>
                 </div>
             </div>
         </div>

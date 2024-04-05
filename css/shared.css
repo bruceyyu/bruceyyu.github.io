@@ -105,3 +105,6 @@ body {
     margin-right: 0.1rem;
     color: var(--theme-secondary-color);
 }
+.research-link {
+    margin-right: 0.2rem;
+}
