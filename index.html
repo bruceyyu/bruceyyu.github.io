@@ -146,7 +146,7 @@
                 </div>
                 <script>
                     var researchList = [
-                    {
+                        {
                             imgSrc: './pics/publication/dynamic_typography.gif',
                             title: 'Dynamic Typography: Bringing Text to Life via Video Diffusion Prior',
                             authors: 'Zichen Liu, Yihao Meng, Hao Ouyang, Yue Yu, Bolin Zhao, Daniel Cohen-Or, Huamin Qu',
@@ -155,6 +155,7 @@
                             links: [
                                 { label: 'paper', url: 'https://arxiv.org/abs/2404.11614' },
                                 { label: 'project page', url: 'https://animate-your-word.github.io/demo/' },
+                                { label: 'github', url: 'zliucz/animate-your-word' }
                             ]
                         }, {
                             imgSrc: './pics/publication/neighviz.png',
@@ -197,14 +198,21 @@
                         var $title = $('<div></div>').html('<b>' + item.title + '</b>');
                         var $authors = $('<div></div>').text(item.authors);
                         var $venue = $('<div></div>').text(item.venue);
-                        var $links = $('<div></div>')
+                        var $links = $('<div style="display: flex"></div>')
                         var $tags = $('<div class="d-flex"></div>');
                         $.each(item.tags, function (index, tag) {
                             var $tag = $('<div class="tag"></div>').text(tag);
                             $tags.append($tag);
                         });
                         $.each(item.links, function (index, link) {
-                            var $link = $('<a href="' + link.url + '" class="research-link">[' + link.label + ']</a>');
+                            switch (link.label) {
+                                case 'github':
+                                    var $link = $('<a class="badge" href="https://github.com/' + link.url + '"><img src="https://img.shields.io/github/stars/' + link.url + '" /></a>')
+                                    break;
+                                default:
+                                    var $link = $('<a href="' + link.url + '" class="research-link">[' + link.label + ']</a>');
+                                    break;
+                            }
                             $links.append($link);
                         })
                         var authorList = item.authors.split(', ');
