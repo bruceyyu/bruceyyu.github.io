@@ -93,12 +93,12 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 align-self-center text-center">
-                    <img id="self-image" src="./pics/self/tapmum.jpeg" />
-                    <div id="self-image-desc" style="font-family: monospace;">May 2023 @ Tap Mum</div>
+                    <img id="self-image" src="./pics/self/graduation.jpeg" />
+                    <div id="self-image-desc" style="font-family: monospace;">Dec 2023 @ 🎓</div>
                     <script>
                         const imageDom = document.getElementById("self-image");
                         const imageDescDom = document.getElementById("self-image-desc");
-                        const images = [{ "id": "tapmum", "name": "May 2023 @ Tap Mum" }, { "id": "capetown", "name": "Aug 2023 @ Cape Town" }, { "id": "feingoshan", "name": "Feb 2022 @ Fei Ngo Shan" }, { "id": "devilspeak", "name": "Dec 2021 @ Devil's Peak" }, { "id": "highjunkpeak", "name": "Nov 2022 @ High Junk Peak" }]
+                        const images = [{ "id": "graduation", "name": "Dec 2023 🎓" }, { "id": "tapmum", "name": "May 2023 @ Tap Mum" }, { "id": "capetown", "name": "Aug 2023 @ Cape Town" }, { "id": "feingoshan", "name": "Feb 2022 @ Fei Ngo Shan" }, { "id": "devilspeak", "name": "Dec 2021 @ Devil's Peak" }, { "id": "highjunkpeak", "name": "Nov 2022 @ High Junk Peak" }]
                         const pickImage = () => {
                             const randomIndex = Math.floor(Math.random() * images.length);
                             const randomImage = images[randomIndex];
@@ -146,7 +146,17 @@
                 </div>
                 <script>
                     var researchList = [
-                        {
+                    {
+                            imgSrc: './pics/publication/dynamic_typography.gif',
+                            title: 'Dynamic Typography: Bringing Text to Life via Video Diffusion Prior',
+                            authors: 'Zichen Liu, Yihao Meng, Hao Ouyang, Yue Yu, Bolin Zhao, Daniel Cohen-Or, Huamin Qu',
+                            venue: 'ArXiv',
+                            tags: ['Text Animation', 'Computer Graphics'],
+                            links: [
+                                { label: 'paper', url: 'https://arxiv.org/abs/2404.11614' },
+                                { label: 'project page', url: 'https://animate-your-word.github.io/demo/' },
+                            ]
+                        }, {
                             imgSrc: './pics/publication/neighviz.png',
                             title: 'NeighViz: Towards Better Understanding of Neighborhood Effects on Social Groups with Spatial Data',
                             authors: 'Yue Yu, Yifang Wang, Qisen Yang, Di Weng, Yongjun Zhang, Xiaogang Wu, Yingcai Wu, Huamin Qu',
