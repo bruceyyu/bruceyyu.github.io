@@ -164,6 +164,7 @@
                             title: 'PyGWalker: On-the-fly Assistant for Exploratory Visual Data Analysis',
                             authors: 'Yue Yu, Leixian Shen, Fei Long, Huamin Qu, Hao Chen',
                             venue: 'IEEE VIS 2024 (To Appear)',
+                            award: 'Best Short Paper',
                             tags: ['Viz Tool', 'Open-source'],
                             links: [
                                 { label: 'arXiv', url: 'https://arxiv.org/abs/2406.11637' }
@@ -213,6 +214,7 @@
                         var $title = $('<div></div>').html('<b>' + item.title + '</b>');
                         var $authors = $('<div></div>').text(item.authors);
                         var $venue = $('<div></div>').text(item.venue);
+                        var $award = $('<div class="award-outer"></div>').html(`<div class="award">${item.award}</div>`);
                         var $links = $('<div style="display: flex"></div>')
                         var $tags = $('<div class="d-flex"></div>');
                         $.each(item.tags, function (index, tag) {
@@ -238,7 +240,7 @@
                         });
                         $authors.html(authorList.join(', '));
                         $col1.append($img);
-                        $col2.append($title, $authors, $venue, $links, $tags);
+                        $col2.append($title, $authors, $venue, item.award ? $award : null, $links, $tags);
                         $row.append($col1, $col2);
                         $('#publication-list').append($row);
                     });
@@ -246,9 +248,69 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="path">News</div>
-                <a class="twitter-timeline" data-width="400" data-height="600"
-                    href="https://twitter.com/Bruce_YuYue?ref_src=twsrc%5Etfw">Tweets by Bruce_YuYue</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <div id="news-list">
+                    <script>
+                        var newsList = [
+                            {
+                                time: 'Aug 2024',
+                                content: '🏆 Our paper "PyGWalker" is accepted by IEEE VIS 2024 and won the best short paper!',
+                                links: [
+                                    { label: 'paper', url: 'https://arxiv.org/abs/2406.11637' }
+                                ],
+                                category: 'research'
+                            }, {
+                                time: 'Aug 2024',
+                                content: '👀 Found amazing tutorial video and article made by Matt Dancho (Business Science) introducing our R package GWalkR. Thank you!',
+                                links: [
+                                    { label: 'Youtube', url: 'https://www.youtube.com/watch?v=5cIq2lZDVB0' },
+                                    { label: 'R-bloggers', url: 'https://www.r-bloggers.com/2024/08/tableau-in-r-for-0-introducing-gwalkr/' }
+                                ],
+                                category: 'project'
+                            }, {
+                                time: 'July 2024',
+                                content: '🇭🇰 Attended ChinaVis 24 at HKUST and presented two posters.',
+                                category: 'research'
+                            }, {
+                                time: 'June 2024',
+                                content: '🥋 Promoted to 2nd Kyu (brown belt) in Goju-ryu Karate.',
+                                category: 'personal'
+                            }, {
+                                time: 'Dec 2023',
+                                content: '🎓 Attended my congregation at HKUST and delivered a speech as a graduate representative.',
+                                category: 'personal'
+                            }, {
+                                time: 'Oct 2023',
+                                content: '🇦🇺 Attended IEEE VIS 2023 at Melbourne and presented our work "NeighViz" at the Symposium on Visualization in Data Science (VDS).',
+                                category: 'research',
+                                links: [
+                                    { label: 'paper', url: 'https://ieeexplore.ieee.org/abstract/document/10357756' },
+                                    { label: 'slides', url: './materials/VDS_NeighViz_long_ver.pdf' }
+                                ]
+                            }, {
+                                time: 'Aug 2023',
+                                content: '🇿🇦 Attended ACM COMPASS 2023 at Cape Town and presented our work "FoodWise".',
+                                category: 'research',
+                                links: [
+                                    { label: 'paper', url: 'https://arxiv.org/abs/2307.12882' }
+                                ]
+                            }, {
+                                time: 'May 2023',
+                                content: '🏆 Received Best Final Year Project from CSE Department! Our team is ranked No. 2 among 100+ teams.',
+                                category: 'research'
+                            }];
+
+                        $.each(newsList, function (index, item) {
+                            var $row = $('<div class="row news-item"></div>');
+                            var $content = $('<div></div>').html(`<b>${item.time}</b> <span>${item.content}</span>`);
+                            var $links = $('<div style="display: flex"></div>')
+                            $.each(item.links, function (index, link) {
+                                $links.append('<a href="' + link.url + '" class="research-link">[' + link.label + ']</a>');
+                            })
+                            $row.append($content, $links);
+                            $('#news-list').append($row);
+                        });
+                    </script>
+                </div>
             </div>
         </div>
 
@@ -306,6 +368,10 @@
             </div>
             <script>
                 var awardList = [
+                    {
+                        name: 'IEEE VIS 2024 Best Short Paper Award',
+                        year: '2024'
+                    },
                     {
                         name: 'Valedictorian, the School of Humanities and Social Science at HKUST, Class of 2023',
                         year: '2023'
@@ -373,7 +439,7 @@
             <hr>
             <div class="row justify-content-center">
                 <div class="col-xs-12 col-md-12 text-center">
-                    <p>Designed and coded by Bruce with 💙. Last updated on April 2024. </p>
+                    <p>Designed and coded by Bruce with 💙. Last updated on August 2024. </p>
                 </div>
             </div>
         </div>
