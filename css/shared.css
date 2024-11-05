@@ -44,25 +44,26 @@ body {
 .image-stack-container {
     position: relative;
     width: 100%;
+    height: calc(13rem + 60px);
     padding: 20px;
     perspective: 1000px;
 }
 .image-wrapper {
     position: absolute;
-    width: calc(100% - 20px);
+    width: 16rem;
     transition: all 0.4s ease-in-out;
     transform-origin: center center;
 }
 .image-wrapper:nth-child(1) {
-    transform: translateX(-20px) scale(1);
+    transform: translateX(-10px) scale(1);
     z-index: 3;
 }
 .image-wrapper:nth-child(2) {
-    transform: translateX(0px) scale(0.98);
+    transform: translateX(20px) scale(0.98) rotate(3deg);
     z-index: 2;
 }
 .image-wrapper:nth-child(3) {
-    transform: translateX(20px) scale(0.95);
+    transform: translateX(50px) scale(0.95) rotate(6deg);
     z-index: 1;
 }
 .image-wrapper:hover {

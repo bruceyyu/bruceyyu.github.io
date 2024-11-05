@@ -68,16 +68,6 @@
                             <div class="image-desc">Human-Nature Interaction (HNI)</div>
                         </div>
                     </div>
-                    <script>
-                        $(document).ready(function() {
-                            // Calculate proper height for container
-                            function setContainerHeight() {
-                                const containerHeight = $('.profile-image').first().height() + 20; // Add padding
-                                $('.image-stack-container').height(containerHeight);
-                            }
-                            $(window).on('load resize', setContainerHeight);
-                        });
-                    </script>
                 </div>
                 <div class="theme-switch" onclick="switchMode()">
                     <span id="theme-night">🌙</span>
