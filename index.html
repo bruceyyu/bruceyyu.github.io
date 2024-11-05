@@ -14,11 +14,11 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9S54MEMG67"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-9S54MEMG67');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9S54MEMG67');
     </script>
 </head>
 
@@ -31,21 +31,22 @@
                             href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%99%9E">虞</a>越)</h3>
                     <!-- <h5 style="font-family: Lucida Handwriting;"><i>Humanities Enhanced by Data Vis</i></h5> -->
                     <p>
-                        Hi, I'm Yue (or Bruce), a MPhil student (and plan to continue as a PhD student from 2025) at HKUST supervised by <a
-                            href="http://huamin.org/">Prof. Huamin Qu</a> and <a
+                        Hi, I'm Yue (or Bruce), a MPhil student (and plan to continue as a PhD student from 2025) at
+                        HKUST supervised by <a href="http://huamin.org/">Prof. Huamin Qu</a> and <a
                             href="https://camerondcampbell.blog/">Prof.
                             Cameron Campbell</a>, and previously earned my BSc in the same university.
                         <br />
                     </p>
                     <p>
                         My research aims to develop and apply algorithms and interactive tools that drive innovation in
-                        social science research, leveraging big data across key stages: from <a
-                            onclick="displayPublication(['Data Management & Exploration'])" href="#publication">🔍 data
+                        <b>social science research</b> and <b>digital media creation</b>, leveraging big data and AI across key
+                        stages: from <a onclick="displayPublication(['Data Management & Exploration'])"
+                            href="#publication">🔍 data
                             management and exploration</a> to
                         <a onclick="displayPublication(['Data Analysis & Interpretation'])" href="#publication">📊
                             analysis and
                             interpretation</a>, and finally <a onclick="displayPublication(['Real-world Impact'])"
-                            href="#publication">💡 translating insights into real-world impact</a>.
+                            href="#publication">💡 translating insights and creativity into real-world impact</a>.
                     </p>
                     <p>
                         When I'm not working, I enjoy human-nature interaction (i.e., hiking) in Hong Kong. I'm also
@@ -53,20 +54,29 @@
                     </p>
                 </div>
                 <div class="col-xs-12 col-md-3 align-self-center text-center">
-                    <img id="self-image" src="./pics/self/graduation.jpeg" />
-                    <div id="self-image-desc" style="font-family: monospace;">Dec 2023 @ 🎓</div>
+                    <div class="image-stack-container">
+                        <div class="image-wrapper">
+                            <img class="profile-image" src="./pics/self/graduation.jpeg" />
+                            <div class="image-desc">Graduation in 2023 🎓</div>
+                        </div>
+                        <div class="image-wrapper">
+                            <img class="profile-image" src="./pics/self/karate.jpeg" />
+                            <div class="image-desc">Human-Human Interaction (HHI)</div>
+                        </div>
+                        <div class="image-wrapper">
+                            <img class="profile-image" src="./pics/self/donkey.jpeg" />
+                            <div class="image-desc">Human-Nature Interaction (HNI)</div>
+                        </div>
+                    </div>
                     <script>
-                        const imageDom = document.getElementById("self-image");
-                        const imageDescDom = document.getElementById("self-image-desc");
-                        const images = [{ "id": "graduation", "name": "Dec 2023 🎓" }, { "id": "tapmum", "name": "May 2023 @ Tap Mum" }, { "id": "capetown", "name": "Aug 2023 @ Cape Town" }, { "id": "feingoshan", "name": "Feb 2022 @ Fei Ngo Shan" }, { "id": "devilspeak", "name": "Dec 2021 @ Devil's Peak" }, { "id": "highjunkpeak", "name": "Nov 2022 @ High Junk Peak" }]
-                        const pickImage = () => {
-                            const randomIndex = Math.floor(Math.random() * images.length);
-                            const randomImage = images[randomIndex];
-                            imageDom.src = `./pics/self/${randomImage.id}.jpeg`;
-                            imageDescDom.innerText = randomImage.name;
-                        }
-                        imageDom.onmouseover = () => pickImage();
-                        imageDom.onclick = () => pickImage();
+                        $(document).ready(function() {
+                            // Calculate proper height for container
+                            function setContainerHeight() {
+                                const containerHeight = $('.profile-image').first().height() + 20; // Add padding
+                                $('.image-stack-container').height(containerHeight);
+                            }
+                            $(window).on('load resize', setContainerHeight);
+                        });
                     </script>
                 </div>
                 <div class="theme-switch" onclick="switchMode()">
@@ -258,25 +268,13 @@
                         onclick="displayPublication(['Data Analysis & Interpretation'])">📊 Data Analysis &
                         Interpretation</div>
                     <div class="tag" style="cursor: pointer;" onclick="displayPublication(['Real-world Impact'])">💡
-                        Real-world Impact</div>
+                        Insights & Creativity to Impact</div>
                     <div class="tag" style="cursor: pointer;" onclick="displayPublication()">All</div>
                 </div>
                 <div id="publication-list">
                 </div>
                 <script>
                     var researchList = [
-                        // {
-                        //     imgSrc: './pics/publication/dynamic_typography.gif',
-                        //     title: 'Dynamic Typography: Bringing Text to Life via Video Diffusion Prior',
-                        //     authors: 'Zichen Liu, Yihao Meng, Hao Ouyang, Yue Yu, Bolin Zhao, Daniel Cohen-Or, Huamin Qu',
-                        //     venue: 'ArXiv',
-                        //     tags: ['Text Animation', 'Computer Graphics'],
-                        //     links: [
-                        //         { label: 'paper', url: 'https://arxiv.org/abs/2404.11614' },
-                        //         { label: 'project page', url: 'https://animate-your-word.github.io/demo/' },
-                        //         { label: 'github', url: 'zliucz/animate-your-word' }
-                        //     ]
-                        // }, 
                         {
                             imgSrc: './pics/publication/pygwalker.png',
                             title: 'PyGWalker: On-the-fly Assistant for Exploratory Visual Data Analysis',
@@ -288,6 +286,18 @@
                                 { label: 'arXiv', url: 'https://arxiv.org/abs/2406.11637' }
                             ]
                         },
+                        {
+                            imgSrc: './pics/publication/dynamic_typography.gif',
+                            title: 'Dynamic Typography: Bringing Text to Life via Video Diffusion Prior',
+                            authors: 'Zichen Liu, Yihao Meng, Hao Ouyang, Yue Yu, Bolin Zhao, Daniel Cohen-Or, Huamin Qu',
+                            venue: 'ArXiv',
+                            tags: ['Real-world Impact', 'Text Animation'],
+                            links: [
+                                { label: 'paper', url: 'https://arxiv.org/abs/2404.11614' },
+                                { label: 'project page', url: 'https://animate-your-word.github.io/demo/' },
+                                { label: 'github', url: 'zliucz/animate-your-word' }
+                            ]
+                        }, 
                         {
                             imgSrc: './pics/publication/neighviz.png',
                             title: 'NeighViz: Towards Better Understanding of Neighborhood Effects on Social Groups with Spatial Data',

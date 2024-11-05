@@ -40,10 +40,54 @@ body {
         .jumbotron .theme-switch :hover{
             cursor: pointer;
         }
-#self-image {
+
+.image-stack-container {
+    position: relative;
     width: 100%;
-    margin: 0.5rem
+    padding: 20px;
+    perspective: 1000px;
 }
+.image-wrapper {
+    position: absolute;
+    width: calc(100% - 20px);
+    transition: all 0.4s ease-in-out;
+    transform-origin: center center;
+}
+.image-wrapper:nth-child(1) {
+    transform: translateX(-20px) scale(1);
+    z-index: 3;
+}
+.image-wrapper:nth-child(2) {
+    transform: translateX(0px) scale(0.98);
+    z-index: 2;
+}
+.image-wrapper:nth-child(3) {
+    transform: translateX(20px) scale(0.95);
+    z-index: 1;
+}
+.image-wrapper:hover {
+    transform: scale(1.05) !important;
+    z-index: 3 !important;
+}
+.profile-image {
+    width: 16rem;
+    height: 13rem;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.image-desc {
+    font-size: 0.8rem;
+    font-family: monospace;
+    text-align: center;
+    margin-top: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.image-wrapper:hover .image-desc {
+    opacity: 1;
+}
+
 .path {
     font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace!important;
     font-weight: bold;
