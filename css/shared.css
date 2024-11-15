@@ -1,23 +1,28 @@
 a {
-    color:var(--theme-primary-color);
+    color: var(--theme-primary-color);
     transition: all 0.2s;
 }
-    a:link {
-        text-decoration: none;
-        color:var(--theme-primary-color);
-    }
-    a:visited {
-        text-decoration: none;
-        color:var(--theme-primary-color);
-    }
-    a:active {
-        text-decoration: none;
-        color:var(--theme-primary-color);
-    }
-    a:hover {
-        text-decoration: none;
-        color:var(--theme-invert-color-0);
-    }
+
+a:link {
+    text-decoration: none;
+    color: var(--theme-primary-color);
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--theme-primary-color);
+}
+
+a:active {
+    text-decoration: none;
+    color: var(--theme-primary-color);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--theme-invert-color-0);
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -26,20 +31,24 @@ body {
     background-color: var(--theme-absolute-color);
     color: var(--theme-invert-color);
 }
+
 .caption-text {
     color: var(--theme-primary-color);
 }
-.jumbotron { 
+
+.jumbotron {
     background-color: var(--theme-color-0);
 }
-    .jumbotron .theme-switch {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-        .jumbotron .theme-switch :hover{
-            cursor: pointer;
-        }
+
+.jumbotron .theme-switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.jumbotron .theme-switch :hover {
+    cursor: pointer;
+}
 
 .image-stack-container {
     position: relative;
@@ -48,35 +57,42 @@ body {
     padding: 20px;
     perspective: 1000px;
 }
+
 .image-wrapper {
     position: absolute;
     width: 16rem;
     transition: all 0.4s ease-in-out;
     transform-origin: center center;
 }
+
 .image-wrapper:nth-child(1) {
     transform: translateX(-10px) scale(1);
     z-index: 3;
 }
+
 .image-wrapper:nth-child(2) {
     transform: translateX(20px) scale(0.98) rotate(3deg);
     z-index: 2;
 }
+
 .image-wrapper:nth-child(3) {
     transform: translateX(50px) scale(0.95) rotate(6deg);
     z-index: 1;
 }
+
 .image-wrapper:hover {
     transform: scale(1.05) !important;
     z-index: 3 !important;
 }
+
 .profile-image {
     width: 16rem;
     height: 13rem;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+
 .image-desc {
     font-size: 0.8rem;
     font-family: monospace;
@@ -85,44 +101,53 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 .image-wrapper:hover .image-desc {
     opacity: 1;
 }
 
 .path {
-    font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace!important;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace !important;
     font-weight: bold;
     margin-bottom: 1rem;
 }
+
 .bio-link {
     display: flex;
 }
-    .bio-link a {
-        display: flex;
-    }
-    .bio-link svg {
-        height: 1.2rem;
-        width: 1.2rem;
-        margin: 0 0.25rem;
-        align-self: center;
-    }
-        .bio-link svg:hover {
-            cursor: pointer;
-        }
-        .bio-link svg path {
-            fill:var(--theme-invert-color);
-        }
-            .bio-link svg:hover path {
-                fill: var(--theme-primary-color);
-                transition: fill 0.3s;
-            }
+
+.bio-link a {
+    display: flex;
+}
+
+.bio-link svg {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0 0.25rem;
+    align-self: center;
+}
+
+.bio-link svg:hover {
+    cursor: pointer;
+}
+
+.bio-link svg path {
+    fill: var(--theme-invert-color);
+}
+
+.bio-link svg:hover path {
+    fill: var(--theme-primary-color);
+    transition: fill 0.3s;
+}
 
 .research-item {
     margin-bottom: 1rem;
 }
+
 .research-item img {
     width: 100%;
 }
+
 .research-item .award-outer {
     padding: 2px;
     border-radius: 0.2rem;
@@ -143,9 +168,11 @@ body {
 .badge-bar {
     display: flex;
 }
+
 .badge-bar .badge {
     margin-inline: 0.2rem;
 }
+
 .badge-bar .badge:first-child {
     margin: 0 0.2rem 0 0;
 }
@@ -156,17 +183,29 @@ body {
     margin-right: 0.1rem;
     color: var(--theme-secondary-color);
 }
+
 .tag {
     font-size: 0.8rem;
     margin-right: 0.4rem;
     color: var(--theme-invert-color-0)
 }
+
 .tag::before {
     content: "#";
     font-weight: bold;
     margin-right: 0.1rem;
     color: var(--theme-secondary-color);
 }
+
+.tag-btn {
+    background: #e2e8f0;
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
 .research-link {
     margin-right: 0.2rem;
 }

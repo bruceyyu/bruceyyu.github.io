@@ -31,7 +31,7 @@
                             href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%99%9E">虞</a>越)</h3>
                     <!-- <h5 style="font-family: Lucida Handwriting;"><i>Humanities Enhanced by Data Vis</i></h5> -->
                     <p>
-                        Hi, I'm Yue (or Bruce), a MPhil student (and plan to continue as a PhD student from 2025) at
+                        Hi, I'm Yue (or Bruce), an MPhil student (and plan to continue as a PhD student from 2025) at
                         HKUST supervised by <a href="http://huamin.org/">Prof. Huamin Qu</a> and <a
                             href="https://camerondcampbell.blog/">Prof.
                             Cameron Campbell</a>, and previously earned my BSc in the same university.
@@ -39,14 +39,17 @@
                     </p>
                     <p>
                         My research aims to develop and apply algorithms and interactive tools that drive innovation in
-                        <b>social science research</b> and <b>digital media creation</b>, leveraging big data and AI across key
-                        stages: from <a onclick="displayPublication(['Data Management & Exploration'])"
-                            href="#publication">🔍 data
-                            management and exploration</a> to
-                        <a onclick="displayPublication(['Data Analysis & Interpretation'])" href="#publication">📊
-                            analysis and
-                            interpretation</a>, and finally <a onclick="displayPublication(['Real-world Impact'])"
-                            href="#publication">💡 translating insights and creativity into real-world impact</a>.
+                        <b>social research</b> and <b>content creation</b>, leveraging big data and AI
+                        across key
+                        stages: <a onclick="displayPublication(['Data Management & Exploration'])" href="#publication"
+                            class="tag-btn">🔍 Explore</a> data management and exploration,
+                        <a onclick="displayPublication(['Data Analysis & Interpretation'])" href="#publication"
+                            class="tag-btn">📊
+                            Analyze</a>
+                        analysis and interpretation, and <a onclick="displayPublication(['Real-world applications'])"
+                            href="#publication" class="tag-btn">💡
+                            Impact</a>
+                        translating insights and creativity into real-world impact.
                     </p>
                     <p>
                         When I'm not working, I enjoy human-nature interaction (i.e., hiking) in Hong Kong. I'm also
@@ -166,6 +169,13 @@
                     <script>
                         var newsList = [
                             {
+                                time: 'Nov 2024',
+                                content: '🎨 We release MagicQuill, an intelligent and interactive image editing system! Try it out!',
+                                links: [
+                                    { label: 'magicquill.art', url: 'https://magicquill.art/demo' },
+                                ],
+                                category: 'project'
+                            }, {
                                 time: 'Oct 2024',
                                 content: '📦 GWalkR just dropped v0.2, which integrates DuckDB for powerful computation! Read my tutorial below.',
                                 links: [
@@ -224,7 +234,7 @@
                         function displayNews(collapse = true) {
                             $('#news-list').empty();
                             if (collapse) {
-                                selectedNewsList = newsList.slice(0, 5);
+                                selectedNewsList = newsList.slice(0, 7);
                             } else {
                                 selectedNewsList = newsList
                             }
@@ -250,21 +260,34 @@
             </div>
             <div class="col-xs-12 order-md-1 col-md-8" id="publication">
                 <div class="path">Publications</div>
-                <div class="mb-4 d-md-flex flex-wrap justify-content-between">
-                    <div class="tag" style="cursor: pointer;"
-                        onclick="displayPublication(['Data Management & Exploration'])">🔍 Data Management & Exploration
-                    </div>
-                    <div class="tag" style="cursor: pointer;"
-                        onclick="displayPublication(['Data Analysis & Interpretation'])">📊 Data Analysis &
-                        Interpretation</div>
-                    <div class="tag" style="cursor: pointer;" onclick="displayPublication(['Real-world Impact'])">💡
-                        Insights & Creativity to Impact</div>
-                    <div class="tag" style="cursor: pointer;" onclick="displayPublication()">All</div>
+                <div class="mb-4 d-flex flex-wrap justify-content-around">
+                    <a class="tag-btn" style="cursor: pointer;"
+                        onclick="displayPublication(['Data Management & Exploration'])">🔍 Explore
+                    </a>
+                    <a class="tag-btn" style="cursor: pointer;"
+                        onclick="displayPublication(['Data Analysis & Interpretation'])">📊 Analyze</a>
+                    <a class="tag-btn" style="cursor: pointer;"
+                        onclick="displayPublication(['Real-world applications'])">💡
+                        Impact</a>
+                    <a class="tag-btn" style="cursor: pointer;" onclick="displayPublication()">All</a>
                 </div>
                 <div id="publication-list">
                 </div>
                 <script>
                     var researchList = [
+                        {
+                            imgSrc: './pics/publication/magicquill.png',
+                            title: 'MagicQuill: An Intelligent Interactive Image Editing System',
+                            authors: 'Zichen Liu*, Yue Yu* (co-first), Hao Ouyang, Qiuyu Wang, Ka Leong Cheng, Wen Wang, Zhiheng Liu, Qifeng Chen, Yujun Shen',
+                            venue: 'ArXiv',
+                            tags: ['Real-world applications', 'Image Editing'],
+                            links: [
+                                { label: '🎵video', url: 'https://www.youtube.com/watch?v=5DiKfONMnE4' },
+                                { label: 'arXiv', url: 'https://arxiv.org/abs/2411.09703' },
+                                { label: 'project page', url: 'https://magicquill.art/demo/' },
+                                { label: 'github', url: 'magic-quill/MagicQuill' }
+                            ]
+                        },
                         {
                             imgSrc: './pics/publication/pygwalker.png',
                             title: 'PyGWalker: On-the-fly Assistant for Exploratory Visual Data Analysis',
@@ -281,13 +304,13 @@
                             title: 'Dynamic Typography: Bringing Text to Life via Video Diffusion Prior',
                             authors: 'Zichen Liu, Yihao Meng, Hao Ouyang, Yue Yu, Bolin Zhao, Daniel Cohen-Or, Huamin Qu',
                             venue: 'ArXiv',
-                            tags: ['Real-world Impact', 'Text Animation'],
+                            tags: ['Real-world applications', 'Text Animation'],
                             links: [
                                 { label: 'paper', url: 'https://arxiv.org/abs/2404.11614' },
                                 { label: 'project page', url: 'https://animate-your-word.github.io/demo/' },
                                 { label: 'github', url: 'zliucz/animate-your-word' }
                             ]
-                        }, 
+                        },
                         {
                             imgSrc: './pics/publication/neighviz.png',
                             title: 'NeighViz: Towards Better Understanding of Neighborhood Effects on Social Groups with Spatial Data',
@@ -305,7 +328,7 @@
                             title: 'FoodWise: Food Waste Reduction and Behavior Change on Campus with Data Visualization and Gamification',
                             authors: 'Yue Yu, Sophia Yi, Xi Nan, Leo Yu-Ho Lo, Kento Shigyo, Liwenhan Xie, Jeffry Wicaksana, Kwang-Ting Cheng, Huamin Qu',
                             venue: '6th ACM SIGCAS/SIGCHI Conference on Computing and Sustainable Societies (COMPASS ’23)',
-                            tags: ['Real-world Impact', 'Sustainability'],
+                            tags: ['Real-world applications', 'Sustainability'],
                             links: [
                                 { label: 'paper', url: 'https://dl.acm.org/doi/10.1145/3588001.3609364' },
                                 { label: 'presentation', url: 'https://www.youtube.com/watch?v=EftanoT-3lM&list=PLzhsLf-y54j32cx90ujLadarjCkCM6Ph_&index=5' },
@@ -356,7 +379,7 @@
                             })
                             var authorList = item.authors.split(', ');
                             $.each(authorList, function (index, author) {
-                                if (author === 'Yue Yu') {
+                                if (author.includes('Yue Yu')) {
                                     authorList[index] = '<b>' + author + '</b>';
                                 }
                             });
