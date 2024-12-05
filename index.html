@@ -57,7 +57,7 @@
                     </p>
                 </div>
                 <div class="col-xs-12 col-md-3 align-self-center text-center">
-                    <div class="image-stack-container">
+                    <div class="image-stack-container" id="imageStackContainer">
                         <div class="image-wrapper">
                             <img class="profile-image" src="./pics/self/graduation.jpeg" />
                             <div class="image-desc">Graduation in 2023 🎓</div>
@@ -71,6 +71,15 @@
                             <div class="image-desc">Human-Nature Interaction (HNI)</div>
                         </div>
                     </div>
+                    <script>
+                        function shuffleDivs() {
+                            const container = document.getElementById('imageStackContainer');
+                            const divs = Array.from(container.children);
+                            divs.sort(() => Math.random() - 0.5); // Shuffle using random sort
+                            divs.forEach(div => container.appendChild(div)); // Reattach shuffled divs
+                        }
+                        window.onload = shuffleDivs; // Shuffle on page load
+                    </script>
                 </div>
                 <div class="theme-switch" onclick="switchMode()">
                     <span id="theme-night">🌙</span>
@@ -169,6 +178,13 @@
                     <script>
                         var newsList = [
                             {
+                                time: 'Dec 2024',
+                                content: '🎤 Gave an online talk with my co-author Zichen about our MagicQuill, invited by ModelScope at Alibaba DAMO Academy.',
+                                links: [
+                                    { label: 'Bilibili', url: 'https://www.bilibili.com/video/BV1Cxi9YHEu8/' },
+                                ],
+                                category: 'project'
+                            }, {
                                 time: 'Nov 2024',
                                 content: '🎨 We release MagicQuill, an intelligent and interactive image editing system! Try it out!',
                                 links: [
@@ -282,9 +298,9 @@
                             venue: 'ArXiv',
                             tags: ['Real-world applications', 'Image Editing'],
                             links: [
-                                { label: '🎹video', url: 'https://www.youtube.com/watch?v=5DiKfONMnE4' },
                                 { label: 'arXiv', url: 'https://arxiv.org/abs/2411.09703' },
                                 { label: 'project page', url: 'https://magicquill.art/demo/' },
+                                { label: 'online talk (Chinese)', url: 'https://www.bilibili.com/video/BV1Cxi9YHEu8/' },
                                 { label: 'github', url: 'magic-quill/MagicQuill' }
                             ]
                         },
@@ -360,7 +376,7 @@
                             var $authors = $('<div></div>').text(item.authors);
                             var $venue = $('<div></div>').text(item.venue);
                             var $award = $('<div class="award-outer"></div>').html(`<div class="award">${item.award}</div>`);
-                            var $links = $('<div class="d-flex"></div>')
+                            var $links = $('<div class="d-flex flex-wrap"></div>')
                             var $tags = $('<div class="d-flex flex-wrap"></div>');
                             $.each(item.tags, function (index, tag) {
                                 var $tag = $('<div class="tag"></div>').text(tag);
@@ -450,11 +466,11 @@
             <script>
                 var awardList = [
                     {
-                        name: 'IEEE VIS 2024 Best Short Paper Award',
+                        name: 'IEEE VIS 2024 Best Short Paper Award (top 1%)',
                         year: '2024'
                     },
                     {
-                        name: 'Valedictorian, the School of Humanities and Social Science at HKUST, Class of 2023',
+                        name: 'First Class Honors',
                         year: '2023'
                     },
                     {
