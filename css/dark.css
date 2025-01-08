@@ -14,7 +14,7 @@
     --toggle-active-bg: #3d3d3d;
     --toggle-active-text: #fff;
     --toggle-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    --tag-bg: #e2e8f0;
+    --tag-bg: #2d3748;
 }
 .box {
     width: 100%; 
@@ -34,8 +34,4 @@
     margin: 1rem; 
     padding: 0.5em;
     transition: all 0.5s;
-}
-.tag-btn {
-    background: #2d3748;
-    color: #e2e8f0;
 }
