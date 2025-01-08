@@ -37,6 +37,7 @@ body {
 }
 
 .jumbotron {
+    padding: 2rem 2rem;
     background-color: var(--theme-color-0);
 }
 
@@ -200,10 +201,42 @@ body {
 .tag-btn {
     padding: 0.2em 0.6em;
     line-height: 1.3rem;
-    border-radius: 4px;
+    border-radius: 0.3rem;
     font-style: normal;
     font-weight: 600;
     font-size: 0.9em;
+    background-color: var(--tag-bg);
+    transition: all 0.3s ease;
+}
+
+.tag-btn.active {
+    background-color: var(--theme-primary-color);
+    color: var(--theme-color-1);
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    background: var(--toggle-bg, #f0f0f0);
+    border-radius: 20px;
+    padding: 2px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    width: fit-content;
+    margin-bottom: auto;
+}
+
+.toggle-option {
+    padding: 3px 10px;
+    border-radius: 13px;
+    transition: all 0.3s ease;
+    color: var(--toggle-text, #666);
+}
+
+.toggle-option.active {
+    background: var(--toggle-active-bg, white);
+    color: var(--toggle-active-text, #333);
+    box-shadow: var(--toggle-shadow, 0 2px 4px rgba(0,0,0,0.1));
 }
 
 .research-link {

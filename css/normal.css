@@ -9,6 +9,12 @@
     --theme-shadow-0: rgba(170, 167, 167, 0.3);
     --theme-shadow-1: rgba(0,0,0,0.12);
     --theme-shadow-2: rgba(170, 167, 167, 0.7);
+    --toggle-bg: #f0f0f0;
+    --toggle-text: #666;
+    --toggle-active-bg: white;
+    --toggle-active-text: #333;
+    --toggle-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    --tag-bg: #e2e8f0;
 }
 .box {
     width: 100%; 
