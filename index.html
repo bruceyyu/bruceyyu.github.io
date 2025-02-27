@@ -13,6 +13,9 @@
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9S54MEMG67"></script>
+    <script src="./js/news-data.js"></script>
+    <script src="./js/research-data.js"></script>
+    <script src="./js/experience-data.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -172,80 +175,6 @@
                 <div class="path">News</div>
                 <div id="news-list">
                     <script>
-                        var newsList = [
-                            {
-                                time: 'Dec 2024',
-                                content: '🎉 Our paper InclusiViz has been accepted by PacificVis 2025 (TVCG Journal Track)! See you in Taipei.',
-                            }, {
-                                time: 'Dec 2024',
-                                content: '🎤 Gave an online talk with my co-author Zichen about our MagicQuill, invited by ModelScope at Alibaba DAMO Academy.',
-                                links: [
-                                    { label: 'Bilibili', url: 'https://www.bilibili.com/video/BV1Cxi9YHEu8/' },
-                                ],
-                                category: 'project'
-                            }, {
-                                time: 'Nov 2024',
-                                content: '🎨 We release MagicQuill, an intelligent and interactive image editing system! Try it out!',
-                                links: [
-                                    { label: 'magicquill.art', url: 'https://magicquill.art/demo' },
-                                ],
-                                category: 'project'
-                            }, {
-                                time: 'Oct 2024',
-                                content: '📦 GWalkR just dropped v0.2, which integrates DuckDB for powerful computation! Read my tutorial below.',
-                                links: [
-                                    { label: 'CRAN', url: 'https://cran.r-project.org/package=GWalkR' },
-                                    { label: 'blog', url: 'https://medium.com/@bruceyu0416/eda-reimagined-in-r-gwalkr-duckdb-for-lightning-fast-visualizations-05b011e8ae39' }
-                                ],
-                                category: 'project'
-                            }, {
-                                time: 'Aug 2024',
-                                content: '🏆 Our paper "PyGWalker" is accepted by IEEE VIS 2024 and won the best short paper! See you in Tampa.',
-                                links: [
-                                    { label: 'paper', url: 'https://arxiv.org/abs/2406.11637' }
-                                ],
-                                category: 'research'
-                            }, {
-                                time: 'Aug 2024',
-                                content: '👀 Found amazing tutorial video and article made by Matt Dancho (Business Science) introducing our R package GWalkR. Thank you!',
-                                links: [
-                                    { label: 'Youtube', url: 'https://www.youtube.com/watch?v=5cIq2lZDVB0' },
-                                    { label: 'R-bloggers', url: 'https://www.r-bloggers.com/2024/08/tableau-in-r-for-0-introducing-gwalkr/' }
-                                ],
-                                category: 'project'
-                            }, {
-                                time: 'July 2024',
-                                content: '🇭🇰 Attended ChinaVis 24 at HKUST and presented two posters.',
-                                category: 'research'
-                            }, {
-                                time: 'June 2024',
-                                content: '🥋 Promoted to 2nd Kyu (brown belt) in Goju-ryu Karate.',
-                                category: 'personal'
-                            }, {
-                                time: 'Dec 2023',
-                                content: '🎓 Attended my congregation at HKUST and delivered a speech as a graduate representative.',
-                                category: 'personal'
-                            }, {
-                                time: 'Oct 2023',
-                                content: '🇦🇺 Attended IEEE VIS 2023 at Melbourne and presented our work "NeighViz" at the Symposium on Visualization in Data Science (VDS).',
-                                category: 'research',
-                                links: [
-                                    { label: 'paper', url: 'https://ieeexplore.ieee.org/abstract/document/10357756' },
-                                    { label: 'slides', url: './materials/VDS_NeighViz_long_ver.pdf' }
-                                ]
-                            }, {
-                                time: 'Aug 2023',
-                                content: '🇿🇦 Attended ACM COMPASS 2023 at Cape Town and presented our work "FoodWise".',
-                                category: 'research',
-                                links: [
-                                    { label: 'paper', url: 'https://arxiv.org/abs/2307.12882' }
-                                ]
-                            }, {
-                                time: 'May 2023',
-                                content: '🏆 Received Best Final Year Project from CSE Department! Our team is ranked No. 2 among 100+ teams.',
-                                category: 'research'
-                            }];
-
                         function displayNews(collapse = true) {
                             $('#news-list').empty();
                             if (collapse) {
@@ -305,95 +234,9 @@
                 <div id="publication-list">
                 </div>
                 <script>
-                    var researchList = [
-                        {
-                            imgSrc: './pics/publication/inclusiviz.png',
-                            title: 'InclusiViz: Visual Analytics of Human Mobility Data for Understanding and Mitigating Urban Segregation',
-                            authors: 'Yue Yu, Yifang Wang, Yongjun Zhang, Huamin Qu, Dongyu Liu',
-                            venue: 'IEEE Transactions on Visualization and Computer Graphics (PacificVis 2025)',
-                            tags: ['Data Analysis & Interpretation', 'Social Science'],
-                            links: [
-                                { label: 'arXiv', url: 'https://arxiv.org/abs/2501.03594' }
-                            ],
-                            featured: true
-                        },
-                        {
-                            imgSrc: './pics/publication/magicquill.gif',
-                            title: 'MagicQuill: An Intelligent Interactive Image Editing System',
-                            authors: 'Zichen Liu*, Yue Yu* (co-first), Hao Ouyang, Qiuyu Wang, Ka Leong Cheng, Wen Wang, Zhiheng Liu, Qifeng Chen, Yujun Shen',
-                            venue: 'ArXiv',
-                            tags: ['Real-world applications', 'Image Editing'],
-                            links: [
-                                { label: 'arXiv', url: 'https://arxiv.org/abs/2411.09703' },
-                                { label: 'project page', url: 'https://magicquill.art/demo/' },
-                                { label: 'online talk (Chinese)', url: 'https://www.bilibili.com/video/BV1Cxi9YHEu8/' },
-                                { label: 'github', url: 'magic-quill/MagicQuill' }
-                            ],
-                            featured: true
-                        },
-                        {
-                            imgSrc: './pics/publication/pygwalker.png',
-                            title: 'PyGWalker: On-the-fly Assistant for Exploratory Visual Data Analysis',
-                            authors: 'Yue Yu, Leixian Shen, Fei Long, Huamin Qu, Hao Chen',
-                            venue: 'IEEE VIS 2024',
-                            award: 'Best Short Paper',
-                            tags: ['Data Management & Exploration', 'Viz Tool', 'Open-source'],
-                            links: [
-                                { label: 'paper', url: 'https://ieeexplore.ieee.org/document/10771146/' },
-                                { label: 'arXiv', url: 'https://arxiv.org/abs/2406.11637' }
-                            ],
-                            featured: true
-                        },
-                        {
-                            imgSrc: './pics/publication/dynamic_typography.gif',
-                            title: 'Dynamic Typography: Bringing Text to Life via Video Diffusion Prior',
-                            authors: 'Zichen Liu, Yihao Meng, Hao Ouyang, Yue Yu, Bolin Zhao, Daniel Cohen-Or, Huamin Qu',
-                            venue: 'ArXiv',
-                            tags: ['Real-world applications', 'Text Animation'],
-                            links: [
-                                { label: 'arXiv', url: 'https://arxiv.org/abs/2404.11614' },
-                                { label: 'project page', url: 'https://animate-your-word.github.io/demo/' },
-                                { label: 'github', url: 'zliucz/animate-your-word' }
-                            ]
-                        },
-                        {
-                            imgSrc: './pics/publication/neighviz.png',
-                            title: 'NeighViz: Towards Better Understanding of Neighborhood Effects on Social Groups with Spatial Data',
-                            authors: 'Yue Yu, Yifang Wang, Qisen Yang, Di Weng, Yongjun Zhang, Xiaogang Wu, Yingcai Wu, Huamin Qu',
-                            venue: '9th Symposium on Visualization in Data Science (VDS@VIS 2023)',
-                            tags: ['Data Analysis & Interpretation', 'Methodological', 'Urban Science'],
-                            links: [
-                                { label: 'paper', url: 'https://ieeexplore.ieee.org/abstract/document/10357756' },
-                                { label: 'arXiv', url: 'https://arxiv.org/abs/2309.11454' },
-                                { label: 'slides', url: './materials/VDS_NeighViz_long_ver.pdf' },
-                            ]
-                        },
-                        {
-                            imgSrc: './pics/publication/foodwise.png',
-                            title: 'FoodWise: Food Waste Reduction and Behavior Change on Campus with Data Visualization and Gamification',
-                            authors: 'Yue Yu, Sophia Yi, Xi Nan, Leo Yu-Ho Lo, Kento Shigyo, Liwenhan Xie, Jeffry Wicaksana, Kwang-Ting Cheng, Huamin Qu',
-                            venue: '6th ACM SIGCAS/SIGCHI Conference on Computing and Sustainable Societies (COMPASS ’23)',
-                            tags: ['Real-world applications', 'Sustainability'],
-                            links: [
-                                { label: 'paper', url: 'https://dl.acm.org/doi/10.1145/3588001.3609364' },
-                                { label: 'arXiv', url: 'https://arxiv.org/abs/2307.12882' },
-                                { label: 'presentation', url: 'https://www.youtube.com/watch?v=EftanoT-3lM&list=PLzhsLf-y54j32cx90ujLadarjCkCM6Ph_&index=5' },
-                                { label: 'blog article', url: 'https://library.hkust.edu.hk/sc/foodwise/' },
-                            ]
-                        },
-                        {
-                            imgSrc: './pics/publication/wallstbets.png',
-                            title: 'Short, Colorful, and Irreverent! A Comparative Analysis of New Users on WallstreetBets During the Gamestop Short-squeeze',
-                            authors: 'Ehsan Ul Haq, Tristan Braud, Lik Hang Lee, Anish Krishna Vallapuram, Yue Yu, Gareth Tyson, Pan Hui',
-                            venue: 'Companion Proceedings of the Web Conference 2022 (WWW ’22)',
-                            tags: ['Data Analysis & Interpretation', 'Substantive'],
-                            links: [
-                                { label: 'paper', url: 'https://dl.acm.org/doi/10.1145/3487553.3524202' }
-                            ]
-                        },];
                     let currentState = {
-                        featured: true,  // Default to featured
-                        selectedTags: [] // Default to no tags selected
+                        featured: true,
+                        selectedTags: []
                     };
                     document.querySelector('.toggle-switch').addEventListener('click', function (e) {
                         if (e.target.classList.contains('toggle-option')) {
@@ -433,7 +276,7 @@
                             var $img = $('<img>').attr('src', item.imgSrc).css('width', '100%');
                             var $title = $('<div></div>').html('<b>' + item.title + '</b>');
                             var $authors = $('<div></div>').text(item.authors);
-                            var $venue = $('<div></div>').text(item.venue);
+                            var $venue = $('<div class="font-italic my-1"></div>').text(item.venue);
                             var $award = $('<div class="award-outer"></div>').html(`<div class="award">${item.award}</div>`);
                             var $links = $('<div class="d-flex flex-wrap"></div>')
                             var $tags = $('<div class="d-flex flex-wrap"></div>');
@@ -523,48 +366,6 @@
                 </div>
             </div>
             <script>
-                var awardList = [
-                    {
-                        name: 'IEEE VIS 2024 Best Short Paper Award (top 1%)',
-                        year: '2024'
-                    },
-                    {
-                        name: 'First Class Honors',
-                        year: '2023'
-                    },
-                    {
-                        name: 'Professor Samuel Chanson Best Final Year Project Award (top 2 in 114 teams)',
-                        year: '2023'
-                    },
-                    {
-                        name: 'Second place in IEEE SusTech 2022 Student Poster Competition',
-                        year: '2022'
-                    },
-                    {
-                        name: 'Multiple Dean’s List and Scholarships at HKUST, totaling HKD 60,000',
-                        year: '2019 - 2023'
-                    }
-                ];
-                var workList = [
-                    {
-                        position: 'Software Engineer Intern',
-                        company: 'Kanaries Data',
-                        companyURL: 'https://kanaries.net/',
-                        date: 'June 2023 - Aug 2023'
-                    },
-                    {
-                        position: 'Junior Research Assistant',
-                        company: 'Department of Marketing, HKUST',
-                        companyURL: 'https://mark.hkust.edu.hk/',
-                        date: 'Jan 2021 - May 2023'
-                    },
-                    {
-                        position: 'Software Engineer Intern',
-                        company: 'Tencent',
-                        companyURL: 'https://www.tencent.com/en-us/about.html',
-                        date: 'May 2021 - Aug 2021'
-                    }
-                ];
                 $.each(awardList, function (index, item) {
                     var $li = $('<li></li>');
                     var $row = $('<div class="row"></div>');
