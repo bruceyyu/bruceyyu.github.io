@@ -21,7 +21,7 @@ const researchList = [
     authors: "Yue Yu, Yifang Wang, Yongjun Zhang, Huamin Qu, Dongyu Liu",
     venue:
       "IEEE Transactions on Visualization and Computer Graphics (PacificVis 2025)",
-    tags: ["Data Analysis & Interpretation", "Social Science"],
+    tags: ["Data Analysis & Interpretation", "Computational Social Science"],
     links: [{ label: "arXiv", url: "https://arxiv.org/abs/2501.03594" }],
     featured: true,
   },
