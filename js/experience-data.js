@@ -27,6 +27,12 @@ const awardList = [
 
 const workList = [
   {
+    position: "Investment Intern",
+    company: "5Y Capital",
+    companyURL: "https://www.5ycap.com/",
+    date: "2025 summer",
+  },
+  {
     position: "Research Intern",
     company: "Ant Group",
     companyURL: "https://www.antresearch.com/",
@@ -38,12 +44,12 @@ const workList = [
     companyURL: "https://kanaries.net/",
     date: "2023 summer",
   },
-  {
-    position: "Junior Research Assistant",
-    company: "Department of Marketing, HKUST",
-    companyURL: "https://mark.hkust.edu.hk/",
-    date: "2021 - 2023",
-  },
+  // {
+  //   position: "Junior Research Assistant",
+  //   company: "Department of Marketing, HKUST",
+  //   companyURL: "https://mark.hkust.edu.hk/",
+  //   date: "2021 - 2023",
+  // },
   {
     position: "Software Engineer Intern",
     company: "Tencent",
