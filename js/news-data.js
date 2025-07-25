@@ -1,5 +1,15 @@
 const newsList = [
   {
+    time: "July 2025",
+    content:
+      "🌺 One co-authored paper Dynamic Typography has been accepted by ICCV 2025, with oral presentation! ",
+  },
+  {
+    time: "July 2025",
+    content:
+      "🎉 One co-authored paper InSituTale has been accepted by UIST 2025!",
+  },
+  {
     time: "Feb 2025",
     content:
       "🎉 Our paper MagicQuill has been accepted by CVPR 2025! See you in Nashville.",

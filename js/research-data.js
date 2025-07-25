@@ -1,5 +1,18 @@
 const researchList = [
   {
+    imgSrc: "./pics/publication/insitutale.gif",
+    title:
+      "InSituTale: Enhancing Augmented Data Storytelling with Physical Objects",
+    authors:
+      "Kentaro Takahira, Yue Yu, Takanori Fujiwara, and Suzuki Ryo, Huamin Qu",
+    venue: "ACM Symposium on User Interface Software and Technology (UIST 2025)",
+    tags: [
+      "Creative Tools",
+      "Augmented Reality",
+    ],
+    featured: true,
+  },
+  {
     imgSrc: "./pics/publication/dietglance.jpg",
     title:
       "DietGlance: Dietary Monitoring and Personalized Analysis at a Glance with Knowledge-Empowered AI Assistant",
@@ -7,8 +20,7 @@ const researchList = [
       "Zhihan Jiang, Running Zhao, Lin Lin, Yue Yu, Handi Chen, Xinchen Zhang, Xuhai Xu, Yifang Wang, Xiaojuan Ma, Edith C.H. Ngai",
     venue: "arXiv",
     tags: [
-      "Data Analysis & Interpretation",
-      "Real-world applications",
+      "Real-World Impact",
       "Ubiquitous Computing",
     ],
     links: [{ label: "arXiv", url: "https://arxiv.org/abs/2502.01317" }],
@@ -20,9 +32,12 @@ const researchList = [
       "InclusiViz: Visual Analytics of Human Mobility Data for Understanding and Mitigating Urban Segregation",
     authors: "Yue Yu, Yifang Wang, Yongjun Zhang, Huamin Qu, Dongyu Liu",
     venue:
-      "IEEE Transactions on Visualization and Computer Graphics (PacificVis 2025)",
-    tags: ["Data Analysis & Interpretation", "Computational Social Science"],
-    links: [{ label: "arXiv", url: "https://arxiv.org/abs/2501.03594" }],
+      "IEEE Transactions on Visualization and Computer Graphics (TVCG 2025)",
+    tags: ["Data Exploration & Analysis", "Computational Social Science"],
+    links: [
+      { label: "paper", url: "https://ieeexplore.ieee.org/document/10989526/" },
+      { label: "arXiv", url: "https://arxiv.org/abs/2501.03594" }
+    ],
     featured: true,
   },
   {
@@ -30,8 +45,8 @@ const researchList = [
     title: "MagicQuill: An Intelligent Interactive Image Editing System",
     authors:
       "Zichen Liu*, Yue Yu* (co-first), Hao Ouyang, Qiuyu Wang, Ka Leong Cheng, Wen Wang, Zhiheng Liu, Qifeng Chen, Yujun Shen",
-    venue: "IEEE /CVF Computer Vision and Pattern Recognition (CVPR 2025)",
-    tags: ["Real-world applications", "Image Editing"],
+    venue: "IEEE/CVF Computer Vision and Pattern Recognition (CVPR 2025)",
+    tags: ["Creative Tools", "Image Editing"],
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2411.09703" },
       { label: "project page", url: "https://magicquill.art/demo/" },
@@ -50,7 +65,7 @@ const researchList = [
     authors: "Yue Yu, Leixian Shen, Fei Long, Huamin Qu, Hao Chen",
     venue: "IEEE VIS 2024",
     award: "Best Short Paper",
-    tags: ["Data Management & Exploration", "Viz Tool", "Open-source"],
+    tags: ["Data Exploration & Analysis", "Viz Tool", "Open-source"],
     links: [
       { label: "paper", url: "https://ieeexplore.ieee.org/document/10771146/" },
       { label: "arXiv", url: "https://arxiv.org/abs/2406.11637" },
@@ -63,8 +78,8 @@ const researchList = [
       "Dynamic Typography: Bringing Text to Life via Video Diffusion Prior",
     authors:
       "Zichen Liu, Yihao Meng, Hao Ouyang, Yue Yu, Bolin Zhao, Daniel Cohen-Or, Huamin Qu",
-    venue: "ArXiv",
-    tags: ["Real-world applications", "Text Animation"],
+    venue: "IEEE/CVF International Conference on Computer Vision (ICCV 2025)",
+    tags: ["Creative Tools", "Text Animation"],
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2404.11614" },
       {
@@ -73,6 +88,8 @@ const researchList = [
       },
       { label: "github", url: "zliucz/animate-your-word" },
     ],
+    award: "Oral Presentation",
+    featured: true,
   },
   {
     imgSrc: "./pics/publication/neighviz.png",
@@ -81,7 +98,7 @@ const researchList = [
     authors:
       "Yue Yu, Yifang Wang, Qisen Yang, Di Weng, Yongjun Zhang, Xiaogang Wu, Yingcai Wu, Huamin Qu",
     venue: "9th Symposium on Visualization in Data Science (VDS@VIS 2023)",
-    tags: ["Data Analysis & Interpretation", "Methodological", "Urban Science"],
+    tags: ["Data Exploration & Analysis", "Methodological", "Urban Science"],
     links: [
       {
         label: "paper",
@@ -99,7 +116,7 @@ const researchList = [
       "Yue Yu, Sophia Yi, Xi Nan, Leo Yu-Ho Lo, Kento Shigyo, Liwenhan Xie, Jeffry Wicaksana, Kwang-Ting Cheng, Huamin Qu",
     venue:
       "6th ACM SIGCAS/SIGCHI Conference on Computing and Sustainable Societies (COMPASS ’23)",
-    tags: ["Real-world applications", "Sustainability"],
+    tags: ["Real-World Impact", "Sustainability"],
     links: [
       { label: "paper", url: "https://dl.acm.org/doi/10.1145/3588001.3609364" },
       { label: "arXiv", url: "https://arxiv.org/abs/2307.12882" },
@@ -112,6 +129,7 @@ const researchList = [
         url: "https://library.hkust.edu.hk/sc/foodwise/",
       },
     ],
+    featured: true,
   },
   {
     imgSrc: "./pics/publication/wallstbets.png",
@@ -120,7 +138,7 @@ const researchList = [
     authors:
       "Ehsan Ul Haq, Tristan Braud, Lik Hang Lee, Anish Krishna Vallapuram, Yue Yu, Gareth Tyson, Pan Hui",
     venue: "Companion Proceedings of the Web Conference 2022 (WWW ’22)",
-    tags: ["Data Analysis & Interpretation", "Substantive"],
+    tags: ["Data Exploration & Analysis", "Substantive"],
     links: [
       { label: "paper", url: "https://dl.acm.org/doi/10.1145/3487553.3524202" },
     ],
