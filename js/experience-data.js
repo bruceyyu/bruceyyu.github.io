@@ -1,6 +1,6 @@
 const awardList = [
   {
-    name: "HKPFS PhD Fellowship",
+    name: "HKPFS PhD Fellowship, HKD 337,200 per year",
     year: "2025 - 2028",
   },
   {
