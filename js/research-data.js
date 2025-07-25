@@ -4,7 +4,7 @@ const researchList = [
     title:
       "InSituTale: Enhancing Augmented Data Storytelling with Physical Objects",
     authors:
-      "Kentaro Takahira, Yue Yu, Takanori Fujiwara, and Suzuki Ryo, Huamin Qu",
+      "Kentaro Takahira, Yue Yu, Takanori Fujiwara, Suzuki Ryo, Huamin Qu",
     venue: "ACM Symposium on User Interface Software and Technology (UIST 2025)",
     tags: [
       "Creative Tools",
