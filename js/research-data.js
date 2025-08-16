@@ -10,6 +10,7 @@ const researchList = [
       "Creative Tools",
       "Augmented Reality",
     ],
+    links: [{ label: "arXiv", url: "https://arxiv.org/abs/2507.21411" }],
     featured: true,
   },
   {
