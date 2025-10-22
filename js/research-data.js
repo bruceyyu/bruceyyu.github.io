@@ -1,5 +1,42 @@
 const researchList = [
   {
+    imgSrc: "./pics/publication/ditto.gif",
+    title:
+      "Ditto: Scaling Instruction-Based Video Editing with a High-Quality Synthetic Dataset",
+    authors:
+      "Qingyan Bai, Qiuyu Wang, Hao Ouyang, Yue Yu, Hanlin Wang, Wen Wang, Ka Leong Cheng, Shuailei Ma, Yanhong Zeng, Zichen Liu, Yinghao Xu, Yujun Shen, Qifeng Chen",
+    venue: "arXiv",
+    tags: ["Creative Tools", "Video Editing"],
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2510.15742" },
+      {
+        label: "project page",
+        url: "https://ezioby.github.io/Ditto_page/",
+      },
+      { label: "github", url: "EzioBy/Ditto" },
+    ],
+    featured: true,
+  },
+  {
+    imgSrc: "./pics/publication/dynamic_typography.gif",
+    title:
+      "Dynamic Typography: Bringing Text to Life via Video Diffusion Prior",
+    authors:
+      "Zichen Liu, Yihao Meng, Hao Ouyang, Yue Yu, Bolin Zhao, Daniel Cohen-Or, Huamin Qu",
+    venue: "IEEE/CVF International Conference on Computer Vision (ICCV 2025)",
+    tags: ["Creative Tools", "Text Animation"],
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2404.11614" },
+      {
+        label: "project page",
+        url: "https://animate-your-word.github.io/demo/",
+      },
+      { label: "github", url: "zliucz/animate-your-word" },
+    ],
+    award: "Best Paper Award Finalist",
+    featured: true,
+  },
+  {
     imgSrc: "./pics/publication/insitutale.gif",
     title:
       "InSituTale: Enhancing Augmented Data Storytelling with Physical Objects",
@@ -74,22 +111,16 @@ const researchList = [
     featured: true,
   },
   {
-    imgSrc: "./pics/publication/dynamic_typography.gif",
+    imgSrc: "./pics/publication/ml_linkage.png",
     title:
-      "Dynamic Typography: Bringing Text to Life via Video Diffusion Prior",
-    authors:
-      "Zichen Liu, Yihao Meng, Hao Ouyang, Yue Yu, Bolin Zhao, Daniel Cohen-Or, Huamin Qu",
-    venue: "IEEE/CVF International Conference on Computer Vision (ICCV 2025)",
-    tags: ["Creative Tools", "Text Animation"],
+      "A Machine Learning Approach for Nominative Record Linkage in Chinese Historical Databases",
+    authors: "Yue Yu, Yueran Hou, Yibei Wu, Cameron Campbell",
+    venue:
+      "SocArXiv",
+    tags: ["Data Exploration & Analysis", "Computational Social Science"],
     links: [
-      { label: "arXiv", url: "https://arxiv.org/abs/2404.11614" },
-      {
-        label: "project page",
-        url: "https://animate-your-word.github.io/demo/",
-      },
-      { label: "github", url: "zliucz/animate-your-word" },
+      { label: "SocArXiv", url: "https://osf.io/preprints/socarxiv/rthvz_v1" }
     ],
-    award: "Oral Presentation",
     featured: true,
   },
   {
@@ -130,7 +161,7 @@ const researchList = [
         url: "https://library.hkust.edu.hk/sc/foodwise/",
       },
     ],
-    featured: true,
+    featured: false,
   },
   {
     imgSrc: "./pics/publication/wallstbets.png",

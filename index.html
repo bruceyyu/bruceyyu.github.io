@@ -214,23 +214,26 @@
             </div>
             <div class="col-xs-12 order-md-1 col-md-8" id="publication">
                 <div class="d-flex justify-content-between">
-                    <div class="path">Publications</div>
+                    <div class="path">Research</div>
                     <div class="toggle-switch">
                         <div class="toggle-option active" data-view="featured">🌟 Featured</div>
                         <div class="toggle-option" data-view="all">All</div>
                     </div>
                 </div>
-                <p>I develop novel AI and visual analytics
-                    tools that span three key stages: <a
-                        onclick="setActiveAndDisplay(this, ['Data Exploration & Analysis'])" class="tag-btn">📊
-                        Analyze</a>
-                    analysis and interpretation of complex societal data, <a
-                        onclick="setActiveAndDisplay(this, ['Creative Tools'])" class="tag-btn">💡
-                        Express</a>
-                    effortless AI-powered creative expression, and <a
-                        onclick="setActiveAndDisplay(this, ['Real-World Impact'])" class="tag-btn">🤝
-                        Impact</a>
-                    translating actionable insights into real-world impact.</p>
+                <div style="margin-bottom: 1rem">
+                    <div>I research novel tools and algorithms in two application domains</div>
+                    <div style="margin-top: 0.3rem;">
+                        <a onclick="setActiveAndDisplay(this, ['Creative Tools']);" class="tag-btn">🎨
+                            Express</a>
+                        Creativity Support with Generative AI (CVPR 2025, ICCV 2025, UIST 2025)
+                    </div>
+                    <div style="margin-top: 0.3rem;">
+                        <a onclick="setActiveAndDisplay(this, ['Data Exploration & Analysis'])" class="tag-btn">📊
+                            Analyze</a>
+                        Computational Social Science & Data Analytics (TVCG 2025, VIS 2024)
+                    </div>
+                </div>
+
                 <div id="publication-list">
                 </div>
                 <script>
@@ -249,6 +252,7 @@
                         }
                     });
                     function setActiveAndDisplay(element, selectedTags = []) {
+                        console.log("sdf")
                         if (element.classList.contains('active')) {
                             element.classList.remove('active');
                             currentState.selectedTags = currentState.selectedTags.filter(
