@@ -1,5 +1,22 @@
 const researchList = [
   {
+    imgSrc: "./pics/publication/ml_linkage.png",
+    title:
+      "A Machine Learning Approach for Nominative Record Linkage in Chinese Historical Databases",
+    authors: "Yue Yu, Yueran Hou, Yibei Wu, Cameron Campbell",
+    venue:
+      "Presentation at SSHA 2025",
+    tags: ["Data Exploration & Analysis", "Computational Social Science"],
+    links: [
+      { label: "SocArXiv", url: "https://osf.io/preprints/socarxiv/rthvz_v1" },
+      {
+        label: "project page",
+        url: "https://github.com/bruceyyu/ML-Chinese-record-linkage",
+      }
+    ],
+    featured: true,
+  },
+  {
     imgSrc: "./pics/publication/ditto.gif",
     title:
       "Ditto: Scaling Instruction-Based Video Editing with a High-Quality Synthetic Dataset",
@@ -15,7 +32,7 @@ const researchList = [
       },
       { label: "github", url: "EzioBy/Ditto" },
     ],
-    featured: true,
+    featured: false,
   },
   {
     imgSrc: "./pics/publication/dynamic_typography.gif",
@@ -107,19 +124,6 @@ const researchList = [
     links: [
       { label: "paper", url: "https://ieeexplore.ieee.org/document/10771146/" },
       { label: "arXiv", url: "https://arxiv.org/abs/2406.11637" },
-    ],
-    featured: true,
-  },
-  {
-    imgSrc: "./pics/publication/ml_linkage.png",
-    title:
-      "A Machine Learning Approach for Nominative Record Linkage in Chinese Historical Databases",
-    authors: "Yue Yu, Yueran Hou, Yibei Wu, Cameron Campbell",
-    venue:
-      "SocArXiv",
-    tags: ["Data Exploration & Analysis", "Computational Social Science"],
-    links: [
-      { label: "SocArXiv", url: "https://osf.io/preprints/socarxiv/rthvz_v1" }
     ],
     featured: true,
   },
