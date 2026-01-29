@@ -141,7 +141,6 @@ const researchList = [
         url: "https://ieeexplore.ieee.org/abstract/document/10357756",
       },
       { label: "arXiv", url: "https://arxiv.org/abs/2309.11454" },
-      { label: "slides", url: "./materials/VDS_NeighViz_long_ver.pdf" },
     ],
   },
   {
