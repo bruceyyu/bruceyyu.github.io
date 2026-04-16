@@ -5,10 +5,10 @@ const researchList = [
       "A Machine Learning Approach for Nominative Record Linkage in Chinese Historical Databases",
     authors: "Yue Yu, Yueran Hou, Yibei Wu, Cameron Campbell",
     venue:
-      "Presentation at SSHA 2025",
+      "Historical Methods",
     tags: ["Data Exploration & Analysis", "Computational Social Science"],
     links: [
-      { label: "SocArXiv", url: "https://osf.io/preprints/socarxiv/rthvz_v1" },
+      { label: "paper", url: "https://www.tandfonline.com/doi/full/10.1080/01615440.2026.2641454" },
       {
         label: "project page",
         url: "https://github.com/bruceyyu/ML-Chinese-record-linkage",
@@ -17,13 +17,87 @@ const researchList = [
     featured: true,
   },
   {
+    imgSrc: "./pics/publication/jsl_parser.png",
+    title:
+      "Parsing Historical Job Titles via LLMs to Analyze Social Mobility in Late Imperial China",
+    authors: "Yue Yu, Jun Chen, Michael Chung, Cameron Campbell",
+    venue:
+      "RC28 Meeting 2026 (Scheduled)",
+    tags: ["Data Exploration & Analysis", "Computational Social Science"],
+    featured: true,
+  },
+  {
+    imgSrc: "./pics/publication/vlm.png",
+    title:
+      "Measuring Micro-Level Social Interactions: An Image-Driven Computational Approach",
+    authors: "Yue Yu*, Wenhao Jiang*, Siwei Cheng",
+    venue:
+      "ASA Annual Meeting 2026, Advances in Computational Methods Session (Scheduled)",
+    tags: ["Data Exploration & Analysis", "Computational Social Science"],
+    featured: true,
+  },
+  {
+    imgSrc: "./pics/publication/lingbot-world.gif",
+    title:
+      "LingBot-World: Advancing Open-source World Models",
+    authors:
+      "Robbyant Team",
+    venue: "Technical Report",
+    tags: ["GenAI", "Language Learning"],
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2601.20540" },
+      {
+        label: "project page",
+        url: "https://technology.robbyant.com/lingbot-world",
+      },
+      { label: "github", url: "robbyant/lingbot-world" },
+    ],
+  },
+  {
+    imgSrc: "./pics/publication/magicquillv2.gif",
+    title:
+      "MagicQuillV2: Precise and Interactive Image Editing with Layered Visual Cues",
+    authors:
+      "Zichen Liu*, Yue Yu*, Hao Ouyang, Qiuyu Wang, Shuailei Ma, Ka Leong Cheng, Wen Wang, Qingyan Bai, Yuxuan Zhang, Yanhong Zeng, Yixuan Li, Xing Zhu, Yujun Shen, Qifeng Chen",
+    venue: "IEEE/CVF Computer Vision and Pattern Recognition (CVPR 2026)",
+    tags: ["GenAI", "Video Editing"],
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2512.03046" },
+      {
+        label: "project page",
+        url: "https://magicquill.art/v2/",
+      },
+      { label: "github", url: "zliucz/MagicQuillV2" },
+    ],
+    featured: false,
+  },
+  {
+    imgSrc: "./pics/publication/holocine.gif",
+    title:
+      "HoloCine: Holistic Generation of Cinematic Multi-Shot Long Video Narratives",
+    authors:
+      "Yihao Meng, Hao Ouyang, Yue Yu, Qiuyu Wang, Wen Wang, Ka Leong Cheng, Hanlin Wang, Yixuan Li, Cheng Chen, Yanhong Zeng, Yujun Shen, Huamin Qu",
+    venue: "IEEE/CVF Computer Vision and Pattern Recognition (CVPR 2026)",
+    tags: ["GenAI", "Video Editing"],
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2510.20822" },
+      {
+        label: "project page",
+        url: "https://holo-cine.github.io/",
+      },
+      { label: "github", url: "yihao-meng/HoloCine" },
+    ],
+    award: "Highlight Paper",
+    featured: false,
+  },
+  {
     imgSrc: "./pics/publication/ditto.gif",
     title:
       "Ditto: Scaling Instruction-Based Video Editing with a High-Quality Synthetic Dataset",
     authors:
       "Qingyan Bai, Qiuyu Wang, Hao Ouyang, Yue Yu, Hanlin Wang, Wen Wang, Ka Leong Cheng, Shuailei Ma, Yanhong Zeng, Zichen Liu, Yinghao Xu, Yujun Shen, Qifeng Chen",
-    venue: "arXiv",
-    tags: ["Creative Tools", "Video Editing"],
+    venue: "IEEE/CVF Computer Vision and Pattern Recognition (CVPR 2026)",
+    tags: ["GenAI", "Video Editing"],
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2510.15742" },
       {
@@ -32,6 +106,7 @@ const researchList = [
       },
       { label: "github", url: "EzioBy/Ditto" },
     ],
+    award: "Highlight Paper",
     featured: false,
   },
   {
@@ -41,7 +116,7 @@ const researchList = [
     authors:
       "Zichen Liu, Yihao Meng, Hao Ouyang, Yue Yu, Bolin Zhao, Daniel Cohen-Or, Huamin Qu",
     venue: "IEEE/CVF International Conference on Computer Vision (ICCV 2025)",
-    tags: ["Creative Tools", "Text Animation"],
+    tags: ["GenAI", "Text Animation"],
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2404.11614" },
       {
@@ -52,34 +127,6 @@ const researchList = [
     ],
     award: "Best Paper Award Finalist",
     featured: true,
-  },
-  {
-    imgSrc: "./pics/publication/insitutale.gif",
-    title:
-      "InSituTale: Enhancing Augmented Data Storytelling with Physical Objects",
-    authors:
-      "Kentaro Takahira, Yue Yu, Takanori Fujiwara, Suzuki Ryo, Huamin Qu",
-    venue: "ACM Symposium on User Interface Software and Technology (UIST 2025)",
-    tags: [
-      "Creative Tools",
-      "Augmented Reality",
-    ],
-    links: [{ label: "arXiv", url: "https://arxiv.org/abs/2507.21411" }],
-    featured: true,
-  },
-  {
-    imgSrc: "./pics/publication/dietglance.jpg",
-    title:
-      "DietGlance: Dietary Monitoring and Personalized Analysis at a Glance with Knowledge-Empowered AI Assistant",
-    authors:
-      "Zhihan Jiang, Running Zhao, Lin Lin, Yue Yu, Handi Chen, Xinchen Zhang, Xuhai Xu, Yifang Wang, Xiaojuan Ma, Edith C.H. Ngai",
-    venue: "arXiv",
-    tags: [
-      "Real-World Impact",
-      "Ubiquitous Computing",
-    ],
-    links: [{ label: "arXiv", url: "https://arxiv.org/abs/2502.01317" }],
-    featured: false,
   },
   {
     imgSrc: "./pics/publication/inclusiviz.png",
@@ -101,7 +148,7 @@ const researchList = [
     authors:
       "Zichen Liu*, Yue Yu* (co-first), Hao Ouyang, Qiuyu Wang, Ka Leong Cheng, Wen Wang, Zhiheng Liu, Qifeng Chen, Yujun Shen",
     venue: "IEEE/CVF Computer Vision and Pattern Recognition (CVPR 2025)",
-    tags: ["Creative Tools", "Image Editing"],
+    tags: ["GenAI", "Image Editing"],
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2411.09703" },
       { label: "project page", url: "https://magicquill.art/demo/" },
@@ -114,68 +161,17 @@ const researchList = [
     featured: true,
   },
   {
-    imgSrc: "./pics/publication/pygwalker.png",
+    imgSrc: "./pics/publication/insitutale.gif",
     title:
-      "PyGWalker: On-the-fly Assistant for Exploratory Visual Data Analysis",
-    authors: "Yue Yu, Leixian Shen, Fei Long, Huamin Qu, Hao Chen",
-    venue: "IEEE VIS 2024",
-    award: "Best Short Paper",
-    tags: ["Data Exploration & Analysis", "Viz Tool", "Open-source"],
-    links: [
-      { label: "paper", url: "https://ieeexplore.ieee.org/document/10771146/" },
-      { label: "arXiv", url: "https://arxiv.org/abs/2406.11637" },
+      "InSituTale: Enhancing Augmented Data Storytelling with Physical Objects",
+    authors:
+      "Kentaro Takahira, Yue Yu, Takanori Fujiwara, Suzuki Ryo, Huamin Qu",
+    venue: "ACM Symposium on User Interface Software and Technology (UIST 2025)",
+    tags: [
+      "GenAI",
+      "Augmented Reality",
     ],
+    links: [{ label: "arXiv", url: "https://arxiv.org/abs/2507.21411" }],
     featured: true,
-  },
-  {
-    imgSrc: "./pics/publication/neighviz.png",
-    title:
-      "NeighViz: Towards Better Understanding of Neighborhood Effects on Social Groups with Spatial Data",
-    authors:
-      "Yue Yu, Yifang Wang, Qisen Yang, Di Weng, Yongjun Zhang, Xiaogang Wu, Yingcai Wu, Huamin Qu",
-    venue: "9th Symposium on Visualization in Data Science (VDS@VIS 2023)",
-    tags: ["Data Exploration & Analysis", "Methodological", "Urban Science"],
-    links: [
-      {
-        label: "paper",
-        url: "https://ieeexplore.ieee.org/abstract/document/10357756",
-      },
-      { label: "arXiv", url: "https://arxiv.org/abs/2309.11454" },
-    ],
-  },
-  {
-    imgSrc: "./pics/publication/foodwise.png",
-    title:
-      "FoodWise: Food Waste Reduction and Behavior Change on Campus with Data Visualization and Gamification",
-    authors:
-      "Yue Yu, Sophia Yi, Xi Nan, Leo Yu-Ho Lo, Kento Shigyo, Liwenhan Xie, Jeffry Wicaksana, Kwang-Ting Cheng, Huamin Qu",
-    venue:
-      "6th ACM SIGCAS/SIGCHI Conference on Computing and Sustainable Societies (COMPASS ’23)",
-    tags: ["Real-World Impact", "Sustainability"],
-    links: [
-      { label: "paper", url: "https://dl.acm.org/doi/10.1145/3588001.3609364" },
-      { label: "arXiv", url: "https://arxiv.org/abs/2307.12882" },
-      {
-        label: "presentation",
-        url: "https://www.youtube.com/watch?v=EftanoT-3lM&list=PLzhsLf-y54j32cx90ujLadarjCkCM6Ph_&index=5",
-      },
-      {
-        label: "blog article",
-        url: "https://library.hkust.edu.hk/sc/foodwise/",
-      },
-    ],
-    featured: false,
-  },
-  {
-    imgSrc: "./pics/publication/wallstbets.png",
-    title:
-      "Short, Colorful, and Irreverent! A Comparative Analysis of New Users on WallstreetBets During the Gamestop Short-squeeze",
-    authors:
-      "Ehsan Ul Haq, Tristan Braud, Lik Hang Lee, Anish Krishna Vallapuram, Yue Yu, Gareth Tyson, Pan Hui",
-    venue: "Companion Proceedings of the Web Conference 2022 (WWW ’22)",
-    tags: ["Data Exploration & Analysis", "Substantive"],
-    links: [
-      { label: "paper", url: "https://dl.acm.org/doi/10.1145/3487553.3524202" },
-    ],
   },
 ];
