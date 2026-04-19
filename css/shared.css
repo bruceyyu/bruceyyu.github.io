@@ -32,23 +32,9 @@ body {
     color: var(--theme-invert-color);
 }
 
-.caption-text {
-    color: var(--theme-primary-color);
-}
-
 .jumbotron {
     padding: 2rem 2rem;
     background-color: var(--theme-color-0);
-}
-
-.jumbotron .theme-switch {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.jumbotron .theme-switch :hover {
-    cursor: pointer;
 }
 
 .image-stack-container {
@@ -112,12 +98,6 @@ body {
     opacity: 1;
 }
 
-.path {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace !important;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
 .bio-link {
     display: flex;
 }
@@ -154,24 +134,6 @@ body {
     width: 100%;
 }
 
-.research-item .award-outer {
-    padding: 2px;
-    border-radius: 0.2rem;
-    background: linear-gradient(to bottom right, #EAC925, #D89810, #DCB319);
-    display: inline-block;
-}
-
-.research-item .award-outer .award {
-    padding: 0.02rem 0.5rem;
-    font-size: 0.8rem;
-    font-weight: bold;
-    border-radius: 0.1rem;
-    background-color: #E3B71A;
-    color: white;
-    margin: auto;
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-}
-
 .badge-bar {
     display: flex;
 }
@@ -184,87 +146,10 @@ body {
     margin: 0 0.2rem 0 0;
 }
 
-.company::before {
-    content: "@";
-    font-weight: bold;
-    margin-right: 0.1rem;
-    color: var(--theme-secondary-color);
-}
-
-.tag {
-    font-size: 0.8rem;
-    margin-right: 0.4rem;
-    color: var(--theme-invert-color-0)
-}
-
-.tag::before {
-    content: "#";
-    font-weight: bold;
-    margin-right: 0.1rem;
-    color: var(--theme-secondary-color);
-}
-
-.tag-btn {
-    padding: 0.1em 0.3em;
-    line-height: 1.3rem;
-    border-radius: 0.3rem;
-    font-size: 0.9em;
-    color: var(--theme-inverted-color);
-    background-color: var(--tag-bg);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.research-theme-text {
-    font-family: 'Crimson Pro', serif; 
-    font-style: italic; 
-    font-size: 1.1rem;
-}
-
-.tag-btn.active {
-    background-color: var(--theme-primary-color);
-    color: var(--theme-color-1);
-}
-
-.toggle-switch {
-    display: flex;
-    align-items: center;
-    background: var(--toggle-bg, #f0f0f0);
-    border-radius: 20px;
-    padding: 2px;
-    cursor: pointer;
-    font-size: 0.7rem;
-    width: fit-content;
-    margin-bottom: auto;
-}
-
-.toggle-option {
-    padding: 3px 10px;
-    border-radius: 13px;
-    transition: all 0.3s ease;
-    color: var(--toggle-text, #666);
-}
-
-.toggle-option.active {
-    background: var(--toggle-active-bg, white);
-    color: var(--toggle-active-text, #333);
-    box-shadow: var(--toggle-shadow, 0 2px 4px rgba(0,0,0,0.1));
-}
-
-.research-link {
-    margin-right: 0.2rem;
-}
-
-#news-list .news-item {
-    margin: 0.5rem;
-}
-
-
 @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
 
 .section-title {
-    font-family: 'Gilda Display', serif;
+    font-family: 'Gilda Display', Georgia, serif;
     font-size: 1.5rem;
     color: #222;
     margin-bottom: 1rem;
@@ -273,9 +158,8 @@ body {
 
 /* Theme Layout Styles */
 .research-theme-title {
-    font-family: 'Gilda Display', serif;
+    font-family: 'Gilda Display', Georgia, serif;
     font-size: 1.5rem;
-    /* font-style: ; */
     color: #222;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -293,6 +177,64 @@ body {
     width: 100%;
     border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft, elegant shadow */
+}
+
+/* Featured CSS research image: imperial ↔ modern crossfade (1.5s hold, 3s fade, loop) */
+.css-crossfade-stack {
+    display: grid;
+    width: 100%;
+}
+
+.css-crossfade-stack > .css-crossfade-layer {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    height: auto;
+}
+
+.css-crossfade-imperial {
+    z-index: 1;
+    animation: cssCrossfadeImperial 11s ease-in-out infinite;
+}
+
+.css-crossfade-modern {
+    z-index: 0;
+    animation: cssCrossfadeModern 11s ease-in-out infinite;
+}
+
+@keyframes cssCrossfadeImperial {
+    0%, 16.6667% {
+        opacity: 1;
+    }
+    50%, 66.6667% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes cssCrossfadeModern {
+    0%, 16.6667% {
+        opacity: 0;
+    }
+    50%, 66.6667% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .css-crossfade-imperial,
+    .css-crossfade-modern {
+        animation: none;
+    }
+
+    .css-crossfade-modern {
+        opacity: 0;
+    }
 }
 
 .theme-meta {
@@ -334,7 +276,7 @@ body {
 }
 
 .elegant-paper-title {
-    font-family: 'Gilda Display', serif;
+    font-family: 'Gilda Display', Georgia, serif;
     font-size: 1.1rem;
     color: #111;
     margin-bottom: 0.4rem;
