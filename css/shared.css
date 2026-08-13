@@ -149,11 +149,65 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
 
 .section-title {
-    font-family: 'Gilda Display', Georgia, serif;
     font-size: 1.5rem;
-    color: #222;
+    color: var(--theme-invert-color);
     margin-bottom: 1rem;
     line-height: 1.2;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
+    /* padding-bottom: 0.85rem; */
+    /* border-bottom: 1px solid var(--theme-shadow-0); */
+}
+
+.section-heading .section-title {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.section-heading .section-heading-link,
+.section-heading .section-heading-link:visited {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex: 0 0 auto;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid var(--theme-primary-color);
+    border-radius: 999px;
+    color: var(--theme-primary-color);
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.section-heading .section-heading-link:hover {
+    background-color: var(--theme-primary-color);
+    color: var(--theme-absolute-color);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 575.98px) {
+    .section-heading {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .section-heading .section-title {
+        font-size: 1.65rem;
+    }
+
+    .section-heading .section-heading-link,
+    .section-heading .section-heading-link:visited {
+        padding: 0.4rem 0.65rem;
+        font-size: 0.76rem;
+    }
 }
 
 /* Theme Layout Styles */

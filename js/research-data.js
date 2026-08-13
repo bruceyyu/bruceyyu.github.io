@@ -22,7 +22,7 @@ const researchList = [
       "Parsing Historical Job Titles via LLMs to Analyze Social Mobility in Late Imperial China",
     authors: "Yue Yu, Jun Chen, Michael Chung, Cameron Campbell",
     venue:
-      "RC28 Meeting 2026 (Scheduled)",
+      "Work in Progress. Presented at Research Committee 28 on Social Stratification and Mobility (RC28) Conference 2026",
     tags: ["Data Exploration & Analysis", "Computational Social Science"],
     featured: true,
   },
@@ -32,7 +32,7 @@ const researchList = [
       "Measuring Micro-Level Social Interactions: An Image-Driven Computational Approach",
     authors: "Yue Yu*, Wenhao Jiang*, Siwei Cheng",
     venue:
-      "ASA Annual Meeting 2026, Advances in Computational Methods Session (Scheduled)",
+      "Work in Progress. Presented at American Sociological Association (ASA) Annual Meeting 2026",
     tags: ["Data Exploration & Analysis", "Computational Social Science"],
     featured: true,
   },
