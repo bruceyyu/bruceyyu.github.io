@@ -5,12 +5,12 @@ const researchList = [
       "A Machine Learning Approach for Nominative Record Linkage in Chinese Historical Databases",
     authors: "Yue Yu, Yueran Hou, Yibei Wu, Cameron Campbell",
     venue:
-      "Historical Methods",
+      "Historical Methods: A Journal of Quantitative and Interdisciplinary History",
     tags: ["Data Exploration & Analysis", "Computational Social Science"],
     links: [
       { label: "paper", url: "https://www.tandfonline.com/doi/full/10.1080/01615440.2026.2641454" },
       {
-        label: "project page",
+        label: "code",
         url: "https://github.com/bruceyyu/ML-Chinese-record-linkage",
       }
     ],
@@ -19,15 +19,22 @@ const researchList = [
   {
     imgSrc: "./pics/publication/jsl_parser.png",
     title:
-      "Parsing Historical Job Titles via LLMs to Analyze Social Mobility in Late Imperial China",
-    authors: "Yue Yu, Jun Chen, Michael Chung, Cameron Campbell",
+      "Office, Rank, and Mobility: Decomposing Historical Chinese Bureaucratic Titles with Language Models",
+    authors: "Yue Yu, Jun Chen, Michael Yan Hon Chung, Cameron Campbell",
     venue:
-      "Work in Progress. Presented at Research Committee 28 on Social Stratification and Mobility (RC28) Conference 2026",
+      "Working Paper",
     tags: ["Data Exploration & Analysis", "Computational Social Science"],
+    links: [
+      { label: "preprint", url: "https://osf.io/preprints/socarxiv/eg87f_v1" },
+      {
+        label: "code & model",
+        url: "https://github.com/bruceyyu/decompose-chinese-official-titles",
+      }
+    ],
     featured: true,
   },
   {
-    imgSrc: "./pics/publication/vlm.png",
+    imgSrc: "./pics/publication/vlm_interaction.png",
     title:
       "Measuring Micro-Level Social Interactions: An Image-Driven Computational Approach",
     authors: "Yue Yu*, Wenhao Jiang*, Siwei Cheng",
