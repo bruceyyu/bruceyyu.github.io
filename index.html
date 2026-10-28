@@ -7,9 +7,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yue Yu (Bruce) studies social mobility, inequality, and human–AI collaboration, developing computational methods for social research and creative tools.">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" id="theme-css-file">
     <link href="css/shared.css" rel="stylesheet">
+    <link href="css/research.css" rel="stylesheet">
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9S54MEMG67"></script>
@@ -24,6 +26,22 @@
 </head>
 
 <body>
+    <svg class="research-icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <symbol id="ri-people" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M21 21v-3a6 6 0 0 0-3-5.2"/></symbol>
+        <symbol id="ri-path" viewBox="0 0 24 24"><circle cx="3" cy="17" r="1.5"/><path d="M4.5 17H7c6 0 5-12 12-12M7 17c5 0 7-5 12-5M7 17c5 0 7 3 12 3M17 3l2 2-2 2M17 10l2 2-2 2M17 18l2 2-2 2"/></symbol>
+        <symbol id="ri-family" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 6.5v6M5 16.5v-4h14v4"/></symbol>
+        <symbol id="ri-arrow" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+        <symbol id="ri-paper" viewBox="0 0 24 24"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h8"/></symbol>
+        <symbol id="ri-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+        <symbol id="ri-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v7l-6 9a1.3 1.3 0 0 0 1 2h14a1.3 1.3 0 0 0 1-2l-6-9V3M7 15h10"/></symbol>
+        <symbol id="ri-edit" viewBox="0 0 24 24"><path d="m4 16 12-12 4 4L8 20H4v-4ZM13 7l4 4M14 20h7"/></symbol>
+        <symbol id="ri-world" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 7h14M5 17h14"/></symbol>
+        <symbol id="ri-story" viewBox="0 0 24 24"><path d="M3 5h7l2 2 2-2h7v15h-7l-2 2-2-2H3V5ZM12 7v15M6 10h3M6 14h3M15 10h3M15 14h3"/></symbol>
+        <symbol id="ri-tools" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 9v11M12 16l2-3 3 4 2-6"/></symbol>
+        <symbol id="ri-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></symbol>
+        <symbol id="ri-notebook" viewBox="0 0 24 24"><rect x="5" y="3" width="16" height="18" rx="2"/><path d="M3 7h4M3 12h4M3 17h4M12 9l-3 3 3 3M15 9l3 3-3 3"/></symbol>
+        <symbol id="ri-award" viewBox="0 0 24 24"><path d="M8 3h8v5a4 4 0 0 1-8 0V3ZM8 5H4v3a4 4 0 0 0 4 4M16 5h4v3a4 4 0 0 1-4 4M12 12v7M8 21h8M9 19h6"/></symbol>
+    </svg>
     <header class="jumbotron">
         <div class="container">
             <div class="row" style="position: relative;">
@@ -31,7 +49,7 @@
                     <h3><span style="font-family: 'Gilda Display', Georgia, serif;">“Bruce” Yue Yu</span><span style="font-family: 'SimSun', '宋體', serif;"> (<a
                             href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%99%9E">虞</a>越)</span></h3>
                     <p>
-                        I research how to use algorithms to decode complex societal patterns and empower human creativity.
+                        I study how institutions and social networks shape opportunity, and develop generative AI models and tools.
                     </p>
                     
                     <p>
@@ -98,7 +116,7 @@
                     </div>
                     </p>
                 </div>
-                <div class="col-xs-12 col-md-3 align-self-center text-center">
+                <div class="col-xs-12 col-md-4 align-self-center text-center">
                     <div class="image-stack-container" id="imageStackContainer">
                         <div class="image-wrapper">
                             <img class="profile-image" src="./pics/self/graduation.jpeg" />
@@ -128,165 +146,141 @@
         <div class="row">
             <div class="col-xs-12 order-md-1 col-md-12" id="publication-section">
                 <div class="section-heading">
-                    <div class="section-title">Featured Research</div>
+                    <div class="section-title">Featured research</div>
                     <a class="section-heading-link" href="./materials/YueYu_CV.pdf" target="_blank" rel="noopener" onclick="gtag('event', 'click', { 'event_category': 'CV Download', 'event_label': 'CV Link Click' });">
                         View full CV <span aria-hidden="true">↗</span>
                     </a>
                 </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-5 mb-4 mb-md-0">
-                        <div class="css-crossfade-stack" role="img" aria-label="Computational Social Science">
-                            <img src="./pics/publication/social_imperial.png" class="theme-image css-crossfade-layer css-crossfade-imperial" alt="">
-                            <img src="./pics/publication/social_modern.png" class="theme-image css-crossfade-layer css-crossfade-modern" alt="">
+                <section id="social-research" aria-labelledby="social-research-title">
+                    <div class="research-intro">
+                        <div>
+                            <p class="research-eyebrow">Computational social science</p>
+                            <h2 id="social-research-title">How is opportunity<br class="research-title-break"> socially organized?</h2>
+                            <p class="research-lead">I study how institutions and social networks shape careers and the allocation of opportunity, using computational methods and historical and contemporary data.</p>
                         </div>
+                        <figure class="research-scene">
+                            <div class="css-crossfade-stack" role="img" aria-label="Illustrations of historical and contemporary social settings">
+                                <img src="./pics/publication/social_imperial.png" class="theme-image css-crossfade-layer css-crossfade-imperial" alt="">
+                                <img src="./pics/publication/social_modern.png" class="theme-image css-crossfade-layer css-crossfade-modern" alt="">
+                            </div>
+                        </figure>
                     </div>
-                    <div class="col-md-7 pl-md-4">
-                        <h2 class="research-theme-title">Modeling social mobility and inequality across time</h2>
-                        <p class="research-theme-slogan">I leverage advanced AI and computational methods to understand social mobility, inequality, and human success across history and the present.</p>
-                        <div class="theme-meta">
-                            <strong>Highlight Venues:</strong> Historical Methods, IEEE TVCG, ASA, RC28
-                        </div>
-                        <div style="display: flex;">
-                            <button class="toggle-papers-btn" data-target="#css-papers">
-                                <span class="btn-text">View Papers</span> <span class="btn-icon">↓</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div id="css-papers" class="paper-list-container"></div>
-                
-                <hr style="margin: 1rem auto; width: 90%; border-top: 1px solid #eaeaea;">
 
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-5 order-md-2 mb-4 mb-md-0">
-                        <img src="./pics/publication/lingbot-world.gif" class="theme-image" alt="Generative AI">
-                    </div>
-                    <div class="col-md-7 order-md-1 pr-md-4">
-                        <h2 class="research-theme-title">Extending the horizon of human creativity</h2>
-                        <p class="research-theme-slogan">I build collaborative human-AI systems and generative algorithms that empower users to create expressive images and cinematic videos.</p>
-                        <div class="theme-meta">
-                            <strong>Highlight Venues:</strong> CVPR, ICCV (Best Paper Finalist), UIST
-                        </div>
-                        <div style="display: flex;">
-                            <button class="toggle-papers-btn" data-target="#genai-papers">
-                                <span class="btn-text">View Papers</span> <span class="btn-icon">↓</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div id="genai-papers" class="paper-list-container"></div>
-                <script>
-                    $(document).ready(function() {
-                        // 1. Toggle Button Logic
-                        $('.toggle-papers-btn').click(function () {
-                            let target = $(this).data('target');
-                            let $icon = $(this).find('.btn-icon');
-                            
-                            $(target).slideToggle(400, function() {
-                                if ($(this).is(':visible')) {
-                                    $icon.text('↑');
-                                } else {
-                                    $icon.text('↓');
-                                }
-                            });
-                        });
-            
-                        // 2. Populate Papers Logic
-                        function renderPaper(item) {
-                            // Bold your name elegantly
-                            let formattedAuthors = item.authors.split(', ').map(author => {
-                                return author.includes('Yue Yu') ? `<b>${author}</b>` : author;
-                            }).join(', ');
-            
-                            // Build links cleanly
-                            let linksHtml = '';
-                            if (item.links) {
-                                item.links.forEach(link => {
-                                    linksHtml += `<a href="${link.url}" target="_blank">${link.label}</a>`;
-                                });
-                            }
-            
-                            // Build award tag if exists
-                            let awardHtml = item.award ? `<div class="elegant-award">🏆 ${item.award}</div>` : '';
-            
-                            // Construct the HTML for a single paper
-                            return `
-                                <div class="row elegant-research-item align-items-center">
-                                    <div class="col-md-3 mb-3 mb-md-0">
-                                        <img src="${item.imgSrc}" alt="${item.title}" style="width: 100%; border-radius: 4px; border: 1px solid #f0f0f0;">
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="elegant-paper-title">${item.title}</div>
-                                        <div class="elegant-authors">${formattedAuthors}</div>
-                                        <div class="elegant-venue">${item.venue}</div>
-                                        ${awardHtml}
-                                        <div class="elegant-links">${linksHtml}</div>
-                                    </div>
+                    <details id="css-papers" class="research-collection" open>
+                        <summary><span>Research questions &amp; papers</span><span class="collection-meta"><svg class="research-icon" aria-hidden="true"><use href="#ri-chevron"/></svg></span></summary>
+                        <div id="research-questions" class="research-questions" aria-label="Research questions and related papers">
+                            <section class="research-question" aria-labelledby="question-boundaries">
+                                <div class="question-intro">
+                                    <div class="question-label"><svg class="research-icon question-icon" aria-hidden="true"><use href="#ri-people"/></svg><p class="research-eyebrow">Encounters</p></div>
+                                    <h3 id="question-boundaries">Who gets to meet whom?</h3>
                                 </div>
-                            `;
-                        }
-            
-                        // Distribute papers into the two containers based on tags
-                        $.each(researchList, function (index, item) {
-                            let html = renderPaper(item);
-            
-                            // GenAI Theme categorization
-                            if (item.tags.includes('GenAI') || item.tags.includes('Video Editing') || item.tags.includes('Image Editing')) {
-                                $('#genai-papers').append(html);
-                            } 
-                            // CSS / Data Theme categorization
-                            else if (item.tags.includes('Computational Social Science') || item.tags.includes('Data Exploration & Analysis')) {
-                                $('#css-papers').append(html);
-                            }
-                            // Fallback: If any papers don't match exactly, you can push them to CSS by default, 
-                            // or add another condition here.
-                            else {
-                                 $('#css-papers').append(html); 
-                            }
-                        });
-                    });
-                </script>
+                                <div class="question-papers" id="boundary-papers"></div>
+                            </section>
+                            <section class="research-question" aria-labelledby="question-pathways">
+                                <div class="question-intro">
+                                    <div class="question-label"><svg class="research-icon question-icon" aria-hidden="true"><use href="#ri-path"/></svg><p class="research-eyebrow">Careers</p></div>
+                                    <h3 id="question-pathways">How does advantage accumulate over a career?</h3>
+                                </div>
+                                <div class="question-papers" id="pathway-papers"></div>
+                            </section>
+                            <section class="research-question" aria-labelledby="question-generations">
+                                <div class="question-intro">
+                                    <div class="question-label"><svg class="research-icon question-icon" aria-hidden="true"><use href="#ri-family"/></svg><p class="research-eyebrow">Generations</p></div>
+                                    <h3 id="question-generations">What carries across generations?</h3>
+                                </div>
+                                <div class="question-papers">
+                                    <article id="ongoing-genealogy" class="question-paper ongoing-paper">
+                                        <div class="paper-artwork ongoing-artwork" style="min-height: 4rem;"><svg class="research-icon" aria-hidden="true"><use href="#ri-family"/></svg></div>
+                                        <div class="paper-content">
+                                            <h4>Reconstructing family histories from Chinese genealogies</h4>
+                                            <p class="paper-meta"><svg class="research-icon" aria-hidden="true"><use href="#ri-flask"/></svg> Ongoing</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+                        </div>
+                    </details>
+                </section>
+
+                <section id="creative-research" class="research-area" aria-labelledby="creative-research-title">
+                    <div class="research-intro">
+                        <div>
+                            <p class="research-eyebrow">Human–AI creativity</p>
+                            <h2 id="creative-research-title" class="research-area-title">How can AI expand<br class="research-title-break"> human creativity?</h2>
+                            <p class="research-lead">I also build interactive tools and generative models for visual expression, from image editing to cinematic worlds.</p>
+                        </div>
+                        <figure class="research-scene">
+                            <img src="./pics/publication/lingbot-world.gif" class="theme-image" alt="Generated world sequences from LingBot-World" loading="lazy">
+                        </figure>
+                    </div>
+                    <details id="creative-papers" class="research-collection">
+                        <summary><span>Research questions &amp; papers</span><span class="collection-meta"><svg class="research-icon" aria-hidden="true"><use href="#ri-chevron"/></svg></span></summary>
+                        <div id="genai-papers" class="research-questions">
+                            <section class="research-question" aria-labelledby="question-control">
+                                <div class="question-intro">
+                                    <div class="question-label"><svg class="research-icon question-icon" aria-hidden="true"><use href="#ri-edit"/></svg><p class="research-eyebrow">Intent &amp; control</p></div>
+                                    <h3 id="question-control">How can intent guide creation?</h3>
+                                </div>
+                                <div class="question-papers" id="control-papers"></div>
+                            </section>
+                            <section class="research-question" aria-labelledby="question-worlds">
+                                <div class="question-intro">
+                                    <div class="question-label"><svg class="research-icon question-icon" aria-hidden="true"><use href="#ri-world"/></svg><p class="research-eyebrow">Worlds &amp; narratives</p></div>
+                                    <h3 id="question-worlds">How can we create worlds in pixels?</h3>
+                                </div>
+                                <div class="question-papers" id="world-papers"></div>
+                            </section>
+                            <section class="research-question" aria-labelledby="question-expression">
+                                <div class="question-intro">
+                                    <div class="question-label"><svg class="research-icon question-icon" aria-hidden="true"><use href="#ri-story"/></svg><p class="research-eyebrow">Media &amp; expression</p></div>
+                                    <h3 id="question-expression">What can become a storytelling medium?</h3>
+                                </div>
+                                <div class="question-papers" id="expression-papers"></div>
+                            </section>
+                        </div>
+                    </details>
+                </section>
             </div>
         </div>
 
-        <div>
-            <div class="row">
-                <div class="col-xs-12 col-md-12">
-                    <div class="section-title">Projects for Fun</div>
-                    <div class="col-xs-12 col-md-12">
-                        <div class="row research-item">
-                            <div class="col-xs-12 col-md-2">
-                                <img src="./pics/projects/gwalkr_logo.png" class="w-100" />
-                            </div>
-                            <div class="col-xs-12 col-md-10">
-                                <div><b>GWalkR: R Package for Interactive Exploratory Data Analysis</b></div>
-                                <div>🕵️ GWalkR is an interactive Exploratory Data Analysis (EDA) Tool in R. With just
-                                    single line of code, it can simplify your R data analysis and data visualization
-                                    workflow by turning your data frame into a Tableau-style UI for visual
-                                    exploration. Also, by using it in RMarkdown, you can create web page to showcase
-                                    your insights with editable and explorable.</div>
-                                <div>
-                                    🪄 Below are some examples showing the power of GWalkR with RMarkdown. Data are from
-                                    <a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday</a>:
-                                </div>
-                                <div>
-                                    <a href="./show/tidytuesday_etymology.nb.html">[From Peak to Tide]</a>
-                                    <a href="./show/R_tuesday_fair_use.nb.html">[How Fair Use Cases Evolved]</a>
-                                </div>
-                                <div class="badge-bar">
-                                    <a class="badge" href="https://CRAN.R-project.org/package=GWalkR"><img
-                                            src="https://www.r-pkg.org/badges/version/GWalkR" /></a>
-                                    <div class="badge"><img
-                                            src="https://cranlogs.r-pkg.org/badges/grand-total/GWalkR" /></div>
-                                    <a class="badge" href="https://github.com/Kanaries/GWalkR"><img
-                                            src="https://img.shields.io/github/stars/kanaries/gwalkr" /></a>
-                                </div>
-                            </div>
+        <section id="open-tools" class="open-resource-section" aria-labelledby="tools-title">
+            <h2 id="tools-title" class="section-title open-resource-title"><svg class="research-icon" aria-hidden="true"><use href="#ri-tools"/></svg> Open Tools</h2>
+            <div class="tool-collection">
+                <article class="resource-item tool-item">
+                    <div class="resource-artwork resource-logo" style="background-color: transparent;"><img src="./pics/projects/gwalkr_logo.png" alt="" loading="lazy"></div>
+                    <div>
+                        <h4>GWalkR</h4>
+                        <p>GWalkR brings interactive, Tableau-style visual exploration to R. Starting from a data frame, users can explore their data with a single line of code, then embed the interactive view in R Markdown to share both results and the exploration behind them.</p>
+                        <div class="elegant-links"><a href="https://CRAN.R-project.org/package=GWalkR" target="_blank" rel="noopener noreferrer">R package</a><a href="https://github.com/Kanaries/GWalkR" target="_blank" rel="noopener noreferrer">GitHub</a><a href="./show/tidytuesday_etymology.nb.html">Example: From Peak to Tide ↗</a><a href="./show/R_tuesday_fair_use.nb.html">Example: How Fair Use Cases Evolved ↗</a></div>
+                        <div id="paper-pygwalker" class="related-tool">
+                            <p>I also contributed to <strong>PyGWalker</strong>, which brings interactive visual data exploration to Python. Our paper received the <span class="tool-award"><svg class="research-icon" aria-hidden="true"><use href="#ri-award"/></svg> Best Short Paper Award</span> at IEEE Visualization and Visual Analytics (VIS 2024).</p>
+                            <div class="elegant-links"><a href="https://arxiv.org/abs/2406.11637" target="_blank" rel="noopener noreferrer">Paper</a><a href="./show/pygwalker_demo.html">Demo ↗</a></div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
-        </div>
+        </section>
+
+        <section id="open-data" class="open-resource-section" aria-labelledby="datasets-title">
+            <h2 id="datasets-title" class="section-title open-resource-title"><svg class="research-icon" aria-hidden="true"><use href="#ri-data"/></svg> Open Data</h2>
+            <div class="open-resource-grid">
+                <div>
+                    <p class="resource-context">The two datasets are <i>China Government Employee Dataset-Qing Jinshenlu (CGED-Q JSL)</i> processed with our record-linkage and title-parsing methods. Person identifiers connect observations of the same official across records; parsed titles distinguish office, additional title, and eligibility. Both files are available in the public <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GMQWVZ&amp;version=12.0" target="_blank" rel="noopener noreferrer">CGED-Q release · v12</a>.</p>
+                    <div class="dataset-pair">
+                        <a class="dataset-link" href="https://dataverse.harvard.edu/file.xhtml?fileId=14184134&amp;version=12.0" target="_blank" rel="noopener noreferrer"><svg class="research-icon" aria-hidden="true"><use href="#ri-people"/></svg><span>Linked person records<small>Connect officials across records</small></span><svg class="research-icon resource-arrow" aria-hidden="true"><use href="#ri-arrow"/></svg></a>
+                        <a class="dataset-link" href="https://dataverse.harvard.edu/file.xhtml?fileId=14356735&amp;version=12.0" target="_blank" rel="noopener noreferrer"><svg class="research-icon" aria-hidden="true"><use href="#ri-paper"/></svg><span>Parsed official titles<small>Distinguish office, title &amp; eligibility</small></span><svg class="research-icon resource-arrow" aria-hidden="true"><use href="#ri-arrow"/></svg></a>
+                    </div>
+                </div>
+                    <article class="resource-item notebook-item">
+                        <div class="resource-artwork resource-symbol"><svg class="research-icon" aria-hidden="true"><use href="#ri-notebook"/></svg></div>
+                        <div>
+                            <h4>Mobility analysis</h4>
+                            <p>Using the open datasets, we can study the social mobility of premodern Chinese elites across 1850–1864.</p>
+                            <div class="elegant-links"><a href="https://github.com/bruceyyu/decompose-chinese-official-titles/blob/main/examples/public_mobility.ipynb" target="_blank" rel="noopener noreferrer">Analysis notebook ↗</a></div>
+                        </div>
+                    </article>
+            </div>
+        </section>
     </div>
 
     <footer class="footer">
@@ -294,9 +288,11 @@
             <hr>
             <div class="row justify-content-center">
                 <div class="col-xs-12 col-md-12 text-center">
-                    <p>Designed and coded by Bruce with 💙. Last updated on August 2026. </p>
+                    <p>Designed and coded by Bruce with 💙. Last updated on October 2026. </p>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="./js/research.js"></script>
 </body>
+</html>
